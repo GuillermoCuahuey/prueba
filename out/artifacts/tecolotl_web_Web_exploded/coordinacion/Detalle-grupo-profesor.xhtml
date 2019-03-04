@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<ui:composition template="/template/dashboard.xhtml" >
+    <ui:define name="menu">
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" uk-nav="">
+            <li class="uk-nav-header">Menú</li>
+            <li class="uk-parent ">
+                <h:link><h:outputText pt:uk-icon="info" class="uk-margin-small-right"/>Escuela</h:link>
+                <ul class="uk-nav-sub">
+                    <li><h:link outcome="/administracion/administracion-dashboard"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard</h:link></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Catalogo</h:link>
+                <ul class="uk-nav-sub">
+                    <li><h:link outcome="/administracion/catalogo-administracion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo administracion</h:link></li>
+                    <li><h:link outcome="/administracion/catalogo-coordinacion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo coordinacion</h:link></li>
+                </ul>
+            </li>
+            <li class="uk-parent uk-open">
+                <h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Coordinacion</h:link>
+                <ul class="uk-nav-sub">
+                    <li><h:link outcome="dashboard-coordinador"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard coordinador</h:link></li>
+                    <li><h:link outcome="detalle-profesor"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Detalle profesor</h:link></li>
+                    <li class="uk-active"><h:link><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Detalle Alumnos</h:link></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Profesor</h:link>
+                <ul class="uk-nav-sub">
+                    <li><h:link outcome="catalogo-administracion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo administracion</h:link></li>
+                    <li><h:link outcome="catalogo-coordinacion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo coordinacion</h:link></li>
+                </ul>
+            </li>
+        </ul>
+    </ui:define>
+    <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="tablas.css"/>
+
+        <h4 class="uk-heading-line uk-text-bold"><span></span></h4>
+
+
+
+        <div class="uk-grid uk-grid-medium uk-button-small" data-uk-grid="">
+
+            <!-- Detalle grupo -->
+            <div class="uk-width-1-1l uk-child-width-1-1@s uk-flex-center uk-margin-small-bottom">
+                <div class="uk-card uk-card-default uk-card-small uk-card-hover uk-margin-small-bottom ">
+                    <div class="uk-card-header ">
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">Grupo</h4></div>
+
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <div class="uk-margin">
+                            <div class="uk-grid-small uk-grid" uk-grid="">
+                            <div class="uk-width-1-1@s uk-width-1-5@m ">
+                                <h:outputLabel for="input-grado" styleClass=" uk-form-label uk-text-capitalize" value="Grado"/>
+                                <div class="uk-form-controls">
+                                    <h:inputText styleClass="uk-input"
+                                                 id="input-grado"
+                                                 pt:placeholder="1"
+                                                 disabled="true"
+                                                 label="Grado"
+                                                 value="#{catalogoAdministradoCoordinadorControlador.tablaModelo.nombre}">
+                                        <f:validateRequired/>
+                                        <f:validateLength minimum="3" maximum="20"/>
+                                    </h:inputText>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-1@s uk-width-1-5@m  ">
+                                <h:outputLabel for="input-grupo" styleClass="  uk-form-label uk-text-capitalize" value="grupo"/>
+                                <h:inputText styleClass="uk-input"
+                                             id="input-grupo"
+                                             pt:placeholder="B"
+                                             disabled="true"
+                                             label="#{administracion['detalleprofesor.teache.table.header.name']}"
+                                             value="#{catalogoAdministradoCoordinadorControlador.tablaModelo.nombre}">
+                                    <f:validateRequired/>
+                                    <f:validateLength minimum="3" maximum="20"/>
+                                </h:inputText>
+                            </div>
+                            <div class="uk-width-1-1@s uk-width-1-5@m ">
+                                <h:outputLabel for="input-no-alumnos" styleClass="  uk-form-label  uk-text-capitalize" value="No. de Alumnos"/>
+                                <h:inputText styleClass="uk-input"
+                                             id="input-no-alumnos"
+                                             pt:placeholder="20"
+                                             disabled="true"
+                                             label="#{administracion['detalleprofesor.active.modal.header.last.name']}"
+                                             value="#{catalogoAdministradoCoordinadorControlador.tablaModelo.nombre}">
+                                    <f:validateRequired/>
+                                    <f:validateLength minimum="3" maximum="20"/>
+                                </h:inputText>
+                            </div>
+                            <div class="uk-width-1-1@s uk-width-1-5@m ">
+                                <h:outputLabel for="input-no-tareas" styleClass="  uk-form-label" value="No. de tareas "/>
+                                <h:inputText styleClass="uk-input"
+                                             id="input-no-tareas"
+                                             pt:placeholder="10"
+                                             disabled="true"
+                                             label="#{administracion['detalleprofesor.active.modal.header.mothers.last']}"
+                                             value="#{catalogoAdministradoCoordinadorControlador.tablaModelo.nombre}">
+                                    <f:validateRequired/>
+                                    <f:validateLength minimum="3" maximum="20"/>
+                                </h:inputText>
+                            </div>
+                            <div class="uk-width-1-1@s uk-width-1-5@m ">
+                                <h:outputLabel for="input-no-tareas-revisar" styleClass="  uk-form-label" value="No. de tareas "/>
+                                <h:inputText styleClass="uk-input"
+                                             id="input-no-tareas-revisar"
+                                             pt:placeholder="5"
+                                             disabled="true"
+                                             label="#{administracion['detalleprofesor.active.modal.header.mothers.last']}"
+                                             value="#{catalogoAdministradoCoordinadorControlador.tablaModelo.nombre}">
+                                    <f:validateRequired/>
+                                    <f:validateLength minimum="3" maximum="20"/>
+                                </h:inputText>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- FIN Detalle grupo  -->
+            <!-- catalog colonias -->
+            <div class="uk-width-1-1l uk-margin-large-bottom">
+                <div class="uk-card uk-card-default uk-card-small uk-card-hover uk-margin-medium-bottom">
+                    <div class="uk-card-header ">
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">Alumnos</h4></div>
+
+                        </div>
+                    </div>
+                    <div class=" uk-card-body">
+                        <h:form id="formulario-tabla-profesor">
+                            <h:dataTable id="tabla-profesor"
+                                         value="#{detalleProfesorGrupoControlador.collectionDataModel}"
+                                         binding="#{detalleProfesorGrupoControlador.htmlDataTable}"
+                                         var="dato"
+                                         first="0"
+                                         rows="5"
+                                         styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover tabla-profesor-limite"
+                                         footerClass="uk-background-primary"
+                                         columnClasses=",,,uk-text-center,uk-text-center,uk-text-center">
+
+                                <h:column headerClass="uk-background-primary uk-width-auto ">
+                                    <f:facet name="header"><span class="letra-titulo ">NOMBRE</span></f:facet>
+                                    #{dato.nombre}
+                                </h:column>
+
+                                <h:column headerClass="uk-background-primary uk-width-auto ">
+                                    <f:facet name="header"><span class="letra-titulo ">APELLIDO PATERNO</span></f:facet>
+                                    #{dato.apellidop}
+                                </h:column>
+
+                                <h:column headerClass="uk-background-primary uk-width-auto ">
+                                    <f:facet name="header"><span class="letra-titulo ">	APELLIDO MATERNO</span></f:facet>
+                                    #{dato.apellidom}
+                                </h:column>
+                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                    <f:facet name="header"><span class="letra-titulo ">COMENTARIOS</span></f:facet>
+                                    <h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="comment" type="button">
+                                            </span>
+                                        <f:ajax/>
+                                    </h:commandLink>
+                                </h:column>
+                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                    <f:facet name="header"><span class="letra-titulo ">TAREAS</span></f:facet>
+                                    #{dato.tareas}
+                                </h:column>
+                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                    <f:facet name="header"><span class="letra-titulo ">TAREAS/REVISAR</span></f:facet>
+                                    #{dato.tareas_revisar}
+                                </h:column>
+
+
+
+
+                                <f:facet name="footer">
+                                    <pa:pie-tabla htmlDataTable="#{detalleProfesorGrupoControlador.htmlDataTable}"/>
+                                </f:facet>
+                            </h:dataTable>
+                        </h:form>
+                    </div>
+                    <div class="uk-card-footer">
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-auto ">
+                                <f:ajax render="formulario-tabla-profesor:tabla-profesor formulario-boton-profesor">
+                                    <h:form id="formulario-boton-profesor" styleClass="uk-form-horizontal">
+                                        <pa:boton-minimizado htmlDataTable="#{detalleProfesorGrupoControlador.htmlDataTable}"/>
+                                    </h:form>
+                                </f:ajax>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /FIN Detalle grupo  -->
+        </div>
+
+        <!--  Modal Bloqueo -->
+        <h:panelGroup layout="block" id="modal-comentarios-alumno" pt:uk-modal="">
+
+                <div class="uk-modal-dialog uk-margin-auto-vertical">
+                    <div class="uk-modal-header">
+
+                        <div class="uk-modal-header uk-background-secondary">
+                            <p class="uk-h4 uk-text-center uk-text-bold"><span class="letra-titulo">Comentarios Nom. Alumno</span></p>
+                        </div>
+
+                    </div>
+
+                    <div class="uk-modal-body">
+                        <ul uk-accordion="multiple: true">
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 1</a>
+                                <div class="uk-accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 2</a>
+                                <div class="uk-accordion-content">
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 3</a>
+                                <div class="uk-accordion-content">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 4</a>
+                                <div class="uk-accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 5</a>
+                                <div class="uk-accordion-content">
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 6</a>
+                                <div class="uk-accordion-content">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 3</a>
+                                <div class="uk-accordion-content">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 4</a>
+                                <div class="uk-accordion-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 5</a>
+                                <div class="uk-accordion-content">
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Tarea No. 6</a>
+                                <div class="uk-accordion-content">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+        </h:panelGroup>
+        <!--  FIN Modal Bloqueo -->
+
+
+
+        <script type="text/javascript">
+            var contrassenia;
+            var contrasseniaeditar;
+            var modalEditar;
+            var modalAgregar;
+            var modalEliminar;
+            var modalBloqueo;
+            document.addEventListener("DOMContentLoaded", function (evt) {
+                modalEditar = document.querySelector('#modal-editar-profesor');
+                modalAgregar = document.querySelector('#modal-nuevo-profesor');
+                modalEliminar = document.querySelector('#modal-eliminar');
+                modalBloqueo = document.querySelector('#modal-bloqueo');
+
+                UIkit.util.on('#modal-editar-profesor', 'show', function () {
+                    modalEditar.querySelector('.uk-modal-body').click();
+                });
+                UIkit.util.on('#modal-nuevo-profesor', 'show', function () {
+                    modalAgregar.querySelector('.uk-modal-body').click();
+                });
+                UIkit.util.on('#modal-eliminar', 'show', function () {
+                    modalEliminar.querySelector('.uk-modal-body').click();
+                });
+                UIkit.util.on('#modal-bloqueo', 'show', function () {
+                    modalBloqueo.querySelector('.uk-modal-body').click();
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function (evt) {
+                contrassenia = document.getElementById('formulario-modal-nuevo-profesor:input-secret-password');
+                contrasseniaeditar = document.getElementById('formulario-modal-editar-profesor:input-secret-editar-password');
+
+            });
+
+            function cambiar() {
+                if(contrassenia.type  === "password") {
+                    contrassenia.type = "text";
+                } else {
+                    contrassenia.type = "password";
+                }
+            }
+            function cambiareditar() {
+                if(contrasseniaeditar.type  === "password") {
+                    contrasseniaeditar.type = "text";
+                } else {
+                    contrasseniaeditar.type = "password";
+                }
+            }
+
+
+            function cierraModal(data,modal) {
+                if (data.status === "success"){
+                    switch (modal) {
+                        case "modalEliminar":
+                            if (modalEliminar.querySelector('.uk-alert-danger') === null) {
+                                UIkit.modal(modalEliminar).hide();
+                            }
+                            break;
+                        case "modalEditar":
+                            if (modalEditar.querySelector('.uk-alert-danger') === null) {
+                                UIkit.modal(modalEditar).hide();
+                            }
+                            break;
+                        case "modalBloqueo":
+                            if (modalBloqueo.querySelector('.uk-alert-danger') === null) {
+                                UIkit.modal(modalBloqueo).hide();
+                            }
+                            break;
+                        case "modalAgregar":
+                            if (modalAgregar.querySelector('.uk-alert-danger') === null) {
+                                UIkit.modal(modalAgregar).hide();
+                            }
+                            break;
+                        default: console.error(modal);
+
+                    }
+                }
+
+
+            }
+
+        </script>
+        <h:outputScript library="js" name="login.js" />
+    </ui:define>
+</ui:composition>
+</html>
