@@ -8,7 +8,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion">
 
-<ui:composition template="/template/dashboard-profesor.xhtml">
+<ui:composition template="../template/dashboard.xhtml">
     <ui:define name="menu">
         <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav="">
             <li class="uk-nav-header">Menú</li>
@@ -22,12 +22,16 @@
 
                 </ul>
             </li>
-
-
         </ul>
     </ui:define>
-    <ui:define name="informacion">
-       <h:panelGroup layout="block"  styleClass="uk-grid " pt:uk-grid="">
+
+
+
+    <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="tablas.css"/>
+
+
+        <h:panelGroup layout="block"  styleClass="uk-grid " pt:uk-grid="">
             <div class="uk-width-1-1@m">
                 <div class="uk-card uk-card-default uk-card-small uk-card-hover  uk-padding-small">
                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-divider uk-grid-small uk-grid-margin-small  uk-child-width-1-2 uk-child-width-1-4@l uk-child-width-1-5@xl uk-margin-auto  uk-text-center uk-flex uk-flex-center" pt:uk-grid="">
@@ -67,10 +71,7 @@
                     </h:panelGroup>
                 </div>
             </div>
-       </h:panelGroup>
-    </ui:define>
-    <ui:define name="contenido">
-        <h:outputStylesheet library="css" name="tablas.css"/>
+        </h:panelGroup>
 
         <h:panelGroup layout="block" class="uk-grid uk-grid-medium" pt:uk-grid="">
 
