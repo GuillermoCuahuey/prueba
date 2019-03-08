@@ -1,9 +1,7 @@
 package tecolotl.web.profesor.controladores;
 
-
 import tecolotl.web.coordinacion.modulo.TareaModelo;
 import tecolotl.web.profesor.modulo.ActividadesModelo;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
@@ -26,7 +24,7 @@ public class ActividadesControlador {
         tarea3 = new ArrayList<>();
         tarea4 = new ArrayList<>();
         for (int i = 0; i < 3; i++){
-            tarea1.add(new ActividadesModelo("sports","plays and games with your friends","aprende sobre los direrentes temas a tratar de deportes","10:12"));
+            tarea1.add(new ActividadesModelo("sports","plays and games with your friends","aprende sobre los direrentes temas a tratar de deportes","10:12","https://vimeo.com/319326066"));
         }
         for (int i = 0; i < 2; i++){
             tarea2.add(new ActividadesModelo("gettings","Meet people","aprende como conocer nuevas personas","25:12"));

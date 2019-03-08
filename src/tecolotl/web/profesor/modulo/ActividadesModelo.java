@@ -7,12 +7,29 @@ public class ActividadesModelo {
     private String titulo;
     private String descripcion;
     private String tiempo;
+    private String url;
+
+    public ActividadesModelo(String tag, String titulo, String descripcion, String tiempo, String url) {
+        this.tag = tag;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.tiempo = tiempo;
+        this.url = url;
+    }
 
     public ActividadesModelo(String tag, String titulo, String descripcion, String tiempo) {
         this.tag = tag;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.tiempo = tiempo;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getTag() {
