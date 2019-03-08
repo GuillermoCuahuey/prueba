@@ -46,16 +46,10 @@
                         <li data-uk-filter-control=".reportes-card"><a href="#">Reportes</a></li>
                     </ul>
                     </div>
-                    <div class="uk-width-expand uk-flex uk-flex-right uk-margin-small-bottom">
+                    <div class="uk-width-expand uk-flex uk-flex-right">
                         <h:form id="formulario-nuevo-catalogo-profesor">
                             <ul class="uk-iconnav uk-margin-small-right">
-                                <li>
-                                    <h:commandLink pt:uk-toggle="target: #modal-coordinador">
-                                            <span class="uk-icon-link uk-text-primary" title="#{boton['add']}" data-uk-tooltip="" data-uk-icon="icon: plus-circle; ratio: 1">
-                                            </span>
-                                        <f:ajax/>
-                                    </h:commandLink>
-                                </li>
+
                                 <li class="uk-visible@s">
                                         <a class="uk-text-primary uk-margin-small-left" href="#" data-uk-icon="icon:comments"></a>
                                         <div class="drop-nav drop-comments uk-dropdown" data-uk-dropdown="mode: click; offset: 20;animation: uk-animation-slide-bottom-small; duration: 150">
@@ -86,25 +80,6 @@
                                             </ul>
                                         </div>
                                     </li>
-                                <li class="uk-visible@s">
-                                        <a class="uk-text-primary  uk-margin-small-left" href="#" data-uk-icon="icon:more"></a>
-                                        <div class="drop-nav uk-dropdown" data-uk-dropdown="mode: click; offset: 20;animation: uk-animation-slide-bottom-small; duration: 150">
-                                            <h4 class="uk-margin-small-bottom uk-margin-remove-adjacent">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-                                            <p class="uk-text-small uk-text-muted">Excepteur sint occaecat cupidatat non
-                                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                                            <a href="#" class="uk-button uk-button-primary uk-width-1-1">UPDATE YOUR ACCOUNT</a>
-
-                                            <ul class="uk-nav-default uk-nav-parent-icon" data-uk-nav="">
-                                                <li class="uk-nav-header">Header</li>
-                                                <li><a href="#"><span class="uk-margin-small-right" data-uk-icon="icon: table"></span> Item</a></li>
-                                                <li><a href="#"><span class="uk-margin-small-right" data-uk-icon="icon: thumbnails"></span> Item</a></li>
-                                                <li class="uk-nav-divider"></li>
-                                                <li><a href="#"><span class="uk-margin-small-right" data-uk-icon="icon: trash"></span> Item</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                <li class="uk-hidden@s"><a data-uk-navbar-toggle-icon="" data-uk-toggle="" href="#offcanvas-nav"></a></li>
 
 
                             </ul>
@@ -117,62 +92,128 @@
                 <div class="js-filter" data-uk-sortable="handle: .drag-icon">
 
                     <div class="actividad-card" data-tags="a beautiful landscape - nature outdoor">
-                        <div class="uk-card uk-card-default uk-card-small uk-card-hover uk-margin-medium-bottom">
+                        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
                             <div class="uk-card-header ">
-                                <div class="uk-grid uk-grid-small">
+                                <div class="uk-grid uk-grid-small uk-margin-small-left">
                                     <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">Alumnos</h4></div>
+                                    <div class="uk-width-expand uk-flex uk-flex-right">
+                                        <h:form id="formulario-nuevo-bloqueo-catalogo">
+                                            <ul class="uk-iconnav">
+                                                <li class="">
+                                                    <div class="uk-margin-small-right">
+                                                    <label class="uk-form-label" for="form-horizontal-select"></label>
+                                                    <div uk-form-custom="target: > * > span:first-child">
+                                                        <select>
+                                                            <option value="1">Ultimos 7 Dias</option>
+                                                            <option value="2">Ultimo mes</option>
+                                                            <option value="3">Ultimo año</option>
+                                                            <option value="4">Todos</option>
+                                                            <option value="5">Personalizado</option>
+                                                        </select>
+                                                        <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                                            <span></span>
+                                                            <span uk-icon="icon: chevron-down"></span>
+                                                        </button>
+                                                    </div>
+                                                    </div>
+                                                </li>
+                                                <!--<li>-->
+                                                    <!--<div class="uk-margin">-->
+                                                        <!--<div class="uk-form-label uk-text-capitalize">muestrame solo</div>-->
+                                                        <!--<div class="uk-form-controls">-->
+                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/> Listen</label>-->
+                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/> Transcript</label>-->
+                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/>Read</label>-->
+                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/>Grammar</label>-->
+                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/>Quizzes</label>-->
+                                                        <!--</div>-->
+                                                    <!--</div>-->
+
+                                                <!--</li>-->
+                                                <li>
+                                                    <div class="uk-width-auto">
+                                                        <ul class="uk-subnav" data-uk-margin="">
+                                                            <li class="uk-nav-header uk-text-capitalize">Solo Muestra</li>
+                                                            <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
+                                                            </li>
+                                                            <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                                <span class="uk-icon-button puntero" title="Ver" data-uk-tooltip="" uk-icon="file-text" type="button"></span><f:ajax/></h:commandLink>
+                                                            </li>
+                                                            <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
+                                                            </li>
+                                                            <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
+                                                            </li>
+                                                            <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+
+
+                                            </ul>
+                                        </h:form>
+                                    </div>
 
                                 </div>
                             </div>
                             <div class=" uk-card-body">
                                 <div class="uk-overflow-auto">
-                                <h:form id="formulario-tabla-profesor">
-                                    <h:dataTable id="tabla-profesor"
-                                                 value="#{detalleProfesorGrupoControlador.collectionDataModel}"
-                                                 binding="#{detalleProfesorGrupoControlador.htmlDataTable}"
+                                <h:form id="formulario-tabla-actividades">
+                                    <h:dataTable id="tabla-actividades"
+                                                 value="#{actividadesAlumnoControlador.collectionDataModel}"
+                                                 binding="#{actividadesAlumnoControlador.htmlDataTable}"
                                                  var="dato"
                                                  first="0"
                                                  rows="5"
-                                                 styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover tabla-profesor-limite"
+                                                 styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover tabla-actividades-limite"
                                                  footerClass="uk-background-primary"
-                                                 columnClasses=",,,uk-text-center,uk-text-center,uk-text-center">
+                                                 columnClasses="uk-text-center,,uk-text-center,uk-text-center,uk-text-center">
 
-                                        <h:column headerClass="uk-background-primary uk-width-auto ">
-                                            <f:facet name="header"><span class="letra-titulo ">NOMBRE</span></f:facet>
-                                            #{dato.nombre}
-                                        </h:column>
-
-                                        <h:column headerClass="uk-background-primary uk-width-auto ">
-                                            <f:facet name="header"><span class="letra-titulo ">APELLIDO PATERNO</span></f:facet>
-                                            #{dato.apellidop}
+                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                            <f:facet name="header"><span class="letra-titulo ">Fecha de Inicio</span></f:facet>
+                                            #{dato.fecha}
                                         </h:column>
 
                                         <h:column headerClass="uk-background-primary uk-width-auto ">
-                                            <f:facet name="header"><span class="letra-titulo ">	APELLIDO MATERNO</span></f:facet>
-                                            #{dato.apellidom}
+                                            <f:facet name="header"><span class="letra-titulo ">Titulo</span></f:facet>
+                                            #{dato.titulo}
+                                        </h:column>
+
+                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                            <f:facet name="header"><span class="letra-titulo ">Puntuacion</span></f:facet>
+                                            #{dato.puntuacion}
                                         </h:column>
                                         <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">COMENTARIOS</span></f:facet>
-                                            <h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="comment" type="button">
-                                            </span>
-                                                <f:ajax/>
-                                            </h:commandLink>
+                                            <f:facet name="header"><span class="letra-titulo ">Monedas</span></f:facet>
+                                            #{dato.monedas}
                                         </h:column>
                                         <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">TAREAS</span></f:facet>
-                                            #{dato.tareas}
+                                            <f:facet name="header"><span class="letra-titulo ">Actividades</span></f:facet>
+                                                <div class="uk-width-auto">
+                                                    <ul class="uk-subnav" data-uk-margin="">
+                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
+                                                        </li>
+                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
+                                                        </li>
+                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
+                                                        </li>
+                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            #{dato.actividades}
                                         </h:column>
-                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">TAREAS/REVISAR</span></f:facet>
-                                            #{dato.tareas_revisar}
-                                        </h:column>
-
-
-
-
                                         <f:facet name="footer">
-                                            <pa:pie-tabla htmlDataTable="#{detalleProfesorGrupoControlador.htmlDataTable}"/>
+                                            <pa:pie-tabla htmlDataTable="#{actividadesAlumnoControlador.htmlDataTable}"/>
                                         </f:facet>
                                     </h:dataTable>
                                 </h:form>
@@ -181,9 +222,9 @@
                             <div class="uk-card-footer">
                                 <div class="uk-grid uk-grid-small">
                                     <div class="uk-width-auto ">
-                                        <f:ajax render="formulario-tabla-profesor:tabla-profesor formulario-boton-profesor">
-                                            <h:form id="formulario-boton-profesor" styleClass="uk-form-horizontal">
-                                                <pa:boton-minimizado htmlDataTable="#{detalleProfesorGrupoControlador.htmlDataTable}"/>
+                                        <f:ajax render="formulario-tabla-actividades:tabla-actividades formulario-boton-actividades">
+                                            <h:form id="formulario-boton-actividades" styleClass="uk-form-horizontal">
+                                                <pa:boton-minimizado htmlDataTable="#{actividadesAlumnoControlador.htmlDataTable}"/>
                                             </h:form>
                                         </f:ajax>
 
@@ -211,7 +252,7 @@
                             <div class="uk-card-media">
                                 <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
                                     <img class="lazy" data-src="https://picsum.photos/400/470/?random=4" data-width="400" data-height="470" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
+                                    <div class="uk-transition-slide-bottom uk-overlay uk-overlay-primary">
                                         <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
                                     </div>
                                 </div>
