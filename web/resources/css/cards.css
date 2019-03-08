@@ -5,7 +5,41 @@
 	left: 0;
 	right: 0;
 	z-index: 99;
-	background-color:#0e6dcd;
+	background-color:#1e87f0;
+	border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.left-content-box {
+	padding: 2px 2px;
+	border-top: 1px solid rgba(255,255,255,0.06);
+	margin-bottom: -1px;
+}
+
+.profile-img {
+	width: 100px;
+	margin: 0 auto 10px auto;
+	display: block;
+}
+.bar-bottom {
+	border-top: 1px solid rgba(255,255,255,0.07);
+	padding: 15px 0;
+	background-color: #222A30;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	bottom: 0;
+	width: 240px;
+}
+
+#site-head2 {
+	padding: 10px 0;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background-color: white;
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 #site-foot {
@@ -21,7 +55,8 @@
     padding-bottom: 0.6rem;
 }
 .uk-logo img {
-	width: 50px;
+	width: 40px;
+
 }
 .spacer {
 	height: 60px;
@@ -54,7 +89,7 @@
 	border-top-color: #1E87F0;
 }
 .uk-subnav li a {
-	border-radius: 3px; 
+	border-radius: 3px;
 }
 .uk-subnav li.uk-active:nth-child(3) a {
 	background-color:#8630F0;
@@ -116,6 +151,10 @@ img[data-src][src*='data:image'] { background: rgba(0,0,0,0.1); }
 	/*border-radius: 15px;*/
 	padding: 0 1rem;
 }
+.search-fld2 {
+	border-radius: 15px;
+	padding: 0 1rem;
+}
 .uk-dropdown.drop-nav {
 	border-radius: 4px;
 	box-shadow: 0 2px 24px rgba(0,0,0,.1);
@@ -171,4 +210,39 @@ img[data-src][src*='data:image'] { background: rgba(0,0,0,0.1); }
 	display: block;
 	line-height: 1.3rem;
 	padding: 0.5rem 0;
+}
+
+uk-progress {
+	height: 2px;
+	margin-bottom: 2px;
+	background-color: rgba(0,0,0,0.23);
+
+}
+* + .uk-progress {
+	margin-top: 0.25rem;
+}
+.uk-progress.warning::-webkit-progress-value {
+	background-color: #faa05a;
+}
+.uk-progress.warning::-moz-progress-bar {
+	background-color: #faa05a;
+}
+.uk-progress.warning::-ms-fill {
+	background-color: #faa05a;
+}
+.uk-progress.success::-webkit-progress-value {
+	background-color: #32d296;
+}
+.uk-progress.success::-moz-progress-bar {
+	background-color: #32d296;
+}
+.uk-progress.success::-ms-fill {
+	background-color: #32d296;
+}
+
+span > a:hover{
+	color: #1E87F0;
+}
+.democlass {
+	color: red;
 }
