@@ -5,7 +5,7 @@
 	left: 0;
 	right: 0;
 	z-index: 99;
-	background-color: white;
+	background-color:#0e6dcd;
 	border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 #site-foot {
@@ -27,7 +27,7 @@
 	height: 60px;
 }
 .uk-card {
-	border-top: 2px solid;
+	border-top: 5px solid;
 	position: relative;
 	transition: box-shadow 0.15s ease-out;
 	border-radius: 3px;
@@ -65,6 +65,12 @@
 .uk-subnav li.uk-active:nth-child(5) a {
 	background-color:#E84DF0;
 }
+.uk-subnav li.uk-active:nth-child(6) a {
+	background-color:#32d296;
+}
+.uk-subnav li.uk-active:nth-child(7) a {
+	background-color:#ec2147;
+}
 .nature-card .uk-card .cat-txt {
 	color: #1E87F0;
 }
@@ -86,6 +92,18 @@
 .photo-card .uk-card .cat-txt {
 	color: #F03A7F;
 }
+.sport-card .uk-card {
+	border-top-color: #32d296;
+}
+.sport-card .uk-card .cat-txt{
+	color: #32d296;
+}
+.nivelc3 .uk-card {
+	border-top-color: #ec2147;
+}
+.nivelc3 .uk-card .cat-txt{
+	color: #ec2147;
+}
 .uk-card .uk-overlay-primary {
 	padding:  0.5rem;
 	text-align: center;
@@ -95,7 +113,7 @@
 }
 img[data-src][src*='data:image'] { background: rgba(0,0,0,0.1); }
 .search-fld {
-	border-radius: 50px;
+	/*border-radius: 15px;*/
 	padding: 0 1rem;
 }
 .uk-dropdown.drop-nav {

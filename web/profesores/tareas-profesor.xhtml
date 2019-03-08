@@ -99,34 +99,36 @@
         <div class="uk-container uk-container-expand uk-margin-large-bottom">
             <ul class="uk-subnav uk-subnav-pill">
                 <li class="uk-active" data-uk-filter-control=""><a href="#">Show All</a></li>
-                <li data-uk-filter-control=".nature-card"><a href="#">A1</a></li>
-                <li data-uk-filter-control=".music-card"><a href="#">A2</a></li>
-                <li data-uk-filter-control=".photo-card"><a href="#">B1</a></li>
-                <li data-uk-filter-control=".design-card"><a href="#">B2</a></li>
+                <li data-uk-filter-control=".nature-card"><a href="#">Level A1</a></li>
+                <li data-uk-filter-control=".music-card"><a href="#">Level A2</a></li>
+                <li data-uk-filter-control=".photo-card"><a href="#">Level B1</a></li>
+                <li data-uk-filter-control=".design-card"><a href="#">Level B2</a></li>
+                <li data-uk-filter-control=".sport-card"><a href="#">Level C1</a></li>
+                <li data-uk-filter-control=".nivelc3"><a href="#">Level C2</a></li>
             </ul>
             <div class="uk-grid uk-grid-medium uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l  uk-child-width-1-5@xl uk-grid-match js-filter" data-uk-grid="masonry: true" data-uk-sortable="handle: .drag-icon">
 
 
               <ui:repeat value="#{actividadesControlador.tarea1}" var="tarea1">
-                <div class="nature-card" data-tags="a beautiful landscape - nature outdoor">
+                <h:panelGroup layout="block" styleClass="nature-card" pt:data-tags="a beautiful landscape - nature outdoor">
                     <div class="uk-card uk-card-small uk-card-default">
                         <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
+                            <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
                                 <div class="uk-width-expand">
                                     <span class="cat-txt">#{tarea1.tag}</span>
                                 </div>
                                 <div class="uk-width-auto uk-text-right uk-text-muted">
-                                    <span data-uk-icon="icon:clock; ratio: 0.8"/>#{tarea1.tiempo}
+                                    <h:outputText pt:uk-icon="icon:clock; ratio: 0.8"/>#{tarea1.tiempo}
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                         <div class="uk-card-media">
-                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                <img class="lazy" data-src="https://picsum.photos/400/300/?random=5" data-width="400" data-height="300" data-uk-img="" alt="" src="img/transp.gif"/>
+                            <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
+                                <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/470/?random=4" pt:data-width="400" pt:data-height="300" pt:data-uk-img="" alt=""/>
                                 <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                    <span data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                    <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
                                 </div>
-                            </div>
+                            </h:panelGroup>
 
                         </div>
                         <div class="uk-card-body">
@@ -134,69 +136,75 @@
                             <p class="uk-text-small uk-text-muted">#{tarea1.descripcion}</p>
                         </div>
                         <div class="uk-card-footer">
-                            <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                <div class="uk-width-expand uk-text-small">
-                                    John Doe
+                            <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
+                                    <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-1@l uk-child-width-1-2@xl uk-grid uk-grid-small">
+                                        <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                        <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                    </h:panelGroup>
                                 </div>
                                 <div class="uk-width-auto uk-text-right">
-                                    <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link" pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
                                 </div>
                                 <div class="uk-width-auto uk-text-right">
-                                    <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"/>
+                                    <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                     </div>
-                </div>
+                </h:panelGroup>
               </ui:repeat>
                 <!-- /card -->
                 <!-- card -->
               <ui:repeat value="#{actividadesControlador.tarea2}" var="tarea2">
-                <div class="music-card" data-tags="amazing music band here - music bands">
+                <h:panelGroup layout="block" styleClass="music-card" pt:data-tags="amazing music band here - music bands">
                     <div class="uk-card uk-card-small uk-card-default">
                         <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
+                            <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:data-uk-grid="">
                                 <div class="uk-width-expand">
                                     <span class="cat-txt">#{tarea2.tag}</span>
                                 </div>
                                 <div class="uk-width-auto uk-text-right uk-text-muted">
-                                    <span data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea2.tiempo}
+                                    <h:outputText pt:data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea2.tiempo}
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                         <div class="uk-card-media">
-                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                <img class="lazy" data-src="https://picsum.photos/400/470/?random=4" data-width="400" data-height="470" data-uk-img="" alt="" src="img/transp.gif"/>
+                            <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
+                                <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/470/?random=4" pt:data-width="400" pt:data-height="470" pt:data-uk-img="" alt="" />
                                 <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                    <span data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                    <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                         <div class="uk-card-body">
                             <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea2.titulo}</h6>
                             <p class="uk-text-small uk-text-muted">#{tarea2.descripcion}</p>
                         </div>
                         <div class="uk-card-footer">
-                            <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                <div class="uk-width-expand uk-text-small">
-                                    John Doe
+                            <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                <div class="uk-width-expand uk-text-small text-color-level2 uk-text-bold">
+                                    <h:panelGroup layout="block" pt:uk-grid="" styleClass="uk-child-width-1-1@l uk-child-width-1-2@xl uk-grid uk-grid-small">
+                                        <div><h:link styleClass="uk-link-reset"><h:outputText pt:data-uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                        <div><h:link styleClass="uk-link-reset"><h:outputText pt:data-uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                    </h:panelGroup>
                                 </div>
                                 <div class="uk-width-auto uk-text-right">
-                                    <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link" pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
                                 </div>
                                 <div class="uk-width-auto uk-text-right">
-                                    <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"/>
+                                    <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                     </div>
-                </div>
+                </h:panelGroup>
               </ui:repeat>
                 <!-- /card -->
                 <!-- card -->
@@ -204,48 +212,51 @@
                 <!-- /card -->
                 <!-- card -->
               <ui:repeat value="#{actividadesControlador.tarea3}" var="tarea3">
-                <div class="design-card"  data-tags="trends in design world - design">
+                <h:panelGroup layout="block" styleClass="design-card"  pt:data-tags="trends in design world - design">
                     <div class="uk-card uk-card-small uk-card-default">
                         <div class="uk-card-header">
-                            <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
+                            <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:data-uk-grid="">
                                 <div class="uk-width-expand">
                                     <span class="cat-txt">#{tarea3.tag}</span>
                                 </div>
                                 <div class="uk-width-auto uk-text-right uk-text-muted">
-                                    <span data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea3.tiempo}
+                                    <h:outputText pt:data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea3.tiempo}
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                         <div class="uk-card-media">
-                            <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                <img class="lazy" data-src="https://picsum.photos/400/460/?random=2" data-width="400" data-height="460" data-uk-img="" alt="" src="img/transp.gif"/>
+                            <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
+                                <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/460/?random=2" pt:data-width="400" pt:data-height="460" pt:data-uk-img="" alt=""/>
                                 <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                    <span data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                    <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                         <div class="uk-card-body">
                             <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea3.titulo}</h6>
                             <p class="uk-text-small uk-text-muted">#{tarea3.descripcion}</p>
                         </div>
                         <div class="uk-card-footer">
-                            <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                <div class="uk-width-expand uk-text-small">
-                                    John Doe
+                            <h:panelGroup layout="block" class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                <div class="uk-width-expand uk-text-small text-color-level3 uk-text-bold">
+                                    <h:panelGroup layout="block" pt:uk-grid="" styleClass="uk-child-width-1-1@l uk-child-width-1-2@xl uk-grid uk-grid-small">
+                                        <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                        <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                    </h:panelGroup>
                                 </div>
                                 <div class="uk-width-auto uk-text-right">
-                                    <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"/>
-                                    <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link" pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                    <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
                                 </div>
                                 <div class="uk-width-auto uk-text-right">
-                                    <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"/>
+                                    <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
                                 </div>
-                            </div>
+                            </h:panelGroup>
                         </div>
                     </div>
-                </div>
+                </h:panelGroup>
               </ui:repeat>
                 <!-- /card -->
                 <!-- card -->
@@ -253,56 +264,152 @@
                 <!-- /card -->
                 <!-- card -->
                 <ui:repeat value="#{actividadesControlador.tarea4}" var="tarea4">
-                    <div class="photo-card"  data-tags="amazing nature pictures - photograhy">
+                    <h:panelGroup layout="block" styleClass="photo-card"  pt:data-tags="amazing nature pictures - photograhy">
                         <div class="uk-card uk-card-small uk-card-default">
                             <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
+                                <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:data-uk-grid="">
                                     <div class="uk-width-expand">
                                         <span class="cat-txt">#{tarea4.tag}</span>
                                     </div>
                                     <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea4.tiempo}
+                                        <h:outputText pt:data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea4.tiempo}
                                     </div>
-                                </div>
+                                </h:panelGroup>
                             </div>
                             <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/360/?random=9" data-width="400" data-height="360" data-uk-img="" alt="" src="img/transp.gif"/>
+                                <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
+                                    <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/360/?random=9" pt:data-width="400" pt:data-height="360" pt:data-uk-img="" alt=""/>
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                        <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
                                     </div>
-                                </div>
-
+                                </h:panelGroup>
                             </div>
                             <div class="uk-card-body">
                                 <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea4.titulo}</h6>
                                 <p class="uk-text-small uk-text-muted">#{tarea4.descripcion}</p>
                             </div>
                             <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
+                                <h:panelGroup layout="block"  styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                    <div class="uk-width-expand uk-text-small text-color-level4 uk-text-bold">
+                                        <h:panelGroup layout="block" pt:uk-grid="" styleClass="uk-child-width-1-1@l uk-child-width-1-2@xl uk-grid uk-grid-small">
+                                            <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                            <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                        </h:panelGroup>
                                     </div>
                                     <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"/>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"/>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"/>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link" pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
                                     </div>
                                     <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"/>
+                                        <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
                                     </div>
-                                </div>
+                                </h:panelGroup>
                             </div>
                         </div>
-                    </div>
+                    </h:panelGroup>
                 </ui:repeat>
                 <!-- /card -->
                 <!-- card -->
-
+                <ui:repeat value="#{actividadesControlador.tarea4}" var="tarea5">
+                    <h:panelGroup layout="block" styleClass="sport-card"  pt:data-tags="amazing nature pictures - photograhy">
+                        <div class="uk-card uk-card-small uk-card-default">
+                            <div class="uk-card-header">
+                                <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:data-uk-grid="">
+                                    <div class="uk-width-expand">
+                                        <span class="cat-txt">#{tarea5.tag}</span>
+                                    </div>
+                                    <div class="uk-width-auto uk-text-right uk-text-muted">
+                                        <h:outputText pt:data-uk-icon="icon:clock; ratio: 0.8"/> #{tarea5.tiempo}
+                                    </div>
+                                </h:panelGroup>
+                            </div>
+                            <div class="uk-card-media">
+                                <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/360/?random=9" pt:data-width="400" pt:data-height="360" pt:data-uk-img="" alt="" />
+                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
+                                        <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                    </div>
+                                </h:panelGroup>
+                            </div>
+                            <div class="uk-card-body">
+                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea5.titulo}</h6>
+                                <p class="uk-text-small uk-text-muted">#{tarea5.descripcion}</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                    <div class="uk-width-expand uk-text-small text-color-level5 uk-text-bold">
+                                        <h:panelGroup layout="block" pt:uk-grid="" styleClass="uk-child-width-1-1@l uk-child-width-1-2@xl uk-grid uk-grid-small">
+                                            <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                            <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                        </h:panelGroup>
+                                    </div>
+                                    <div class="uk-width-auto uk-text-right">
+                                        <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link" pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
+                                    </div>
+                                    <div class="uk-width-auto uk-text-right">
+                                        <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
+                                    </div>
+                                </h:panelGroup>
+                            </div>
+                        </div>
+                    </h:panelGroup>
+                </ui:repeat>
                 <!-- /card -->
                 <!-- card -->
+                <ui:repeat value="#{actividadesControlador.tarea1}" var="tarea6">
+                    <h:panelGroup layout="block" styleClass="nivelc3" pt:data-tags="a beautiful landscape - nature outdoor">
+                        <div class="uk-card uk-card-small uk-card-default">
+                            <div class="uk-card-header">
+                                <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:data-uk-grid="">
+                                    <div class="uk-width-expand">
+                                        <span class="cat-txt">#{tarea6.tag}</span>
+                                    </div>
+                                    <div class="uk-width-auto uk-text-right uk-text-muted">
+                                        <h:outputText pt:data-uk-icon="icon:clock; ratio: 0.8"/>#{tarea6.tiempo}
+                                    </div>
+                                </h:panelGroup>
+                            </div>
+                            <div class="uk-card-media">
+                                <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
+                                    <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/360/?random=4" pt:data-width="400" pt:data-height="300" pt:data-uk-img="" alt=""/>
+                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
+                                        <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                    </div>
+                                </h:panelGroup>
 
+                            </div>
+                            <div class="uk-card-body">
+                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea6.titulo}</h6>
+                                <p class="uk-text-small uk-text-muted">#{tarea6.descripcion}</p>
+                            </div>
+                            <div class="uk-card-footer">
+                                <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                    <div class="uk-width-expand uk-text-small text-color-level6 uk-text-bold">
+                                        <h:panelGroup layout="block" pt:uk-grid="" styleClass="uk-child-width-1-1@l uk-child-width-1-2@xl uk-grid-small">
+                                            <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                            <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                        </h:panelGroup>
+                                    </div>
+                                    <div class="uk-width-auto uk-text-right">
+                                        <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link" pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                        <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
+                                    </div>
+
+                                    <div class="uk-width-auto uk-text-right">
+                                        <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
+                                    </div>
+                                </h:panelGroup>
+                            </div>
+                        </div>
+                    </h:panelGroup>
+                </ui:repeat>
                 <!-- /card -->
                 <!-- card -->
 
@@ -344,9 +451,27 @@
     <h:outputScript library="js" name="uikit-icons.js"/>
     <h:outputScript library="js" name="cards.js"/>
     <script type="text/javascript">
+        let carMedias = document.querySelectorAll('.nature-card .uk-card-media');
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://vimeo.com/api/oembed.json', true);
+        carMedias.forEach(function (objeto, index) {
+            let imagen = objeto.querySelector('img');
+            let fuente = imagen.getAttribute('data-src');
+        })
+
+        function imagenVimeo(fuente,imagen) {
+            xhr.send({url:fuente});
+        }
+        xhr.onload = function () {
+            let  objeto = JSON.parse(xhr.response);
+            console.log(objeto.duration);
+
+        };
         setTimeout(function(){
             UIkit.notification('Now you can filter cards with search field! Type "amazing", "music" or "nature"');
         }, 1000);
+
+
     </script>
 </h:body>
 
