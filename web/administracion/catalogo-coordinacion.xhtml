@@ -12,7 +12,7 @@
     <ui:define name="menu">
         <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav="">
             <li class="uk-nav-header">Menú</li>
-            <li><a href="#"><span data-uk-icon="icon: table" class="uk-margin-small-right"></span>Escuelas</a></li>
+            <li ><h:link outcome="catalogo-coordinacion.xhtml"><span data-uk-icon="icon: table" class=" uk-active uk-margin-small-right"></span>Escuelas</h:link></li>
             <li class="uk-parent uk-open">
                 <a href="CatalagoAdministrador.html"><span data-uk-icon="icon: database" class="uk-margin-small-right"></span>Catálogos</a>
                 <ul class="uk-nav-sub">
@@ -46,7 +46,7 @@
                                 <ul class="uk-iconnav">
                                     <li>
                                         <h:commandLink pt:uk-toggle="target: #modal-coordinador">
-                                            <span class="uk-icon-link" title="#{boton['add']}" data-uk-tooltip="" data-uk-icon="icon: plus-circle; ratio: 1.5">
+                                            <span class="uk-icon-link uk-text-primary" title="#{boton['add']}" data-uk-tooltip="" data-uk-icon="icon: plus-circle; ratio: 1.5">
                                             </span>
                                             <f:ajax/>
                                         </h:commandLink>
@@ -108,7 +108,7 @@
                                         <ul class="uk-iconnav">
                                             <li>
                                                 <h:commandLink pt:uk-toggle="target: #modal-profesor">
-                                                <span class="uk-icon-link" title="#{boton['add']}" data-uk-tooltip="" data-uk-icon="icon: plus-circle; ratio: 1.5"></span>
+                                                <span class="uk-icon-link uk-text-primary" title="#{boton['add']}" data-uk-tooltip="" data-uk-icon="icon: plus-circle; ratio: 1.5"></span>
                                                     <f:ajax/>
                                                 </h:commandLink>
                                             </li>
