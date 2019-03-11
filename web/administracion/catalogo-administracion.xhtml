@@ -10,20 +10,35 @@
 
 <ui:composition template="/template/dashboard.xhtml" >
     <ui:define name="menu">
-        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav="">
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" uk-nav="">
             <li class="uk-nav-header">Menú</li>
-            <li><a href="#"><span data-uk-icon="icon: table" class="uk-margin-small-right"></span>Escuelas</a></li>
-            <li class="uk-parent uk-open">
-                <a href="CatalagoAdministrador.html"><span data-uk-icon="icon: database" class="uk-margin-small-right"></span>Catálogos</a>
+            <li class="uk-parent ">
+                <h:link><h:outputText pt:uk-icon="info" class="uk-margin-small-right"/>Escuela</h:link>
                 <ul class="uk-nav-sub">
-                    <li class="uk-active"><h:link ><span data-uk-icon="icon: users" class="uk-margin-small-right"></span>Adminsitrador</h:link>
-                    </li>
-                    <li ><h:link outcome="catalogo-coordinacion.xhtml"><span data-uk-icon="icon: users" class=" uk-active uk-margin-small-right"></span>Coordinador/Profesor</h:link>
-                    </li>
-
+                    <li><h:link outcome="/administracion/administracion-dashboard"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard</h:link></li>
                 </ul>
             </li>
-
+            <li class="uk-parent uk-open">
+                <h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Catalogo</h:link>
+                <ul class="uk-nav-sub">
+                    <li class="uk-active"><h:link ><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo administracion</h:link></li>
+                    <li><h:link outcome="catalogo-coordinacion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo coordinacion</h:link></li>
+                </ul>
+            </li>
+            <li class="uk-parent ">
+                <h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Coordinacion</h:link>
+                <ul class="uk-nav-sub">
+                    <li><h:link outcome="/coordinacion/dashboard-coordinador"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard coordinador</h:link></li>
+                    <li class=""><h:link outcome="/coordinacion/gesto-grupos"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Gestion de grupo</h:link></li>
+                </ul>
+            </li>
+            <li class="uk-parent ">
+                <h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Profesor</h:link>
+                <ul class="uk-nav-sub">
+                    <li><h:link outcome="/profesores/dashboard-profesor"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard profesor</h:link></li>
+                    <li><h:link outcome="/administracion/catalogo-coordinacion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo coordinacion</h:link></li>
+                </ul>
+            </li>
         </ul>
     </ui:define>
     <ui:define name="contenido">
