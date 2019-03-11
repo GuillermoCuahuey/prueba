@@ -4,9 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion"
-      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion">
+
 
 <ui:composition template="/template/profesor-alumno.xhtml">
     <ui:define name="menu">
@@ -42,7 +43,7 @@
                         <li class="uk-active" data-uk-filter-control=".actividad-card"><a href="#">Actividad/Alumno</a></li>
                         <li data-uk-filter-control=".tarea-card"><a href="#">Tareas</a></li>
                         <li data-uk-filter-control=".nivel-card"><a href="#">Asignación de nivel</a></li>
-                        <li data-uk-filter-control=".asignacion-card"><a href="#">Asignacion</a></li>
+                        <li data-uk-filter-control=".progreso-card"><a href="#">Estadistica</a></li>
                         <li data-uk-filter-control=".reportes-card"><a href="#">Reportes</a></li>
                     </ul>
                     </div>
@@ -90,14 +91,14 @@
 
                 <!--CARDS WRAPPER-->
                 <div class="js-filter" data-uk-sortable="handle: .drag-icon">
-
+                    <!-- card -->
                     <div class="actividad-card" data-tags="a beautiful landscape - nature outdoor">
                         <div class="uk-card uk-card-default uk-card-small uk-card-hover">
                             <div class="uk-card-header ">
                                 <div class="uk-grid uk-grid-small uk-margin-small-left">
                                     <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">Alumnos</h4></div>
                                     <div class="uk-width-expand uk-flex uk-flex-right">
-                                        <h:form id="formulario-nuevo-bloqueo-catalogo">
+                                        <h:form id="formulario-filtro-alumno00">
                                             <ul class="uk-iconnav">
                                                 <li class="">
                                                     <div class="uk-margin-small-right">
@@ -135,19 +136,19 @@
                                                         <ul class="uk-subnav" data-uk-margin="">
                                                             <li class="uk-nav-header uk-text-capitalize">Solo Muestra</li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Listen" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero" title="Ver" data-uk-tooltip="" uk-icon="file-text" type="button"></span><f:ajax/></h:commandLink>
+                                                                <span class="uk-icon-button puntero" title="Transcript" data-uk-tooltip="" uk-icon="file-text" type="button"></span><f:ajax/></h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Read" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="Grammar" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
+                                                                <span class="uk-icon-button puntero uk-text-primary" title="quizzes" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -193,7 +194,7 @@
                                             #{dato.monedas}
                                         </h:column>
                                         <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">Actividades</span></f:facet>
+                                            <f:facet name="header"><span class="letra-titulo ">Tipo</span></f:facet>
                                                 <div class="uk-width-auto">
                                                     <ul class="uk-subnav" data-uk-margin="">
                                                         <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
@@ -235,89 +236,90 @@
                         </div>
 
                     </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="tarea-card" data-tags="amazing music band here - music bands">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">MUSIC / BANDS</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 6 min.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/470/?random=4" data-width="400" data-height="470" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">AMAZING MUSIC BAND HERE</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- /card -->
                     <!-- card -->
                     <div class="nivel-card" data-tags="video music awards pictures - music bands">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">MUSIC / BANDS</span>
+                        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+                            <div class="uk-card-header ">
+                                <div class="uk-grid uk-grid-small uk-margin-small-left">
+                                    <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">nivel actual</h4></div>
+                                    <div class="uk-width-expand uk-flex uk-flex-right">
+                                        <div class="uk-width-expand uk-flex uk-flex-right">
+
+                                            <div class="uk-width-auto">
+                                                <h:graphicImage library="img" name="letra-a.svg" width="50" height="50" styleClass="uk-border-circle"/>
+                                            </div>
+                                            <span class="uk-text-primary">%60</span>
+                                            <progress class="uk-progress-full success " value="78" max="100"></progress>
+                                            <div class="uk-width-auto uk-margin-auto-right uk-margin-auto-left">
+                                                <h:graphicImage library="img" name="letra-b.svg" width="50" height="50" styleClass="uk-border-circle"/>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 12 min.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/400/?random=3" data-width="400" data-height="400" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">VIDEO MUSIC AWARDS PICTURES</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                                <h:form id="formulario-tabla-nivel">
+                                    <div class="uk-overflow-auto">
+                                        <h:dataTable id="tabla-nivel"
+                                                     value="#{asignacionNivelControlador.collectionDataModel}"
+                                                     binding="#{asignacionNivelControlador.htmlDataTable}"
+                                                     var="dato"
+                                                     first="0"
+                                                     rows="10"
+                                                     styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover"
+                                                     footerClass="uk-background-primary"
+                                                     columnClasses=",uk-text-center,uk-text-center,uk-text-center,uk-text-center,uk-text-center,uk-text-center,uk-text-center">
+
+                                            <h:column headerClass="uk-background-primary ">
+                                                <f:facet name="header"><span class="letra-titulo ">Alumnos</span></f:facet>
+                                                #{dato.nickname}
+                                            </h:column>
+
+                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                <f:facet name="header"><span class="letra-titulo ">Listen</span></f:facet>
+                                                <span class="uk-icon-link uk-text-capitalize uk-text-success" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: check; ratio: 1.5"></span>
+
+                                            </h:column>
+                                            <h:column headerClass="uk-background-primary  uk-width-small uk-text-center">
+                                                <f:facet name="header"><span class="letra-titulo ">Transcript</span></f:facet>
+                                                <span class="uk-icon-link uk-text-capitalize uk-text-success" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: check; ratio: 1.5"></span>
+
+                                            </h:column>
+                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                <f:facet name="header"><span class="letra-titulo ">Read</span></f:facet>
+                                                <span class="uk-icon-link uk-text-capitalize uk-text-danger" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: close; ratio: 1.5"></span>
+
+                                            </h:column>
+                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                <f:facet name="header"><span class="letra-titulo ">Grammar</span></f:facet>
+                                                <span class="uk-icon-link uk-text-capitalize uk-text-primary" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: ban; ratio: 1.5"></span>
+
+                                            </h:column>
+                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                <f:facet name="header"><span class="letra-titulo ">quizzes</span></f:facet>
+                                                #{dato.quizzes}
+                                            </h:column>
+                                            <f:facet name="footer">
+                                                <pa:pie-tabla htmlDataTable="#{asignacionNivelControlador.htmlDataTable}"/>
+                                            </f:facet>
+                                        </h:dataTable>
+                                    </div>
+                                </h:form>
+
                             </div>
                             <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
+                                <div class="uk-grid uk-grid-small">
+                                    <div class="uk-width-auto ">
+                                        <f:ajax render="formulario-tabla-nivel:tabla-nivel formulario-botones-nivel">
+                                            <h:form id="formulario-botones-nivel" styleClass="uk-form-horizontal">
+                                                <pa:boton-minimizado htmlDataTable="#{asignacionNivelControlador.htmlDataTable}"/>
+                                            </h:form>
+                                        </f:ajax>
+
                                     </div>
                                 </div>
                             </div>
@@ -325,46 +327,42 @@
                     </div>
                     <!-- /card -->
                     <!-- card -->
-                    <div class="asignacion-card"  data-tags="trends in design world - design">
+
+                    <div class="progreso-card"  data-tags="trends in design world - design">
                         <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">DESIGN</span>
+                            <ui:repeat value="#{dahsboardProfesorControldor.graficaModelos}" var="grafica">
+                                <!-- panel -->
+
+                                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+                                        <div class="uk-card-header">
+                                            <h:panelGroup layout="block" styleClass="uk-grid-small uk-flex-middle uk-grid" pt:uk-grid="">
+                                                <div class="uk-width-auto">
+                                                    <h:graphicImage library="img" name="verde.svg" width="50" height="50" styleClass="uk-border-circle" pt:uk-svg=""/>
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <h4 class="uk-margin-remove-bottom">Mejor alumno de la clase</h4>
+                                                </div>
+                                            </h:panelGroup>
+                                        </div>
+                                        <div class="uk-card-body">
+                                            <div class="chart-container">
+                                                <canvas class="mi-char">
+                                                    <div>#{grafica.grupo}</div>
+                                                    <div>#{grafica.grado}</div>
+                                                    <div>#{grafica.color}</div>
+                                                    <div>#{grafica.dato1}</div>
+                                                    <div>#{grafica.dato2}</div>
+                                                    <div>#{grafica.dato3}</div>
+                                                    <div>#{grafica.dato4}</div>
+                                                    <div>#{grafica.dato5}</div>
+                                                </canvas>
+
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 18 min.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/460/?random=2" data-width="400" data-height="460" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">TRENDS IN DESIGN WORLD</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
+
+                            </ui:repeat>
                         </div>
                     </div>
                     <!-- /card -->
@@ -383,7 +381,7 @@
                             </div>
                             <div class="uk-card-media">
                                 <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/200/?random=1" data-width="400" data-height="200" data-uk-img="" alt=""/>
+                                    <img class="lazy" data-src="https://picsum.photos/400/200/?random=1" data-width="400" data-height="200" data-uk-img="" alt="" src="img/transp.gif"/>
                                     <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
                                         <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
                                     </div>
@@ -414,281 +412,74 @@
                     </div>
                     <!-- /card -->
                     <!-- card -->
-                    <div class="photo-card"  data-tags="amazing nature pictures - photograhy">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">PHOTOGRAPHY</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 46 min.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/360/?random=9" data-width="400" data-height="360" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
+                    <div class="tarea-card" data-tags="amazing music band here - music bands">
 
-                            </div>
+
                             <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">AMAZING LANDSCAPE PICTURES</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="nature-card"  data-tags="wildlife and nature pictures - nature outdoor">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">Nature / Outdoor</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 1 hr.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/300/?random=1" data-width="400" data-height="300" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
+                                <div class="uk-container uk-container-expand uk-margin-large-bottom">
+                                    <div class="uk-grid uk-grid-medium uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l  uk-child-width-1-5@xl uk-grid-match" data-uk-grid="masonry: true" data-uk-sortable="handle: .drag-icon">
+                                        <ui:repeat value="#{actividadesControlador.tarea1}" var="tarea1">
+                                            <h:panelGroup layout="block" styleClass="nature-card" pt:data-tags="a beautiful landscape - nature outdoor">
+                                                <div class="uk-card uk-card-small uk-card-default">
+                                                    <div class="uk-card-header">
+                                                        <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
+                                                            <div class="uk-width-expand">
+                                                                <span class="cat-txt">#{tarea1.tag}</span>
+                                                            </div>
+                                                            <div class="uk-width-auto uk-text-right uk-text-muted">
+                                                                <h:outputText pt:uk-icon="icon:clock; ratio: 0.8"/>#{tarea1.tiempo}
+                                                            </div>
+                                                        </h:panelGroup>
+                                                    </div>
+                                                    <div class="uk-card-media">
+                                                        <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
+                                                            <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/470/?random=4" pt:data-width="400" pt:data-height="300" pt:data-uk-img="" alt=""/>
+                                                            <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
+                                                                <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
+                                                            </div>
+                                                        </h:panelGroup>
 
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">WILDLIFE AND NATURE PICTURES</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="music-card"  data-tags="amazing new rock band from england - music bands">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">MUSIC / BANDS</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 1 hr.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/470/?random=1" data-width="400" data-height="470" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
+                                                    </div>
+                                                    <div class="uk-card-body">
+                                                        <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea1.titulo}</h6>
+                                                        <p class="uk-text-small uk-text-muted">#{tarea1.descripcion}</p>
+                                                    </div>
+                                                    <div class="uk-card-footer">
+                                                        <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
+                                                            <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
+                                                                <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-1@m uk-grid uk-grid-small">
+                                                                    <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
+                                                                    <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                                                </h:panelGroup>
+                                                            </div>
+                                                            <div class="uk-width-auto uk-text-right iconos">
 
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">AMAZING NEW ROCK BAND FROM ENGLAND</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="music-card"  data-tags="new album release today - music bands">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">MUSIC / BANDS</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 2 hr.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/400/?random=1" data-width="400" data-height="400" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
+                                                                <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
+                                                                <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                                                <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                                                <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
 
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">NEW ALBUM RELEASE TODAY</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="photo-card" data-tags="urban picture gallery - photography">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">PHOTOGRAPHY</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 3 hr.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/330/?random=1" data-width="400" data-height="330" data-uk-img="" alt="" />
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
+                                                            </div>
+                                                            <div class="uk-width-auto uk-text-right">
+                                                                <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
+                                                            </div>
 
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">URBAN PICTURE GALLERY</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
+                                                        </h:panelGroup>
+                                                    </div>
+                                                </div>
+                                            </h:panelGroup>
+                                        </ui:repeat>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
-                    <!-- /card -->
-                    <!-- card -->
-                    <div class="photo-card" data-tags="portraits - photograhy">
-                        <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">PHOTOGRAPHY</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 1 day.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/350/?random=6" data-width="400" data-height="350" data-uk-img="" alt=""/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">PORTRAITS</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
-                            <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /card -->
-
 
 
                 </div>
 
             </div>
+
+
         </section>
 
         <h:outputScript library="js" name="uikit.js"/>

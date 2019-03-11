@@ -32,9 +32,9 @@
                             <div class="uk-width-auto"><h4><span class="uk-text-middle uk-text-capitalize">detalle coordinador</span></h4></div>
                             <div class="uk-width-expand uk-text-right panel-icons">
                                 <h:form>
-                                    <h:commandLink styleClass="uk-icon-button  uk-icon" pt:uk-toggle="target: #modal-nuevo-coord" >
+                                    <h:commandLink styleClass="uk-icon-button  uk-icon uk-text-primary" pt:uk-toggle="target: #modal-nuevo-coord" >
                                         <f:ajax></f:ajax>
-                                        <h:outputText pt:uk-icon="icon: plus-circle; ratio: 1.5"/>
+                                        <h:outputText  pt:uk-icon="icon: plus-circle; ratio: 1.5"/>
                                     </h:commandLink>
                                 </h:form>
                                 <!--<a href="#" class="uk-icon-button uk-icon-link" uk-icon="twitter"></a>-->
@@ -82,6 +82,12 @@
                                         <div uk-dropdown="boundary:.tabla-coordinador-dropdown; mode: click" id="dropear" >
                                             <ul class="uk-nav uk-dropdown-nav uk-text-left">
                                                 <li>
+                                                    <h:commandLink   action="Detalles-profesores" styleClass="uk-text-primary">
+                                                        <h:graphicImage library="img" name="maestro.svg" width="20" height="20" styleClass="uk-text-primary"/>
+                                                        <span class="uk-text-middle"><h:outputText value="Profesor"/></span>
+                                                        <f:ajax />
+                                                    </h:commandLink>
+                                                </li><li>
                                                     <h:commandLink   pt:uk-toggle="target: #modal-editar-coord" styleClass="uk-text-primary">
                                                         <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
                                                         <span class="uk-text-middle"><h:outputText value="Editar"/></span>
@@ -89,21 +95,21 @@
                                                     </h:commandLink>
                                                 </li>
                                                 <li>
-                                                    <h:commandLink  pt:uk-toggle="target: #modal-eliminar" >
+                                                    <h:commandLink  pt:uk-toggle="target: #modal-eliminar" styleClass="uk-text-primary">
                                                         <h:outputText pt:uk-icon="icon: trash" styleClass="uk-margin-small-right uk-icon" />
                                                         <span class="uk-text-middle"><h:outputText value="Eliminar"/></span>
                                                         <f:ajax/>
                                                     </h:commandLink>
                                                 </li>
                                                 <li>
-                                                    <h:commandLink  pt:uk-toggle="target: #modal-asignar-licencia" >
+                                                    <h:commandLink  pt:uk-toggle="target: #modal-asignar-licencia" styleClass="uk-text-primary">
                                                         <h:outputText pt:uk-icon="icon: plus-circle" styleClass="uk-margin-small-right uk-icon"/>
                                                         <span class="uk-text-middle"><h:outputText value="Licencia"/></span>
                                                         <f:ajax/>
                                                     </h:commandLink>
                                                 </li>
                                                 <li>
-                                                    <h:commandLink  pt:uk-toggle="target: #modal-bloqueo" >
+                                                    <h:commandLink  pt:uk-toggle="target: #modal-bloqueo" styleClass="uk-text-primary">
                                                         <h:outputText pt:uk-icon="icon: ban" styleClass="uk-margin-small-right uk-icon" />
                                                         <span class="uk-text-middle"><h:outputText value="Bloqueo"/></span>
                                                         <f:ajax/>
@@ -124,7 +130,7 @@
                     <div class="uk-card-footer">
                         <f:ajax render="formulario-coordinador:tabla-coordinador formulario-paginacion-coord"
                                 onevent="limpiaSelect">
-                            <h:form id="formulario-paginacion-coordinador">
+                            <h:form id="formulario-paginacion-coord">
                                 <div  styleClass="" pt:uk-grid="">
                                     <div class="uk-panel uk-flex uk-flex-left uk-width-1-1@s uk-width-1-2@m">
                                         <pa:boton htmlDataTable="#{coordinadorControlador.htmlDataTable}"/>

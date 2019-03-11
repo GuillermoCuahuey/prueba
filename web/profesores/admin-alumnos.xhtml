@@ -117,23 +117,9 @@
                                         <div uk-dropdown="boundary:.tabla-alumnos-limite; mode: click" >
                                             <ul class="uk-nav uk-dropdown-nav">
                                                 <li>
-                                                    <h:commandLink  pt:uk-toggle="target: #modal-colonia" >
-                                                        <span uk-icon="icon: pencil"  class="uk-margin-small-right uk-icon uk-text-primary" ></span>
-                                                        <span class="uk-text-middle uk-text-primary uk-text-capitalize"><h:outputText value="Asignar Tarea"/></span>
-                                                        <f:ajax/>
-                                                    </h:commandLink>
-                                                </li>
-                                                <li>
-                                                    <h:commandLink  pt:uk-toggle="target: #modal-eliminar" >
-                                                        <span uk-icon="icon: push" class="uk-margin-small-right uk-icon uk-text-primary" ></span>
-                                                        <span class="uk-text-middle uk-text-primary uk-text-capitalize"><h:outputText value="evaluar"/></span>
-                                                        <f:ajax/>
-                                                    </h:commandLink>
-                                                </li>
-                                                <li>
-                                                    <h:commandLink  pt:uk-toggle="target: #modal-descarga" >
-                                                        <span uk-icon="icon: copy" class="uk-margin-small-right uk-icon uk-text-primary" ></span>
-                                                        <span class="uk-text-middle uk-text-primary uk-text-capitalize"><h:outputText value="reporte"/></span>
+                                                    <h:commandLink  action="detalle-alumno" >
+                                                        <span uk-icon="icon: file-text" class="uk-margin-small-right uk-icon uk-text-primary" ></span>
+                                                        <span class="uk-text-middle uk-text-primary uk-text-capitalize"><h:outputText value="detalles"/></span>
                                                         <f:ajax/>
                                                     </h:commandLink>
                                                 </li>

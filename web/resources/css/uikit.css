@@ -6003,6 +6003,25 @@ ul.uk-nav-sub {
   border-radius: 500px;
   overflow: hidden;
 }
+.uk-progress-full {
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 3 */
+  display: block;
+  width: 100%;
+  /* 4 */
+  border: 0;
+  /* 5 */
+  background-color: #f8f8f8;
+  /* 6 */
+  margin-bottom: 40px;
+  height: 30px;
+  border-radius: 1000px;
+  overflow: hidden;
+}
 /* Add margin if adjacent element */
 * + .uk-progress {
   margin-top: 20px;
