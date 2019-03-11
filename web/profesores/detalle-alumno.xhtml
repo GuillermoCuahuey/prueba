@@ -215,6 +215,8 @@
                                         </h:column>
                                         <f:facet name="footer">
                                             <pa:pie-tabla htmlDataTable="#{actividadesAlumnoControlador.htmlDataTable}"/>
+                                        </f:facet><f:facet name="footer">
+                                            <pa:pie-tabla htmlDataTable="#{actividadesAlumnoControlador.htmlDataTable}"/>
                                         </f:facet>
                                     </h:dataTable>
                                 </h:form>
@@ -369,47 +371,81 @@
                     <!-- card -->
                     <div class="reportes-card"  data-tags="amazing pictures - photography">
                         <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header">
-                                <div class="uk-grid uk-grid-small uk-text-small" data-uk-grid="">
-                                    <div class="uk-width-expand">
-                                        <span class="cat-txt">PHOTOGRAPHY</span>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right uk-text-muted">
-                                        <span data-uk-icon="icon:clock; ratio: 0.8"></span> 23 min.
+                            <div class="uk-card-header ">
+                                <div class="uk-width-expand uk-flex uk-flex-right">
+                                    <div class="uk-width-expand uk-flex uk-flex-right">
+                                        <button class="uk-button uk-button-primary uk-margin-small-right "  type="button">
+                                            <span >Descarga</span>
+                                            <span uk-icon="icon: tablet" class="uk-icon uk-margin-small-right"></span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="uk-card-media">
-                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                    <img class="lazy" data-src="https://picsum.photos/400/200/?random=1" data-width="400" data-height="200" data-uk-img="" alt="" src="img/transp.gif"/>
-                                    <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                        <span data-uk-icon="icon:heart; ratio: 0.8"></span> 12.345 <span data-uk-icon="icon:comment; ratio: 0.8"></span> 12.345
+
+
+                            <div class="uk-card-body">
+                                    <div class="uk-overflow-auto">
+                                        <h:form id="formulario-tabla-reporte">
+                                            <h:dataTable id="tabla-reporte"
+                                                         value="#{reportesAlumnoControlador.collectionDataModel}"
+                                                         binding="#{reportesAlumnoControlador.htmlDataTable}"
+                                                         var="dato"
+                                                         first="0"
+                                                         rows="5"
+                                                         styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover tabla-actividades-limite"
+                                                         footerClass="uk-background-primary"
+                                                         columnClasses=",uk-text-center,uk-text-center,uk-text-center">
+
+
+                                                <h:column headerClass="uk-background-primary uk-width-auto ">
+                                                    <f:facet name="header"><span class="letra-titulo ">Habilidad</span></f:facet>
+                                                    #{dato.titulo}
+                                                </h:column>
+
+                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                    <f:facet name="header"><span class="letra-titulo ">exactitud</span></f:facet>
+                                                    #{dato.puntuacion}
+                                                </h:column>
+                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                    <f:facet name="header"><span class="letra-titulo ">Correcto</span></f:facet>
+                                                    #{dato.monedas}
+                                                </h:column>
+                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                    <f:facet name="header"><span class="letra-titulo ">Total</span></f:facet>
+                                                    #{dato.monedas}
+                                                </h:column>
+                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
+                                                    <f:facet name="header"><span class="letra-titulo ">Desarrollo</span></f:facet>
+                                                    <div>
+                                                        <span class="uk-text-small"><small>%60</small></span>
+                                                        <progress class="uk-progress" value="60" max="100"></progress>
+                                                    </div>
+                                                </h:column>
+
+                                                <f:facet name="footer">
+                                                    <pa:pie-tabla htmlDataTable="#{reportesAlumnoControlador.htmlDataTable}"/>
+                                                </f:facet>
+                                            </h:dataTable>
+                                        </h:form>
                                     </div>
-                                </div>
 
                             </div>
-                            <div class="uk-card-body">
-                                <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">AMAZING PICTURES</h6>
-                                <p class="uk-text-small uk-text-muted">Duis aute irure dolor in reprehenderit in voluptate velit</p>
-                            </div>
                             <div class="uk-card-footer">
-                                <div class="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small">
-                                        John Doe
+                                <div class="uk-grid uk-grid-small">
+                                    <div class="uk-width-auto ">
+                                        <f:ajax render="formulario-tabla-reporte:tabla-reporte formulario-boton-reporte">
+                                            <h:form id="formulario-boton-reporte" styleClass="uk-form-horizontal">
+                                                <pa:boton-minimizado htmlDataTable="#{reportesAlumnoControlador.htmlDataTable}"/>
+                                            </h:form>
+                                        </f:ajax>
+
                                     </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a href="#" data-uk-tooltip="title: Twitter" class="uk-icon-link" data-uk-icon="icon:twitter; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Instagram" class="uk-icon-link" data-uk-icon="icon:instagram; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Behance" class="uk-icon-link" data-uk-icon="icon:behance; ratio: 0.8"></a>
-                                        <a href="#" data-uk-tooltip="title: Pinterest" class="uk-icon-link" data-uk-icon="icon:pinterest; ratio: 0.8"></a>
-                                    </div>
-                                    <div class="uk-width-auto uk-text-right">
-                                        <a data-uk-tooltip="title: Drag this card" href="#" class="uk-icon-link drag-icon" data-uk-icon="icon:move; ratio: 1"></a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- /card -->
                     <!-- card -->
                     <div class="tarea-card" data-tags="amazing music band here - music bands">
@@ -476,7 +512,6 @@
 
 
                 </div>
-
             </div>
 
 
