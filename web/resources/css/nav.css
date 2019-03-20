@@ -1,0 +1,45 @@
+.nav-default-profesor {
+    border-bottom: 10px solid;
+    position: relative;
+    transition: box-shadow 0.15s ease-out;
+    border-radius: 3px;
+    border-bottom-color: var(--activo-fondo-navbar);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+.uk-subnav-alumno > .uk-disabled > a {
+    color: #000000;
+}
+.nav-default-profesor>li>a{
+    font-family: 'Sniglet', "Arial Black";
+    font-size: 15px !important;
+    padding: 7px 10px 7px 10px;
+    color:#000;
+}
+
+.nav-default-profesor>li>a:hover{
+    color: var(--turquesa-primary-color);
+    background-color:var(--inactivo-fondo-navbar);
+    color:var(--inactivo-letra-navbar);
+}
+
+.nav-default-profesor>a{
+    color: var(--turquesa-primary-color) !important;
+    border: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: var(--turquesa-primary-color);}
+
+.section-color{
+    background-color: #f4f3ed;
+}
+.card-alumno {
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-color: var(--inactivo-fondo-navbar);
+    position: relative;
+    transition: box-shadow 0.15s ease-out;
+    border-radius: 5%;
+}
