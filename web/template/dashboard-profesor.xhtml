@@ -9,19 +9,20 @@
 
 <ui:include src="header-profesor.xhtml"/>
 <h:body >
-    <ui:include src="nav1-profesor.xhtml"/>
-    <!--<ui:include src="nav2.xhtml"/>-->
-    <div id="content" data-uk-height-viewport="expand: true">
-        <div class="uk-container uk-container-expand">
-            <ui:insert name="menu"/>
+   <header>
+        <ui:include src="nav1-profesor.xhtml"/>
+   </header>
+    <div class="section-color">
+        <div class="uk-container">
+          <ui:insert name="menu"/>
         </div>
     </div>
-
-    <div data-uk-height-viewport="expand: true">
-        <div class="uk-container uk-container-expand">
-            <ui:insert name="contenido">Sin contenido</ui:insert>
+    <section>
+        <div class="uk-container">
+             <ui:insert name="contenido"/>
         </div>
-    </div>
+    </section>
     <ui:include src="footer.xhtml"/>
 </h:body>
+
 </html>

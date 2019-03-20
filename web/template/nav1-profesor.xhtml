@@ -7,47 +7,34 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <!--HEADER-->
-    <header id="top-head" class="uk-position-fixed">
-        <header>
-
-        </header>
-        <h:form id="login-maestro">
-        <div class="color-nav">
+    <div class="">
+        <div class=" color-nav">
             <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="">
-                <a class="logo uk-logo" href="#"><img src="../resources/img/esquadron4.svg" alt="logo" title="logo" width="50px" height="50px" ></img></a>
-
-            <div class="uk-navbar-right">
-        <ul class="uk-navbar-nav height-nav">
-            <li>
-                <a href="#">Usuario</a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                <a class="logo uk-logo" href="#"><h:graphicImage  library="img" name="esquadron4.svg"  alt="logo" title="logo" width="50px" height="50px" /></a>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav height-nav">
+                        <li class="uk-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
                         <li>
-                            <h:link    outcome="admin-alumnos.xhtml" styleClass="uk-text-primary" >
-                                <h:outputText pt:uk-icon="icon: settings" styleClass="uk-margin-small-right uk-icon" />
-                                <span class="uk-text-middle"><h:outputText value="Mi Cuenta"/></span>
-                            </h:link>
+                            <a href="#">Parent</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="uk-nav-header">Header</li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
                         </li>
-                        <li>
-                            <h:commandLink   pt:uk-toggle="target: #modal-editar-prof" styleClass="uk-text-primary">
-                                <h:outputText pt:uk-icon="icon: sign-out" styleClass="uk-margin-small-right uk-icon" />
-                                <span class="uk-text-middle"><h:outputText value="Salir"/></span>
-                                <f:ajax />
-                            </h:commandLink>
-                        </li>
-
                     </ul>
                 </div>
-            </li>
-        </ul>
-    </div>
-
-
-
             </nav>
             <div class="barra-nav"></div>
         </div>
-        </h:form>
-    </header>
+    </div>
+
     <!--/HEADER-->
 </html>
