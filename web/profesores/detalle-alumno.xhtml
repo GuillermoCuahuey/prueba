@@ -9,54 +9,40 @@
       xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion">
 
 
-<ui:composition template="/template/profesor-alumno.xhtml">
+<ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
-        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav="">
-            <li class="uk-nav-header">Menú</li>
-            <li class="uk-active"><a href="#"><span data-uk-icon="icon: table" class="uk-margin-small-right"></span>Recursos Maestro</a></li>
-            <li class="uk-parent">
-                <a ><span data-uk-icon="icon: database" class="uk-margin-small-right"></span>Alumnos</a>
-                <ul class="uk-nav-sub">
-                    <li><h:link outcome="catalogo-administracion.xhtml" ><span data-uk-icon="icon: users" class="uk-margin-small-right"></span>Adminstracion</h:link>
-                    </li>
-
-
-                </ul>
-            </li>
-            <li><a href="Deshboard.html"><img  class="uk-icon-image" src="../resources/img/maestro.svg"></img> &nbsp; Profesores</a></li>
-
+        <ul class="uk-subnav nav-sub" uk-margin="">
+            <li class="nav-sub-active"><a href="#">Product License</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
         </ul>
     </ui:define>
 
     <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="profesor.css"/>
         <!--HEADER-->
 
         <h:outputStylesheet library="css" name="tablas.css"/>
-        <h:outputStylesheet library="css" name="cards.css"/>
-
         <!--CARDS WRAPPER-->
-        <section class="uk-section uk-section-default uk-section-default uk-padding-remove-bottom">
-            <div class="uk-container uk-container-expand uk-margin-large-bottom">
-                <div class="uk-grid uk-grid-small">
-                    <div class="uk-width-auto">
-                    <ul class="uk-subnav uk-subnav-pill">
+        <section class="uk-section uk-section-default uk-section-default uk-padding-remove-top">
+            <div class="uk-container uk-container-expand">
+                    <ul class="uk-subnav  nav-default-profesor uk-subnav-alumno">
                         <li class="uk-active" data-uk-filter-control=".actividad-card"><a href="#">Actividad/Alumno</a></li>
                         <li data-uk-filter-control=".tarea-card"><a href="#">Tareas</a></li>
                         <li data-uk-filter-control=".nivel-card"><a href="#">Asignación de nivel</a></li>
                         <li data-uk-filter-control=".progreso-card"><a href="#">Estadistica</a></li>
                         <li data-uk-filter-control=".reportes-card"><a href="#">Reportes</a></li>
                     </ul>
-                    </div>
-                </div>
 
                 <!--CARDS WRAPPER-->
                 <div class="js-filter" data-uk-sortable="handle: .drag-icon">
                     <!-- card -->
                     <div class="actividad-card" data-tags="a beautiful landscape - nature outdoor">
-                        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                            <div class="uk-card-header ">
+                        <div class="uk-card uk-card-default uk-card-small color-card-four">
+                            <div class="uk-card-header padding-0">
                                 <div class="uk-grid uk-grid-small uk-margin-small-left">
-                                    <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">Alumnos</h4></div>
+                                    <div class="uk-text-bold"><h4 class=" uk-text-capitalize">Alumnos</h4></div>
                                     <div class="uk-width-expand uk-flex uk-flex-right">
                                         <h:form id="formulario-filtro-alumno00">
                                             <ul class="uk-iconnav">
@@ -121,8 +107,9 @@
                                     </div>
 
                                 </div>
+
                             </div>
-                            <div class=" uk-card-body">
+                            <div class="uk-card-body padding-0">
                                 <div class="uk-overflow-auto">
                                 <h:form id="formulario-tabla-actividades">
                                     <h:dataTable id="tabla-actividades"
@@ -131,46 +118,48 @@
                                                  var="dato"
                                                  first="0"
                                                  rows="5"
-                                                 styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover tabla-actividades-limite"
-                                                 footerClass="uk-background-primary"
-                                                 columnClasses="uk-text-center,,uk-text-center,uk-text-center,uk-text-center">
+                                                 styleClass="uk-table uk-table-justify uk-table-small uk-table-middle tablaPrimaria uk-text-center tabla-profesor-dropdown"
+                                                 headerClass="borde-top-amarillo uk-text-center"
+                                                 columnClasses="uk-width-small,,uk-width-small,uk-width-small,uk-width-small"
+                                                 rowClasses="tdPrimario"
+                                                 footerClass="thPrimario uk-text-left">
 
-                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">Fecha de Inicio</span></f:facet>
+                                        <h:column>
+                                            <f:facet name="header"><span class="letra-tabla uk-text-bold">Fecha de Inicio</span></f:facet>
                                             #{dato.fecha}
                                         </h:column>
 
-                                        <h:column headerClass="uk-background-primary uk-width-auto ">
-                                            <f:facet name="header"><span class="letra-titulo ">Titulo</span></f:facet>
+                                        <h:column>
+                                            <f:facet name="header"><span class="letra-tabla uk-text-bold">Titulo</span></f:facet>
                                             #{dato.titulo}
                                         </h:column>
 
-                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">Puntuacion</span></f:facet>
+                                        <h:column>
+                                            <f:facet name="header"><span class="letra-tabla uk-text-bold">Puntuacion</span></f:facet>
                                             #{dato.puntuacion}
                                         </h:column>
-                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">Monedas</span></f:facet>
+                                        <h:column>
+                                            <f:facet name="header"><span class="letra-tabla uk-text-bold">Monedas</span></f:facet>
                                             #{dato.monedas}
                                         </h:column>
-                                        <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                            <f:facet name="header"><span class="letra-titulo ">Tipo</span></f:facet>
-                                                <div class="uk-width-auto">
-                                                    <ul class="uk-subnav" data-uk-margin="">
-                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
-                                                        </li>
-                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
-                                                        </li>
-                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
-                                                        </li>
-                                                        <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                            <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                        <h:column>
+                                            <f:facet name="header"><span class="letra-tabla uk-text-bold">Tipo</span></f:facet>
+                                            <div class="uk-width-auto">
+                                                <ul class="uk-subnav" data-uk-margin="">
+                                                    <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
+                                                    </li>
+                                                    <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
+                                                    </li>
+                                                    <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
+                                                    </li>
+                                                    <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                             #{dato.actividades}
                                         </h:column>
                                         <f:facet name="footer">
@@ -203,9 +192,9 @@
                     <!-- card -->
                     <div class="nivel-card" data-tags="video music awards pictures - music bands">
                         <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                            <div class="uk-card-header ">
+                            <div class="uk-card-header padding-0">
                                 <div class="uk-grid uk-grid-small uk-margin-small-left">
-                                    <div class="uk-width-auto  uk-text-capitalize"><h4 class=" uk-text-capitalize">nivel actual</h4></div>
+                                    <div class="uk-text-capitalize uk-text-bold"><h4 class=" uk-text-capitalize">nivel actual</h4></div>
                                     <div class="uk-width-expand uk-flex uk-flex-right">
                                         <div class="uk-width-expand uk-flex uk-flex-right">
 
@@ -223,7 +212,7 @@
 
                                 </div>
                             </div>
-                            <div class="uk-card-body">
+                            <div class="uk-card-body padding-0">
                                 <h:form id="formulario-tabla-nivel">
                                     <div class="uk-overflow-auto">
                                         <h:dataTable id="tabla-nivel"
@@ -232,37 +221,38 @@
                                                      var="dato"
                                                      first="0"
                                                      rows="10"
-                                                     styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover"
-                                                     footerClass="uk-background-primary"
-                                                     columnClasses=",uk-text-center,uk-text-center,uk-text-center,uk-text-center,uk-text-center,uk-text-center,uk-text-center">
-
-                                            <h:column headerClass="uk-background-primary ">
-                                                <f:facet name="header"><span class="letra-titulo ">Alumnos</span></f:facet>
+                                                     styleClass="uk-table uk-table-justify uk-table-small uk-table-middle tablaPrimaria uk-text-center tabla-profesor-dropdown"
+                                                     headerClass="borde-top-amarillo uk-text-center"
+                                                     columnClasses="uk-width-small,uk-width-small,uk-width-small"
+                                                     rowClasses="tdPrimario"
+                                                     footerClass="thPrimario uk-text-left">
+                                            <h:column>
+                                                <f:facet name="header"><span class="letra-tabla uk-text-bold">Alumnos</span></f:facet>
                                                 #{dato.nickname}
                                             </h:column>
 
-                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                <f:facet name="header"><span class="letra-titulo ">Listen</span></f:facet>
+                                            <h:column>
+                                                <f:facet name="header"><span class="letra-tabla uk-text-bold">Listen</span></f:facet>
                                                 <span class="uk-icon-link uk-text-capitalize uk-text-success" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: check; ratio: 1.5"></span>
 
                                             </h:column>
-                                            <h:column headerClass="uk-background-primary  uk-width-small uk-text-center">
-                                                <f:facet name="header"><span class="letra-titulo ">Transcript</span></f:facet>
+                                            <h:column>
+                                                <f:facet name="header"><span class="letra-tabla uk-text-bold">Transcript</span></f:facet>
                                                 <span class="uk-icon-link uk-text-capitalize uk-text-success" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: check; ratio: 1.5"></span>
 
                                             </h:column>
-                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                <f:facet name="header"><span class="letra-titulo ">Read</span></f:facet>
+                                            <h:column>
+                                                <f:facet name="header"><span class="letra-tabla uk-text-bold">Read</span></f:facet>
                                                 <span class="uk-icon-link uk-text-capitalize uk-text-danger" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: close; ratio: 1.5"></span>
 
                                             </h:column>
-                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                <f:facet name="header"><span class="letra-titulo ">Grammar</span></f:facet>
+                                            <h:column>
+                                                <f:facet name="header"><span class="letra-tabla uk-text-bold">Grammar</span></f:facet>
                                                 <span class="uk-icon-link uk-text-capitalize uk-text-primary" title="nuevo alumno" data-uk-tooltip="" data-uk-icon="icon: ban; ratio: 1.5"></span>
 
                                             </h:column>
-                                            <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                <f:facet name="header"><span class="letra-titulo ">quizzes</span></f:facet>
+                                            <h:column>
+                                                <f:facet name="header"><span class="letra-tabla uk-text-bold">quizzes</span></f:facet>
                                                 #{dato.quizzes}
                                             </h:column>
                                             <f:facet name="footer">
@@ -301,7 +291,7 @@
                                                 <div class="uk-width-auto">
                                                     <h:graphicImage library="img" name="verde.svg" width="50" height="50" styleClass="uk-border-circle" pt:uk-svg=""/>
                                                 </div>
-                                                <div class="uk-width-expand">
+                                                <div class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">
                                                     <h4 class="uk-margin-remove-bottom">Mejor alumno de la clase</h4>
                                                 </div>
                                             </h:panelGroup>
@@ -331,7 +321,7 @@
                     <!-- card -->
                     <div class="reportes-card"  data-tags="amazing pictures - photography">
                         <div class="uk-card uk-card-small uk-card-default">
-                            <div class="uk-card-header ">
+                            <div class="uk-card-header padding-0">
                                 <div class="uk-width-expand uk-flex uk-flex-right">
                                     <div class="uk-width-expand uk-flex uk-flex-right">
                                         <button class="uk-button uk-button-primary uk-margin-small-right "  type="button">
@@ -343,7 +333,7 @@
                             </div>
 
 
-                            <div class="uk-card-body">
+                            <div class="uk-card-body padding-0">
                                     <div class="uk-overflow-auto">
                                         <h:form id="formulario-tabla-reporte">
                                             <h:dataTable id="tabla-reporte"
@@ -352,30 +342,31 @@
                                                          var="dato"
                                                          first="0"
                                                          rows="5"
-                                                         styleClass="uk-table uk-table-divider uk-table-middle uk-table-hover tabla-actividades-limite"
-                                                         footerClass="uk-background-primary"
-                                                         columnClasses=",uk-text-center,uk-text-center,uk-text-center">
+                                                         styleClass="uk-table uk-table-justify uk-table-small uk-table-middle tablaPrimaria uk-text-center tabla-profesor-dropdown"
+                                                         headerClass="borde-top-amarillo uk-text-center"
+                                                         columnClasses="uk-width-small,uk-width-small,uk-width-small"
+                                                         rowClasses="tdPrimario"
+                                                         footerClass="thPrimario uk-text-left">
 
-
-                                                <h:column headerClass="uk-background-primary uk-width-auto ">
-                                                    <f:facet name="header"><span class="letra-titulo ">Habilidad</span></f:facet>
+                                                <h:column>
+                                                    <f:facet name="header"><span class="letra-tabla uk-text-bold">Habilidad</span></f:facet>
                                                     #{dato.titulo}
                                                 </h:column>
 
-                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                    <f:facet name="header"><span class="letra-titulo ">exactitud</span></f:facet>
+                                                <h:column>
+                                                    <f:facet name="header"><span class="letra-tabla uk-text-bold">exactitud</span></f:facet>
                                                     #{dato.puntuacion}
                                                 </h:column>
-                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                    <f:facet name="header"><span class="letra-titulo ">Correcto</span></f:facet>
+                                                <h:column>
+                                                    <f:facet name="header"><span class="letra-tabla uk-text-bold">Correcto</span></f:facet>
                                                     #{dato.monedas}
                                                 </h:column>
-                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                    <f:facet name="header"><span class="letra-titulo ">Total</span></f:facet>
+                                                <h:column>
+                                                    <f:facet name="header"><span class="letra-tabla uk-text-bold">Total</span></f:facet>
                                                     #{dato.monedas}
                                                 </h:column>
-                                                <h:column headerClass="uk-background-primary uk-width-small uk-text-center">
-                                                    <f:facet name="header"><span class="letra-titulo ">Desarrollo</span></f:facet>
+                                                <h:column>
+                                                    <f:facet name="header"><span class="letra-tabla uk-text-bold">Desarrollo</span></f:facet>
                                                     <div>
                                                         <span class="uk-text-small"><small>%60</small></span>
                                                         <progress class="uk-progress" value="60" max="100"></progress>

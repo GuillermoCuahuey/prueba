@@ -2929,9 +2929,19 @@ select.uk-form-width-xsmall {
 .uk-card-small.uk-card-body,
 .uk-card-small .uk-card-body {
   padding: 20px 20px;
+}.uk-card-small .uk-card-body.padding-0{
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .uk-card-small .uk-card-header {
   padding: 13px 20px;
+}.uk-card-small .uk-card-header.padding-0 {
+   padding-bottom: 0px;
+   padding-top: 0px;
+   padding-left: 16px;
+   padding-right: 16px;
 }
 .uk-card-small .uk-card-footer {
   padding: 13px 20px;

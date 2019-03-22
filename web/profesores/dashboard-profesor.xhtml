@@ -11,25 +11,7 @@
 <ui:composition template="/template/dashboard-profesor.xhtml">
 
 
-    <ui:define name="menu">
-            <div class="section-color">
-                <div class="uk-container">
-                    <ul class="uk-subnav nav-sub" uk-margin="">
-                        <li class="nav-sub-active"><a href="#">Dasboard</a></li>
-                        <li class="uk-text-uppercase"><a href="#">Alumnos</a></li>
-                        <li class="uk-text-uppercase"><a href="#">Recursos de Profesor</a></li>
-
-                    </ul>
-                </div>
-            </div>
-    </ui:define>|
-
-    <ui:define name="contenido">
-
-
-        <h:outputStylesheet library="css" name="tablas.css"/>
-
-
+    <ui:define name="estadistica">
         <h:panelGroup layout="block"  styleClass="uk-grid " pt:uk-grid="">
             <div class="uk-width-1-1@m">
                 <div class="uk-card uk-card-default uk-card-small uk-card-hover  uk-padding-small">
@@ -71,6 +53,27 @@
                 </div>
             </div>
         </h:panelGroup>
+    </ui:define>|
+    <ui:define name="menu">
+            <div class="section-color">
+                <div class="uk-container">
+                    <ul class="uk-subnav nav-sub" uk-margin="">
+                        <li class="nav-sub-active"><a href="#">Dasboard</a></li>
+                        <li class="uk-text-uppercase"><a href="#">Alumnos</a></li>
+                        <li class="uk-text-uppercase"><a href="#">Recursos de Profesor</a></li>
+
+                    </ul>
+                </div>
+            </div>
+    </ui:define>|
+
+    <ui:define name="contenido">
+
+
+        <h:outputStylesheet library="css" name="tablas.css"/>
+
+
+
 
         <h:panelGroup layout="block" class="uk-grid uk-grid-medium" pt:uk-grid="">
 

@@ -345,6 +345,11 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
   /*text-align: center;*/
   border-bottom: 2px solid #000;
 }
+.borde-top-amarillo{
+  /*text-align: center;*/
+  border-top : 4px solid var(--tsecundary-option-one);
+  border-bottom: 2px solid #000;
+}
 .tablaPrimaria .thPrimario{
   /*background-color: #F5F5F5;*/
     background-color: #ceccc2;
