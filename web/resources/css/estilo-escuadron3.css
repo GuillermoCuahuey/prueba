@@ -26,8 +26,6 @@
   --activo-letra-navbar: #FFFFFF;
   --inactivo-fondo-navbar: #DCEDC8;
   --inactivo-letra-navbar: #757575;
-  /*cards*/
-  --card-color-border: #B31F0C;
 
 }
 .color-nav{
@@ -65,7 +63,7 @@
   height: 15px;
   background-color: var(--color-barra-nav);
   position: relative;
-  top: -2px;
+  top: -1px;
 }
 .nav-sub>li{
   margin: 10px 3px;
@@ -75,13 +73,12 @@
 .nav-sub>li>a{
     font-family: 'Sniglet', "Arial Black";
     font-size: 15px !important;
-    padding: 7px 10px 7px 10px;
+  padding: 7px 10px 7px 10px;
+  color:#000;
 }
-.letra-color-subnav{
-  color: #000 !important;
-}
+
 .nav-sub>li>a:hover{
-  color: var(--turquesa-primary-color) !important;
+  color: var(--turquesa-primary-color);
   border: solid;
   border-width: 3px;
   border-radius: 5px;
@@ -95,9 +92,6 @@
   border-radius: 5px;
   border-color: var(--turquesa-primary-color);}
 
-
-
-
 .section-color{
   background-color: #f4f3ed;
 }
@@ -109,28 +103,12 @@
 }
 .titulo-cards{
   /*color: #E84F0C;*/
-    color:white;
-    border-top-left-radius:  3px;
-    border-top-right-radius: 3px;
-    background-color:var(--nsecundary-option-one);
-    padding: 3px 4px;
-}
-
-.titulo-section{
-  /*color: #E84F0C;*/
-  color:white;
-    border-top-left-radius:  3px;
-    border-top-right-radius: 3px;
-    background-color:var(--tsecundary-option-one);
-    padding: 4px 4px;
+  color:var(--nsecundary-option-one);
+  border-bottom-style: solid;
+  border-bottom-color: #E84F0C;
 
 }
 
-.imagen-card-section{
-    /*margin-top: 3px;*/
-  display:block;
-  margin-top: 3px;
-}
 
 .boton-escuadron-primary{
   background-color: var(--turquesa-primary-color);
@@ -211,32 +189,25 @@
 .uk-card {
   border-left: 5px solid;
   border-right: 5px solid;
+  /*border-color: var(--nsecundary-option-one);*/
   position: relative;
   transition: box-shadow 0.15s ease-out;
   border-radius: 5%;
 }
 
 .color-card-one{
-  border-color: var(--psecundary-option-one);
+  border-color: var(--naranja-primary-color);
 }
 .color-card-two{
-  border-color: var(--nsecundary-option-two);
+  border-color: var(--nsecundary-option-one);
 }
 .color-card-three{
-  border-color: var(--activo-fondo-navbar);
+  border-color: var(--nsecundary-option-two);
 }
-.color-card-four{
-    border-color: var(--tsecundary-option-one);
+.color-title-card{
+  color: var(--naranja-primary-color);
 }
-.color-card-five{
-    border-color: var(--asecundary-option-one);
-}
-.color-card-six{
-    border-color: var(--color-nav-primary);
-}
-.color-card-seven{
-  border-color: var(--card-color-border);
-}
+
 .uk-navbar-dropdown{
    border: 3px solid;
    border-color: var(--subnav-color);
@@ -321,93 +292,9 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
   color: white;
 }
 
-/*Tamano de letra */
-.size-one{
-  font-size: 60px;
-}
-.color-texto{
-  color: var(--turquesa-primary-color);
-}
-
-.tablaPrimaria{
-  width: 100%;
-  font-family: inherit;
-  color: #000 !important;
-  background-color: #FFF5EE;
-  border-radius: 8px;
-  border-spacing: 0;
-  border-collapse: collapse;
-  /*overflow: hidden;*/
-  font-size: 13px;
-  font-weight: bold;
-}
-.tablaPrimaria, .thPrimario, .tdPrimario{
-  /*text-align: center;*/
-  border-bottom: 2px solid #000;
-}
-.borde-top-amarillo{
-  /*text-align: center;*/
-  border-top : 4px solid var(--tsecundary-option-one);
-  border-bottom: 2px solid #000;
-}
-.tablaPrimaria .thPrimario{
-  /*background-color: #F5F5F5;*/
-    background-color: #ceccc2;
-}
-.uk-table-small th,
-.uk-table-small td {
-  padding: 7px 8px;
-}
-
-.uk-dropdown {
-  border: solid;
-  border-width: 3px;
-  border-color: var(--subnav-color);
-  border-radius: 5%;
-
-}
-
-.profile-img {
-
-    display: block;
-
-}
-
-.uk-tooltip {
-    /* 1 */
-    max-width: 300px;
-    padding: 4px 7px;
-    /* 4 */
-    background: var(--turquesa-primary-color) !important;
-    border:solid 2px;
-    border-color: black;
-    border-radius: 3px;
-    color: #fff !important;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Sniglet', "Arial Black";
-}
-
-.margen-one{
-  margin-top: 25px;
-}
-
-.tamaño-imagen{
-  width: 100px;
-  height: 100px;
-}
-.contenedor-imagen-alumnos{
-  height: 150px;
-  /*background-color: #595959;*/
-}
-.letra-cards{
-  /*font-family: 'Sniglet', "Arial Black";*/
-  color: black;
-  font-size: 40px;
-  display: inline-block;
-}
-.uk-icon-image {
-  width: 30px;
-  height: 30px;
-
+.uk-card .cat-txt {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
 }
