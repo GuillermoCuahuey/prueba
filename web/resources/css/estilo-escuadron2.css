@@ -109,20 +109,28 @@
 }
 .titulo-cards{
   /*color: #E84F0C;*/
-  color:var(--nsecundary-option-one);
-  border-bottom-style: solid;
-  border-bottom-color: #E84F0C;
-
+    color:white;
+    border-top-left-radius:  3px;
+    border-top-right-radius: 3px;
+    background-color:var(--nsecundary-option-one);
+    padding: 3px 4px;
 }
 
 .titulo-section{
   /*color: #E84F0C;*/
-  color:var(--tsecundary-option-one);
-  border-bottom-style: solid;
-  border-bottom-color: var(--tsecundary-option-one);
+  color:white;
+    border-top-left-radius:  3px;
+    border-top-right-radius: 3px;
+    background-color:var(--tsecundary-option-one);
+    padding: 4px 4px;
 
 }
 
+.imagen-card-section{
+    /*margin-top: 3px;*/
+  display:block;
+  margin-top: 3px;
+}
 
 .boton-escuadron-primary{
   background-color: var(--turquesa-primary-color);
@@ -338,7 +346,8 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
   border-bottom: 2px solid #000;
 }
 .tablaPrimaria .thPrimario{
-  background-color: #F5F5F5;
+  /*background-color: #F5F5F5;*/
+    background-color: #ceccc2;
 }
 .uk-table-small th,
 .uk-table-small td {
@@ -351,4 +360,44 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
   border-color: var(--subnav-color);
   border-radius: 5%;
 
+}
+
+.profile-img {
+
+    display: block;
+
+}
+
+.uk-tooltip {
+    /* 1 */
+    max-width: 300px;
+    padding: 4px 7px;
+    /* 4 */
+    background: var(--turquesa-primary-color) !important;
+    border:solid 2px;
+    border-color: black;
+    border-radius: 3px;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Sniglet', "Arial Black";
+}
+
+.margen-one{
+  margin-top: 25px;
+}
+
+.tamaño-imagen{
+  width: 100px;
+  height: 100px;
+}
+.contenedor-imagen-alumnos{
+  height: 150px;
+  /*background-color: #595959;*/
+}
+.letra-cards{
+  /*font-family: 'Sniglet', "Arial Black";*/
+  color: black;
+  font-size: 40px;
+  display: inline-block;
 }
