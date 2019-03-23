@@ -70,7 +70,7 @@
             </ul>
             <h:panelGroup layout="block" styleClass="uk-grid js-filter uk-margin-medium-top uk-margin-large-bottom" pt:uk-grid="">
                     <ui:repeat value="#{actividadesControlador.tarea1}" var="tarea1">
-                        <h:panelGroup layout="block" styleClass="uk-width-1-4@m nature-card" pt:data-tags="a beautiful landscape - nature outdoor">
+                        <h:panelGroup layout="block" styleClass="uk-width-1-3@m nature-card" pt:data-tags="a beautiful landscape - nature outdoor">
                             <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-one">
                                 <div class="uk-card-header border-card">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
@@ -92,18 +92,23 @@
                                 </div>
                                 <div class="uk-card-footer">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
-                                        <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                        <div class="uk-width-auto uk-text-small text-color-level1 uk-text-bold">
+                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-auto uk-grid uk-grid-small">
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                             </h:panelGroup>
                                         </div>
-                                        <div class="uk-width-auto uk-text-right iconos">
-
-                                            <h:graphicImage styleClass="uk-icon-image uk-svg" library="img" name="listen.svg"  uk-svg=""/>
-                                            <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
+                                        <div class="uk-width-expand ">
+                                            <div class="uk-grid uk-grid-small uk-child-width-1-5" uk-grid="">
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Listening" styleClass="uk-icon-image uk-svg" library="img" name="listen.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Transcrip" styleClass="uk-icon-image uk-svg " library="img" name="transcript1.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Reading" styleClass="uk-icon-image uk-svg " library="img" name="reading.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Gramatic" styleClass="uk-icon-image uk-svg " library="img" name="gramatica.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Quiz" styleClass="uk-icon-image uk-svg " library="img" name="quizcalifica.svg" /></div>
+                                            </div>
+                                            <!--<h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>-->
+                                            <!--<h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>-->
+                                            <!--<h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>-->
 
                                         </div>
 
@@ -114,7 +119,7 @@
                         </h:panelGroup>
                     </ui:repeat>
                     <ui:repeat value="#{actividadesControlador.tarea2}" var="tarea2">
-                        <h:panelGroup layout="block" styleClass="uk-width-1-4@m music-card" pt:data-tags="play and games">
+                        <h:panelGroup layout="block" styleClass="uk-width-1-3@m music-card" pt:data-tags="play and games">
                             <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-two">
                                 <div class="uk-card-header border-card">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
@@ -136,18 +141,20 @@
                                 </div>
                                 <div class="uk-card-footer">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
-                                        <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                        <div class="uk-width-auto uk-text-small text-color-level1 uk-text-bold">
+                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-auto uk-grid uk-grid-small">
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                             </h:panelGroup>
                                         </div>
-                                        <div class="uk-width-auto uk-text-right iconos">
-
-                                            <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
+                                        <div class="uk-width-expand ">
+                                            <div class="uk-grid uk-grid-small uk-child-width-1-5" uk-grid="">
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Listening" styleClass="uk-icon-image uk-svg" library="img" name="listen.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Transcrip" styleClass="uk-icon-image uk-svg " library="img" name="transcript1.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Reading" styleClass="uk-icon-image uk-svg " library="img" name="reading.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Gramatic" styleClass="uk-icon-image uk-svg " library="img" name="gramatica.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Quiz" styleClass="uk-icon-image uk-svg " library="img" name="quizcalifica.svg" /></div>
+                                            </div>
 
                                         </div>
 
@@ -158,7 +165,7 @@
                         </h:panelGroup>
                     </ui:repeat>
                     <ui:repeat value="#{actividadesControlador.tarea3}" var="tarea3">
-                    <h:panelGroup layout="block" styleClass="uk-width-1-4@m photo-card" pt:data-tags="food and places">
+                    <h:panelGroup layout="block" styleClass="uk-width-1-3@m photo-card" pt:data-tags="food and places">
                         <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-three">
                             <div class="uk-card-header border-card">
                                 <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
@@ -180,19 +187,20 @@
                             </div>
                             <div class="uk-card-footer">
                                 <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
-                                    <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                        <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                    <div class="uk-width-auto uk-text-small text-color-level1 uk-text-bold">
+                                        <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-auto uk-grid uk-grid-small">
                                             <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                             <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                         </h:panelGroup>
                                     </div>
-                                    <div class="uk-width-auto uk-text-right iconos">
-
-                                        <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
-                                        <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                        <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                        <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
-
+                                    <div class="uk-width-expand ">
+                                        <div class="uk-grid uk-grid-small uk-child-width-1-5" uk-grid="">
+                                            <div><h:graphicImage pt:data-uk-tooltip="title: Listening" styleClass="uk-icon-image uk-svg" library="img" name="listen.svg" /></div>
+                                            <div><h:graphicImage pt:data-uk-tooltip="title: Transcrip" styleClass="uk-icon-image uk-svg " library="img" name="transcript1.svg" /></div>
+                                            <div><h:graphicImage pt:data-uk-tooltip="title: Reading" styleClass="uk-icon-image uk-svg " library="img" name="reading.svg" /></div>
+                                            <div><h:graphicImage pt:data-uk-tooltip="title: Gramatic" styleClass="uk-icon-image uk-svg " library="img" name="gramatica.svg" /></div>
+                                            <div><h:graphicImage pt:data-uk-tooltip="title: Quiz" styleClass="uk-icon-image uk-svg " library="img" name="quizcalifica.svg" /></div>
+                                        </div>
                                     </div>
 
 
@@ -202,7 +210,7 @@
                     </h:panelGroup>
                 </ui:repeat>
                     <ui:repeat value="#{actividadesControlador.tarea4}" var="tarea4">
-                        <h:panelGroup layout="block" styleClass="uk-width-1-4@m design-card" pt:data-tags="food and places">
+                        <h:panelGroup layout="block" styleClass="uk-width-1-3@m design-card" pt:data-tags="food and places">
                             <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-four">
                                 <div class="uk-card-header border-card">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
@@ -224,19 +232,20 @@
                                 </div>
                                 <div class="uk-card-footer">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
-                                        <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                        <div class="uk-width-auto uk-text-small text-color-level1 uk-text-bold">
+                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-auto uk-grid uk-grid-small">
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                             </h:panelGroup>
                                         </div>
-                                        <div class="uk-width-auto uk-text-right iconos">
-
-                                            <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
-
+                                        <div class="uk-width-expand ">
+                                            <div class="uk-grid uk-grid-small uk-child-width-1-5" uk-grid="">
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Listening" styleClass="uk-icon-image uk-svg" library="img" name="listen.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Transcrip" styleClass="uk-icon-image uk-svg " library="img" name="transcript1.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Reading" styleClass="uk-icon-image uk-svg " library="img" name="reading.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Gramatic" styleClass="uk-icon-image uk-svg " library="img" name="gramatica.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Quiz" styleClass="uk-icon-image uk-svg " library="img" name="quizcalifica.svg" /></div>
+                                            </div>
                                         </div>
 
 
@@ -246,7 +255,7 @@
                         </h:panelGroup>
                     </ui:repeat>
                     <ui:repeat value="#{actividadesControlador.tarea2}" var="tarea5">
-                        <h:panelGroup layout="block" styleClass="uk-width-1-4@m sport-card" pt:data-tags="food and places">
+                        <h:panelGroup layout="block" styleClass="uk-width-1-3@m sport-card" pt:data-tags="food and places">
                             <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-five">
                                 <div class="uk-card-header border-card">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
@@ -268,21 +277,21 @@
                                 </div>
                                 <div class="uk-card-footer">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
-                                        <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                        <div class="uk-width-auto uk-text-small text-color-level1 uk-text-bold">
+                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-auto uk-grid uk-grid-small">
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                             </h:panelGroup>
                                         </div>
-                                        <div class="uk-width-auto uk-text-right iconos">
-
-                                            <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
-
+                                        <div class="uk-width-expand ">
+                                            <div class="uk-grid uk-grid-small uk-child-width-1-5" uk-grid="">
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Listening" styleClass="uk-icon-image uk-svg" library="img" name="listen.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Transcrip" styleClass="uk-icon-image uk-svg " library="img" name="transcript1.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Reading" styleClass="uk-icon-image uk-svg " library="img" name="reading.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Gramatic" styleClass="uk-icon-image uk-svg " library="img" name="gramatica.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Quiz" styleClass="uk-icon-image uk-svg " library="img" name="quizcalifica.svg" /></div>
+                                            </div>
                                         </div>
-
 
                                     </h:panelGroup>
                                 </div>
@@ -290,7 +299,7 @@
                         </h:panelGroup>
                     </ui:repeat>
                     <ui:repeat value="#{actividadesControlador.tarea2}" var="tarea3">
-                        <h:panelGroup layout="block" styleClass="uk-width-1-4@m nivelc3" pt:data-tags="food and places">
+                        <h:panelGroup layout="block" styleClass="uk-width-1-3@m nivelc3" pt:data-tags="food and places">
                             <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-six">
                                 <div class="uk-card-header border-card">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
@@ -312,21 +321,22 @@
                                 </div>
                                 <div class="uk-card-footer">
                                     <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
-                                        <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                        <div class="uk-width-auto uk-text-small text-color-level1 uk-text-bold">
+                                            <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-auto uk-grid uk-grid-small">
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                                 <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                             </h:panelGroup>
                                         </div>
-                                        <div class="uk-width-auto uk-text-right iconos">
-
-                                            <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                            <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
+                                        <div class="uk-width-expand ">
+                                            <div class="uk-grid uk-grid-small uk-child-width-1-5" uk-grid="">
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Listening" styleClass="uk-icon-image uk-svg" library="img" name="listen.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Transcrip" styleClass="uk-icon-image uk-svg " library="img" name="transcript1.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Reading" styleClass="uk-icon-image uk-svg " library="img" name="reading.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Gramatic" styleClass="uk-icon-image uk-svg " library="img" name="gramatica.svg" /></div>
+                                                <div><h:graphicImage pt:data-uk-tooltip="title: Quiz" styleClass="uk-icon-image uk-svg " library="img" name="quizcalifica.svg" /></div>
+                                            </div>
 
                                         </div>
-
 
                                     </h:panelGroup>
                                 </div>
