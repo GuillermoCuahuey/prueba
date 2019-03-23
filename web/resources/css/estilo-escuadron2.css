@@ -411,3 +411,24 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
   height: 30px;
 
 }
+.uk-progress-full {
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 3 */
+  display: block;
+  width: 100%;
+  /* 4 */
+  border: 0;
+  /* 5 */
+  background-color: #f8f8f8;
+  /* 6 */
+  margin-bottom: 0px;
+  margin-top: 13px;
+  height: 18px;
+  border-radius: 1000px;
+  overflow: hidden;
+
+}

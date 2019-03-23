@@ -25,12 +25,12 @@
 
         <h:outputStylesheet library="css" name="tablas.css"/>
         <!--CARDS WRAPPER-->
-        <section class="uk-section uk-section-default uk-section-default uk-padding-remove-top">
+        <section class="uk-section uk-section-default uk-section-default uk-padding-remove-top " data-uk-filter="target: .js-filter">
             <div class="uk-container uk-container-expand">
                     <ul class="uk-subnav  nav-default-profesor uk-subnav-alumno">
                         <li class="uk-active" data-uk-filter-control=".actividad-card"><a href="#">Actividad/Alumno</a></li>
                         <li data-uk-filter-control=".tarea-card"><a href="#">Tareas</a></li>
-                        <li data-uk-filter-control=".nivel-card"><a href="#">Asignación de nivel</a></li>
+                        <li data-uk-filter-control=".nivel-card "><a href="#">Asignación de nivel</a></li>
                         <li data-uk-filter-control=".progreso-card"><a href="#">Estadistica</a></li>
                         <li data-uk-filter-control=".reportes-card"><a href="#">Reportes</a></li>
                     </ul>
@@ -38,16 +38,16 @@
                 <!--CARDS WRAPPER-->
                 <div class="js-filter" data-uk-sortable="handle: .drag-icon">
                     <!-- card -->
-                    <div class="actividad-card" data-tags="a beautiful landscape - nature outdoor">
-                        <div class="uk-card uk-card-default uk-card-small color-card-four">
-                            <div class="uk-card-header padding-0">
-                                <div class="uk-grid uk-grid-small uk-margin-small-left">
-                                    <div class="uk-text-bold"><h4 class=" uk-text-capitalize">Alumnos</h4></div>
+                    <div class="actividad-card uk-container">
+                        <div class="">
+                            <div class="titulo-section padding-0">
+                                <div class="uk-grid uk-margin-small-left">
+                                    <div class="uk-text-bold"><h4 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section ">Alumnos</h4></div>
                                     <div class="uk-width-expand uk-flex uk-flex-right">
                                         <h:form id="formulario-filtro-alumno00">
                                             <ul class="uk-iconnav">
                                                 <li class="">
-                                                    <div class="uk-margin-small-right">
+                                                    <div class="">
                                                     <label class="uk-form-label" for="form-horizontal-select"></label>
                                                     <div uk-form-custom="target: > * > span:first-child">
                                                         <select>
@@ -64,38 +64,37 @@
                                                     </div>
                                                     </div>
                                                 </li>
-                                                <!--<li>-->
-                                                    <!--<div class="uk-margin">-->
-                                                        <!--<div class="uk-form-label uk-text-capitalize">muestrame solo</div>-->
-                                                        <!--<div class="uk-form-controls">-->
-                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/> Listen</label>-->
-                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/> Transcript</label>-->
-                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/>Read</label>-->
-                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/>Grammar</label>-->
-                                                            <!--<label><input class="uk-checkbox uk-margin-small-left" type="checkbox" checked=""/>Quizzes</label>-->
-                                                        <!--</div>-->
-                                                    <!--</div>-->
-
-                                                <!--</li>-->
                                                 <li>
                                                     <div class="uk-width-auto">
                                                         <ul class="uk-subnav" data-uk-margin="">
                                                             <li class="uk-nav-header uk-text-capitalize">Solo Muestra</li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Listen" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
+                                                                <h:graphicImage styleClass="" library="img" name="gramatica.svg" width="40" height="40" pt:data-uk-tooltip="gramatica"/>
+                                                                <f:ajax/>
+                                                            </h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero" title="Transcript" data-uk-tooltip="" uk-icon="file-text" type="button"></span><f:ajax/></h:commandLink>
+                                                                <h:graphicImage styleClass="" library="img" name="transcript1.svg" width="40" height="40" pt:data-uk-tooltip="transcribir"/>
+                                                                <f:ajax/>
+                                                            </h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Read" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
+                                                                <h:graphicImage styleClass="" library="img" name="quizcontesta.svg" width="40" height="40" pt:data-uk-tooltip="examen"/>
+                                                                <f:ajax/>
+                                                            </h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="Grammar" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
+                                                                <h:graphicImage styleClass="" library="img" name="reading.svg" width="40" height="40" pt:data-uk-tooltip="lectura"/>
+                                                                <f:ajax/>
+                                                            </h:commandLink>
                                                             </li>
                                                             <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                                <span class="uk-icon-button puntero uk-text-primary" title="quizzes" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
+                                                                <h:graphicImage styleClass="" library="img" name="listen.svg" width="40" height="40" pt:data-uk-tooltip="escuchar"/>
+                                                                <f:ajax/>
+                                                            </h:commandLink>
                                                             </li>
+
+
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -109,7 +108,7 @@
                                 </div>
 
                             </div>
-                            <div class="uk-card-body padding-0">
+                            <div class="padding-0">
                                 <div class="uk-overflow-auto">
                                 <h:form id="formulario-tabla-actividades">
                                     <h:dataTable id="tabla-actividades"
@@ -147,24 +146,37 @@
                                             <div class="uk-width-auto">
                                                 <ul class="uk-subnav" data-uk-margin="">
                                                     <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file" type="button"></span><f:ajax/></h:commandLink>
+                                                        <h:graphicImage styleClass="" library="img" name="gramatica.svg" width="25" height="25" pt:data-uk-tooltip="gramatica"/>
+                                                        <f:ajax/>
+                                                    </h:commandLink>
                                                     </li>
                                                     <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-pdf" type="button"></span><f:ajax/></h:commandLink>
+                                                        <h:graphicImage styleClass="" library="img" name="transcript1.svg" width="25" height="25" pt:data-uk-tooltip="transcribir"/>
+                                                        <f:ajax/>
+                                                    </h:commandLink>
                                                     </li>
                                                     <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="copy" type="button"></span><f:ajax/></h:commandLink>
+                                                        <h:graphicImage styleClass="" library="img" name="quizcontesta.svg" width="25" height="25" pt:data-uk-tooltip="examen"/>
+                                                        <f:ajax/>
+                                                    </h:commandLink>
                                                     </li>
                                                     <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
-                                                        <span class="uk-icon-button puntero uk-text-primary" title="Ver" data-uk-tooltip="" uk-icon="file-edit" type="button"></span><f:ajax/></h:commandLink>
+                                                        <h:graphicImage styleClass="" library="img" name="reading.svg" width="25" height="25" pt:data-uk-tooltip="lectura"/>
+                                                        <f:ajax/>
+                                                    </h:commandLink>
                                                     </li>
+                                                    <li><h:commandLink pt:uk-toggle="target: #modal-comentarios-alumno">
+                                                        <h:graphicImage styleClass="" library="img" name="listen.svg" width="25" height="25" pt:data-uk-tooltip="escuchar"/>
+                                                        <f:ajax/>
+                                                    </h:commandLink>
+                                                    </li>
+
+
                                                 </ul>
                                             </div>
                                             #{dato.actividades}
                                         </h:column>
                                         <f:facet name="footer">
-                                            <pa:pie-tabla htmlDataTable="#{actividadesAlumnoControlador.htmlDataTable}"/>
-                                        </f:facet><f:facet name="footer">
                                             <pa:pie-tabla htmlDataTable="#{actividadesAlumnoControlador.htmlDataTable}"/>
                                         </f:facet>
                                     </h:dataTable>
@@ -190,31 +202,30 @@
 
                     <!-- /card -->
                     <!-- card -->
-                    <div class="nivel-card" data-tags="video music awards pictures - music bands">
-                        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                            <div class="uk-card-header padding-0">
-                                <div class="uk-grid uk-grid-small uk-margin-small-left">
-                                    <div class="uk-text-capitalize uk-text-bold"><h4 class=" uk-text-capitalize">nivel actual</h4></div>
-                                    <div class="uk-width-expand uk-flex uk-flex-right">
+                    <div class="nivel-card uk-container">
+                        <div class="">
+                            <div class="titulo-section padding-0">
+                                <div class="uk-grid">
+                                    <div class="uk-text-bold"><h4 class=" uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">nivel actual</h4></div>
                                         <div class="uk-width-expand uk-flex uk-flex-right">
 
                                             <div class="uk-width-auto">
                                                 <h:graphicImage library="img" name="letra-a.svg" width="50" height="50" styleClass="uk-border-circle"/>
                                             </div>
                                             <span class="uk-text-primary">%60</span>
-                                            <progress class="uk-progress-full success " value="78" max="100"></progress>
+                                            <progress class="uk-progress-full" value="78" max="100"></progress>
                                             <div class="uk-width-auto uk-margin-auto-right uk-margin-auto-left">
                                                 <h:graphicImage library="img" name="letra-b.svg" width="50" height="50" styleClass="uk-border-circle"/>
                                             </div>
 
                                         </div>
-                                    </div>
 
                                 </div>
                             </div>
-                            <div class="uk-card-body padding-0">
+                            <div class="padding-0">
+                                <div class="uk-overflow-auto">
                                 <h:form id="formulario-tabla-nivel">
-                                    <div class="uk-overflow-auto">
+
                                         <h:dataTable id="tabla-nivel"
                                                      value="#{asignacionNivelControlador.collectionDataModel}"
                                                      binding="#{asignacionNivelControlador.htmlDataTable}"
@@ -259,8 +270,9 @@
                                                 <pa:pie-tabla htmlDataTable="#{asignacionNivelControlador.htmlDataTable}"/>
                                             </f:facet>
                                         </h:dataTable>
-                                    </div>
+
                                 </h:form>
+                                </div>
 
                             </div>
                             <div class="uk-card-footer">
@@ -405,57 +417,51 @@
                             <div class="uk-card-body">
                                 <div class="uk-container uk-container-expand uk-margin-large-bottom">
                                     <div class="uk-grid uk-grid-medium uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l  uk-child-width-1-5@xl uk-grid-match" data-uk-grid="masonry: true" data-uk-sortable="handle: .drag-icon">
-                                        <ui:repeat value="#{actividadesControlador.tarea1}" var="tarea1">
-                                            <h:panelGroup layout="block" styleClass="nature-card" pt:data-tags="a beautiful landscape - nature outdoor">
-                                                <div class="uk-card uk-card-small uk-card-default">
-                                                    <div class="uk-card-header">
+                                        <ui:repeat value="#{actividadesControlador.tarea2}" var="tarea2">
+                                            <h:panelGroup layout="block" styleClass="uk-width-1-4@m music-card" pt:data-tags="play and games">
+                                                <div class="uk-card uk-card-default uk-card-small uk-card-hover color-card-two">
+                                                    <div class="uk-card-header border-card">
                                                         <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-text-small" pt:uk-grid="">
                                                             <div class="uk-width-expand">
-                                                                <span class="cat-txt">#{tarea1.tag}</span>
+                                                                <h:graphicImage styleClass="uk-border-circle" library="img" name="3ojos.svg" width="30" height="30" />
+                                                                <span class="cat-txt">sports</span>
                                                             </div>
                                                             <div class="uk-width-auto uk-text-right uk-text-muted">
-                                                                <h:outputText pt:uk-icon="icon:clock; ratio: 0.8"/>#{tarea1.tiempo}
+                                                                <h:outputText pt:uk-icon="icon:clock; ratio: 0.8"/>12:30
                                                             </div>
                                                         </h:panelGroup>
                                                     </div>
-                                                    <div class="uk-card-media">
-                                                        <h:panelGroup layout="block" styleClass="uk-inline-clip uk-transition-toggle" pt:tabindex="0">
-                                                            <h:graphicImage styleClass="lazy" pt:data-src="https://picsum.photos/400/470/?random=4" pt:data-width="400" pt:data-height="300" pt:data-uk-img="" alt=""/>
-                                                            <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
-                                                                <h:outputText pt:data-uk-icon="icon:heart; ratio: 0.8"/> 12.345 <h:outputText pt:data-uk-icon="icon:comment; ratio: 0.8"/> 12.345
-                                                            </div>
-                                                        </h:panelGroup>
-
+                                                    <div class="uk-card-media-top">
+                                                        <h:graphicImage library="img" name="sport.jpg" alt=""/>
                                                     </div>
-                                                    <div class="uk-card-body">
-                                                        <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold">#{tarea1.titulo}</h6>
-                                                        <p class="uk-text-small uk-text-muted">#{tarea1.descripcion}</p>
+                                                    <div class="uk-card-body uk-padding-remove-bottom uk-padding-remove-top">
+                                                        <h6 class="uk-margin-small-bottom uk-margin-remove-adjacent uk-text-bold uk-text-small">plays and games with your friends</h6>
+                                                        <p class="uk-text-small uk-text-muted ">aprende sobre los direrentes temas a tratar de deportes</p>
                                                     </div>
                                                     <div class="uk-card-footer">
                                                         <h:panelGroup layout="block" styleClass="uk-grid uk-grid-small uk-grid-divider uk-flex uk-flex-middle" pt:data-uk-grid="">
                                                             <div class="uk-width-expand uk-text-small text-color-level1 uk-text-bold">
-                                                                <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-1@m uk-grid uk-grid-small">
-                                                                    <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Descargables</h:link></div>
-                                                                    <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/>Guía Didáctica</h:link></div>
+                                                                <h:panelGroup pt:uk-grid="" styleClass="uk-child-width-1-2@m uk-grid uk-grid-small">
+                                                                    <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
+                                                                    <div><h:link styleClass="uk-link-reset"><h:outputText pt:uk-icon="icon: file-pdf" styleClass=""/></h:link></div>
                                                                 </h:panelGroup>
                                                             </div>
                                                             <div class="uk-width-auto uk-text-right iconos">
 
                                                                 <h:outputText pt:data-uk-tooltip="title: Twitter" styleClass="uk-icon-link " pt:data-uk-icon="icon:twitter; ratio: 1"/>
-                                                                <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link" pt:data-uk-icon="icon:instagram; ratio: 1"/>
-                                                                <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link" pt:data-uk-icon="icon:behance; ratio: 1"/>
-                                                                <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
+                                                                <h:outputText pt:data-uk-tooltip="title: Instagram" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:instagram; ratio: 1"/>
+                                                                <h:outputText pt:data-uk-tooltip="title: Behance" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:behance; ratio: 1"/>
+                                                                <h:outputText pt:data-uk-tooltip="title: Pinterest" styleClass="uk-icon-link uk-margin-small-left" pt:data-uk-icon="icon:pinterest; ratio: 1"/>
 
                                                             </div>
-                                                            <div class="uk-width-auto uk-text-right">
-                                                                <h:outputLink pt:data-uk-tooltip="title: Drag this card" styleClass="uk-icon-link drag-icon" pt:data-uk-icon="icon:move; ratio: 1"/>
-                                                            </div>
+
 
                                                         </h:panelGroup>
                                                     </div>
                                                 </div>
                                             </h:panelGroup>
                                         </ui:repeat>
+
                                     </div>
                                 </div>
                             </div>
