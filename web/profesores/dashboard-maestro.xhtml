@@ -211,7 +211,6 @@
 
         </div>
 
-
     <h:outputScript library="js" name="Chart.js"/>
         <script type="text/javascript">
             var i;
@@ -243,39 +242,61 @@
                 }
             }
 
-
-
-
-
             for (i = 0; i &lt; grafica.length; i++) {
 
                 // datos[0].innerHTML
 
                 let datos = grafica[i].querySelectorAll('div');
 
+                // new Chart(grafica[i], {
+                //     type: 'radar',
+                //     data: {
+                //         labels: ["Listening","Reading" , "Speaking", "Writing", "Mental Map"],
+                //         datasets: [{
+                //             label: datos[1].innerHTML+datos[0].innerHTML,
+                //             fill: true,
+                //             backgroundColor: datos[2].innerHTML,
+                //             borderColor: "rgba(51,153,255,0.2)",
+                //             pointBorderColor: "#fff",
+                //             pointBackgroundColor: "rgba(179,181,198,1)",
+                //             data: [parseFloat(datos[3].innerHTML), parseFloat(datos[4].innerHTML), parseFloat(datos[5].innerHTML), parseFloat(datos[6].innerHTML), parseFloat(datos[7].innerHTML)]
+                //         }]
+                //     },
+                //     options: {
+                //         maintainAspectRatio: false,
+                //         responsiveAnimationDuration: 500,
+                //         animation: {
+                //             duration: 2000
+                //         },
+                //         title: {
+                //             display: true,
+                //             text: 'Amelia juarez garcia'
+                //         }
+                //     }
+                // });
+
                 new Chart(grafica[i], {
-                    type: 'radar',
+                    type: 'horizontalBar',
                     data: {
-                        labels: ["Listening","Reading" , "Speaking", "Writing", "Mental Map"],
+                        labels: ["Learning", "Speaking", "Mental Map", "Transcrip", "Quiz"],
                         datasets: [{
-                            label: datos[1].innerHTML+datos[0].innerHTML,
-                            fill: true,
-                            backgroundColor: datos[2].innerHTML,
-                            borderColor: "rgba(51,153,255,0.2)",
-                            pointBorderColor: "#fff",
-                            pointBackgroundColor: "rgba(179,181,198,1)",
-                            data: [parseFloat(datos[3].innerHTML), parseFloat(datos[4].innerHTML), parseFloat(datos[5].innerHTML), parseFloat(datos[6].innerHTML), parseFloat(datos[7].innerHTML)]
+                            label: "Population (millions)",
+                            backgroundColor: ["#39f", "#895df6", "#3cba9f", "#e8c3b9", "#c45850"],
+                            data: [9, 7, 5.7, 8, 7]
                         }]
                     },
                     options: {
                         maintainAspectRatio: false,
                         responsiveAnimationDuration: 500,
+                        legend: {
+                            display: false
+                        },
                         animation: {
                             duration: 2000
                         },
                         title: {
                             display: true,
-                            text: 'Amelia juarez garcia'
+                            text: 'Predicted activity in 2020'
                         }
                     }
                 });
