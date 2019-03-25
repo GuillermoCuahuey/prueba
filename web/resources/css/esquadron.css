@@ -109,10 +109,14 @@
 }
 .titulo-cards{
   /*color: #E84F0C;*/
-    color:white;
-    border-top-left-radius:  3px;
-    border-top-right-radius: 3px;
-    background-color:var(--nsecundary-option-one);
+    /*color:white;*/
+    color: var(--nsecundary-option-one);
+    /*border-top-left-radius:  3px;*/
+    /*border-top-right-radius: 3px;*/
+    /*border-radius: 15px;*/
+   border:1px solid var(--nsecundary-option-one);
+  /*border-color:var(--nsecundary-option-one) ;*/
+    /*background-color:var(--nsecundary-option-one);*/
     padding: 3px 4px;
 }
 
@@ -410,26 +414,5 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 .uk-icon-image {
   width: 30px;
   height: 30px;
-
-}
-.uk-progress-full {
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  /* 3 */
-  display: block;
-  width: 100%;
-  /* 4 */
-  border: 0;
-  /* 5 */
-  background-color: #f8f8f8;
-  /* 6 */
-  margin-bottom: 0px;
-  margin-top: 13px;
-  height: 18px;
-  border-radius: 1000px;
-  overflow: hidden;
 
 }
