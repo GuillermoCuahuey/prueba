@@ -8,136 +8,96 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion">
 
-<ui:composition template="/template/dashboard.xhtml">
+<ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
-        <!--<ul class="uk-nav uk-nav-default uk-nav-parent-icon" uk-nav="">-->
-            <!--<li class="uk-nav-header">Menú</li>-->
-            <!--<li class="uk-parent ">-->
-                <!--<h:link><h:outputText pt:uk-icon="info" class="uk-margin-small-right"/>Escuela</h:link>-->
-                <!--<ul class="uk-nav-sub">-->
-                    <!--<li><h:link outcome="/administracion/administracion-dashboard"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard</h:link></li>-->
-                <!--</ul>-->
-            <!--</li>-->
-            <!--<li class="uk-parent">-->
-                <!--<h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Catalogo</h:link>-->
-                <!--<ul class="uk-nav-sub">-->
-                    <!--<li><h:link outcome="/administracion/catalogo-administracion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo administracion</h:link></li>-->
-                    <!--<li><h:link outcome="/administracion/catalogo-coordinacion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo coordinacion</h:link></li>-->
-                <!--</ul>-->
-            <!--</li>-->
-            <!--<li class="uk-parent uk-open">-->
-                <!--<h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Coordinacion</h:link>-->
-                <!--<ul class="uk-nav-sub">-->
-                    <!--<li class="uk-active"><h:link ><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Dashboard coordinador</h:link></li>-->
-
-                <!--</ul>-->
-            <!--</li>-->
-            <!--<li class="uk-parent">-->
-                <!--<h:link><h:outputText pt:uk-icon="database" class="uk-margin-small-right"/>Profesor</h:link>-->
-                <!--<ul class="uk-nav-sub">-->
-                    <!--<li><h:link outcome="catalogo-administracion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo administracion</h:link></li>-->
-                    <!--<li><h:link outcome="catalogo-coordinacion"><h:outputText pt:uk-icon="home" class="uk-margin-small-right"/>Catalogo coordinacion</h:link></li>-->
-                <!--</ul>-->
-            <!--</li>-->
-        <!--</ul>-->
+        <ul class="uk-subnav nav-sub" uk-margin="">
+            <li class="nav-sub-active"><a href="#">Product License</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
+        </ul>
     </ui:define>
     <ui:define name="contenido">
         <h:outputStylesheet library="css" name="tablas.css"/>
-       <h:panelGroup layout="block" styleClass="uk-grid" uk-grid="">
-           <div class="uk-width-1-1@m">
-               <div class="uk-card uk-card-default uk-card-small uk-card-hover uk-margin-medium-bottom">
-                   <div class="uk-card-header">
-                       <div class="uk-grid uk-grid-small" uk-grid="">
-                           <div class="uk-width-auto"><h4><span class="uk-text-middle uk-text-capitalize">Tareas</span></h4></div>
+        <div class="contenedor-imagen-alumnos uk-margin-small-bottom uk-margin-small-top">
+            <h:graphicImage styleClass="uk-border-circle uk-visible@s" library="img" name="fonfo2.png" height="100" width="100"/>
+            <h3 class="letra-cards lescuadron">Mapa mental evaluacion</h3>
+        </div>
+       <h:panelGroup layout="block" styleClass="uk-container uk-grid" uk-grid="">
 
-                       </div>
-                   </div>
-                    <div class="uk-card-body">
-                        <h:form id="formulario-tareas-profesor">
-                            <h:dataTable
-                                        value="#{mapaMentalControlador.collectionDataModel}"
-                                        binding="#{mapaMentalControlador.htmlDataTable}"
-                                        var="tareas"
-                                        id="tabla-tareas-profesor"
-                                        first="0"
-                                        rows="5"
-                                        styleClass="uk-table uk-table-divider uk-table-middle uk-table-small uk-table-hover tabla-tareas-dropdow"
-                                        headerClass="uk-background-primary uk-text-center"
-                                        footerClass="uk-background-primary uk-text-left"
-                                        >
+           <div class="uk-width-1-1@s">
+                        <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Mapa Samantha Ramirez Garcia</h5>
 
-                                <h:column>
-                                    <f:facet name="header"><span class="letra-titulo">Pregunta</span></f:facet>
-                                    <h:outputLabel styleClass="uk-form-label" value="#{tareas.pregunta}" for="pregunta" />
-                                    <div class="uk-form-controls">
-                                        <h:inputText id="pregunta"  pt:placeholder="the kittens are eating" disabled="true"  styleClass="uk-input"  />
-                                    </div>
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header"><span class="letra-titulo">Puntaje</span></f:facet>
-                                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid uk-margin-small-bottom uk-flex uk-flex-center">
-                                        <label><input class="uk-radio" type="radio"   /> #{tareas.puntaje1}</label>
-                                        <label><input class="uk-radio" type="radio"/>#{tareas.puntaje2}</label>
-                                        <label><input class="uk-radio" type="radio"   />#{tareas.puntaje3}</label>
-                                        <label><input class="uk-radio" type="radio" />#{tareas.puntaje4}</label>
-                                    </div>
-                                </h:column>
-                                <f:facet name="footer">
-                                    <pa:pie-tabla htmlDataTable="#{mapaMentalControlador.htmlDataTable}"/>
-                                </f:facet>
-                            </h:dataTable>
+                        <h:form id="formulario-tareas-profesor" styleClass="uk-form-stacked">
+                            <div class="uk-overflow-auto">
+                                <h:dataTable
+                                            value="#{mapaMentalControlador.collectionDataModel}"
+                                            binding="#{mapaMentalControlador.htmlDataTable}"
+                                            var="tareas"
+                                            id="tabla-tareas-profesor"
+                                            first="0"
+                                            rows="5"
+                                            styleClass="uk-table uk-table-middle uk-table-small tablaPrimaria uk-table-hover tabla-tareas-dropdow uk-margin-small-top"
+                                            headerClass="thPrimario"
+                                            rowClasses="tdPrimario"
+                                            footerClass="thPrimario uk-text-left"
+                                            >
+
+                                    <h:column>
+                                        <f:facet name="header"><span class="letra-tabla uk-text-bold">Pregunta</span></f:facet>
+                                           <div>
+                                                <h:outputLabel styleClass="uk-form-label" value="#{tareas.pregunta}" for="pregunta" />
+                                                <h:inputText id="pregunta"  pt:placeholder="the kittens are eating" disabled="true"  styleClass="uk-input uk-form-width-large" />
+                                           </div>
+
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header"><span class="letra-tabla uk-text-bold">Puntaje</span></f:facet>
+
+                                        <div class="uk-form-controls">
+                                           <div class="uk-form-width-medium">
+                                                <label><input class="uk-radio " type="radio" name="radio1"/>6</label>
+                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio1"/>7</label>
+                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio1"/>8</label>
+                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio1"/>9</label>
+                                           </div>
+                                        </div>
+                                    </h:column>
+
+                                    <f:facet name="footer">
+                                        <pa:pie-tabla htmlDataTable="#{mapaMentalControlador.htmlDataTable}"/>
+                                    </f:facet>
+                                </h:dataTable>
+                            </div>
                         </h:form>
-                    </div>
-                   <div class="uk-card-footer">
-                       <h:form id="formulario-paginacion-tareas">
-                            <f:ajax render="formulario-tareas-profesor:tabla-tareas-profesor formulario-paginacion-tareas"  onevent="limpiaSelect">
-                                <div uk-grid="">
-                                    <div class="uk-panel uk-flex uk-flex-left uk-width-expand ">
-                                        <pa:boton htmlDataTable="#{mapaMentalControlador.htmlDataTable}"/>
-                                    </div>
-                                    <div class="uk-width-auto">
-                                        <button class="uk-button uk-button-small uk-button-primary " type="button">Aceptar</button>
-                                    </div>
-                                </div>
-                            </f:ajax>
-                       </h:form>
-                   </div>
 
-               </div>
            </div>
+           <!--<div class="uk-width-1-1@m">-->
+               <!--<div class="uk-container uk-margin-medium-bottom">-->
+                   <!--<h:form id="formulario-paginacion-tareas">-->
+                       <!--<f:ajax render="formulario-tareas-profesor:tabla-tareas-profesor formulario-paginacion-tareas"  onevent="limpiaSelect">-->
+                           <!--<div uk-grid="">-->
+                               <!--<div class="uk-panel uk-flex uk-flex-left uk-width-expand ">-->
+                                   <!--<pa:boton htmlDataTable="#{mapaMentalControlador.htmlDataTable}"/>-->
+                               <!--</div>-->
+                               <!--<div class="uk-width-auto">-->
+                                   <!--<button class="boton-escuadron-base uk-text-uppercase " type="button">Aceptar</button>-->
+                               <!--</div>-->
+                           <!--</div>-->
+                       <!--</f:ajax>-->
+                   <!--</h:form>-->
+               <!--</div>-->
+           <!--</div>-->
+
        </h:panelGroup>
 
         <script type="text/javascript">
-            var contrassenia;
-            var contrasseniaeditar;
-            var modalEliminar;
-            var modalModificar;
-            var modalLicencia;
-            var modalBloqueo;
-            var modalCoord;
+
             document.addEventListener("DOMContentLoaded", function (evt) {
                 limpiaSelect("undefined");
                 // modalAgregar = document.querySelector('#modal-contacto');
-                modalEliminar = document.querySelector('#modal-eliminar');
-                modalModificar = document.querySelector('#modal-editar-coord');
-                modalLicencia = document.querySelector('#modal-asignar-licencia');
-                modalBloqueo = document.querySelector('#modal-bloqueo');
-                modalCoord = document.querySelector('#modal-nuevo-coord');
-                UIkit.util.on('#modal-eliminar', 'show', function () {
-                    modalEliminar.querySelector('.uk-modal-body').click();
-                });
-                UIkit.util.on('#modal-editar-coord', 'show', function () {
-                    modalLicencia.querySelector('.uk-modal-body').click();
-                });
-                UIkit.util.on('#modal-asignar-licencia', 'show', function () {
-                    modalModificar.querySelector('.uk-modal-body').click();
-                });
-                UIkit.util.on('#modal-bloqueo', 'show', function () {
-                    modalBloqueo.querySelector('.uk-modal-body').click();
-                });
-                UIkit.util.on('#modal-nuevo-coord', 'show', function () {
-                    modalCoord.querySelector('.uk-modal-body').click();
-                });
+
+
 
             });
             document.addEventListener('DOMContentLoaded', function (evt) {
@@ -160,53 +120,7 @@
                 }
             }
 
-            function cierraModal(data,modal) {
-                if (data.status === "success"){
-                    switch (modal) {
-                        case "modalEliminar":
-                            if (modalEliminar.querySelector('.uk-alert-danger') === null) {
-                                UIkit.modal(modalEliminar).hide();
-                            }
-                            break;
-                        case "modalModificar":
-                            if (modalModificar.querySelector('.uk-alert-danger') === null) {
-                                UIkit.modal(modalModificar).hide();
-                            }
-                            break;
-                        case "modalLicencia":
-                            if (modalLicencia.querySelector('.uk-alert-danger') === null) {
-                                UIkit.modal(modalLicencia).hide();
-                            }
-                            break;
-                        case "modalBloqueo":
-                            if (modalBloqueo.querySelector('.uk-alert-danger') === null) {
-                                UIkit.modal(modalBloqueo).hide();
-                            }
-                            break;
-                        case "modalCoord":
-                            if (modalCoord.querySelector('.uk-alert-danger') === null){
-                                UIkit.modal(modalCoord).hide();
-                            }
-                            break;
-                        default: console.error(modal);
 
-                    }
-                }
-            }
-            function cambiar() {
-                if(contrassenia.type  === "password") {
-                    contrassenia.type = "text";
-                } else {
-                    contrassenia.type = "password";
-                }
-            }
-            function cambiareditar() {
-                if(contrasseniaeditar.type  === "password") {
-                    contrasseniaeditar.type = "text";
-                } else {
-                    contrasseniaeditar.type = "password";
-                }
-            }
         </script>
 
     </ui:define>

@@ -17,6 +17,10 @@ top: 10px;
     color:white;
 }
 
+.letra-tabla{
+    color: black;
+}
+
 .fondo-peligro{
     background-color: #f0506e;
 }
