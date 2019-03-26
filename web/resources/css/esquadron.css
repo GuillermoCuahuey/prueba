@@ -28,6 +28,8 @@
   --inactivo-letra-navbar: #757575;
   /*cards*/
   --card-color-border: #B31F0C;
+    /*color-section*/
+  --color-subnav-fondo:#f4f3ed;
 
 }
 .color-nav{
@@ -72,10 +74,20 @@
   padding: 10px 20px;
   font-weight: bold;
 }
+.nav-sub-offcanvas>li{
+    margin: 10px 3px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
 .nav-sub>li>a{
     font-family: 'Sniglet', "Arial Black";
     font-size: 15px !important;
     padding: 7px 10px 7px 10px;
+}
+.nav-sub-offcanvas>li>a{
+    font-family: 'Sniglet', "Arial Black";
+    font-size: 15px !important;
+    padding: 2px 5px 2px 5px;
 }
 .letra-color-subnav{
   color: #000 !important;
@@ -86,6 +98,13 @@
   border-width: 3px;
   border-radius: 5px;
   border-color: var(--turquesa-primary-color);
+}
+.nav-sub-offcanvas>li>a:hover{
+    color: var(--turquesa-primary-color) !important;
+    border: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: var(--turquesa-primary-color);
 }
 
 .nav-sub-active>a{
@@ -414,5 +433,17 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 .uk-icon-image {
   width: 30px;
   height: 30px;
+
+}
+
+.color-contenido-grafica{
+    /*background-color: rgba(0,164,157,0.2);*/
+    background-color: rgba(0,168,236,0.2);
+    color: white;
+}
+
+.uk-offcanvas-bar {
+
+    background: var(--color-subnav-fondo);
 
 }

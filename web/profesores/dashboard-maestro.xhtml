@@ -10,12 +10,28 @@
 
 <ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
-        <ul class="uk-subnav nav-sub" uk-margin="">
+        <ul class="uk-subnav nav-sub uk-visible@m " uk-margin="">
             <li class="nav-sub-active"><a href="#">Product License</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
         </ul>
+        <div class="uk-navbar-left uk-hidden@m">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
+        </div>
+        <div id="menu" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar  ">
+
+                <button class="uk-offcanvas-close" type="button" uk-close=""></button>
+
+                <ul class="uk-nav  nav-sub-offcanvas ">
+                    <li class="uk-active nav-sub-active"><a href="#">Active</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                </ul>
+
+            </div>
+        </div>
     </ui:define>
     <ui:define name="contenido">
         <h:outputStylesheet library="css" name="graficas.css"/>
@@ -121,7 +137,7 @@
                 <ui:repeat value="#{dahsboardProfesorControldor.graficaModelos}" var="grafica">
                 <div>
                     <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Mejor alumno de la clase</h5>
-                        <div class="chart-container-min">
+                        <div class="chart-container-min color-contenido-grafica">
                             <canvas class="mi-char">
                                 <div>#{grafica.grupo}</div>
                                 <div>#{grafica.grado}</div>
