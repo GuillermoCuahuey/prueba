@@ -128,7 +128,7 @@
             </div>
 
         </div>
-        <div class="uk-container uk-container-small uk-flex uk-flex-center uk-margin-small-bottom uk-visible@m" >
+        <div class="uk-container  uk-flex uk-flex-left uk-margin-small-bottom uk-visible@m" >
             <div> <h:graphicImage styleClass="uk-border-circle" library="img" name="3ojos.svg" width="70" height="70"/></div>
             <div class="uk-margin-small-left esquadron-paddin"><h3 class="letra-cards lescuadron ">Premia el ezfuerzo de tus alumnos</h3></div>
         </div>
@@ -192,32 +192,32 @@
                                 <div uk-dropdown="boundary:.tabla-profesor-dropdown; mode: click" id="dropear" >
                                     <ul class="uk-nav uk-dropdown-nav uk-text-left">
                                         <li>
-                                            <h:link    outcome="admin-alumnos.xhtml" styleClass="uk-text-primary" >
+                                            <h:link outcome="admin-alumnos" styleClass="uk-text-primary" >
                                                 <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
                                                 <span class="uk-text-middle"><h:outputText value="Detalle"/></span>
                                             </h:link>
                                         </li>
                                         <li>
-                                            <h:commandLink   pt:uk-toggle="target: #modal-editar-prof" styleClass="uk-text-primary">
+
+                                            <h:link outcome="biblioteca-profesor" styleClass="uk-text-primary" >
                                                 <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
-                                                <span class="uk-text-middle"><h:outputText value="Editar"/></span>
-                                                <f:ajax />
-                                            </h:commandLink>
+                                                <span class="uk-text-middle"><h:outputText value="Asignar Tarea"/></span>
+                                            </h:link>
                                         </li>
                                         <li>
                                             <h:commandLink  pt:uk-toggle="target: #modal-eliminar" styleClass="uk-text-primary" >
                                                 <h:outputText pt:uk-icon="icon: trash" styleClass="uk-margin-small-right uk-icon" />
-                                                <span class="uk-text-middle"><h:outputText value="Eliminar"/></span>
+                                                <span class="uk-text-middle"><h:outputText value="Reporte"/></span>
                                                 <f:ajax/>
                                             </h:commandLink>
                                         </li>
-                                        <li>
-                                            <h:commandLink  pt:uk-toggle="target: #modal-bloqueo" styleClass="uk-text-primary" >
-                                                <h:outputText pt:uk-icon="icon: ban" styleClass="uk-margin-small-right uk-icon" />
-                                                <span class="uk-text-middle"><h:outputText value="Bloqueo"/></span>
-                                                <f:ajax/>
-                                            </h:commandLink>
-                                        </li>
+                                        <!--<li>-->
+                                            <!--<h:commandLink  pt:uk-toggle="target: #modal-bloqueo" styleClass="uk-text-primary" >-->
+                                                <!--<h:outputText pt:uk-icon="icon: ban" styleClass="uk-margin-small-right uk-icon" />-->
+                                                <!--<span class="uk-text-middle"><h:outputText value="Bloqueo"/></span>-->
+                                                <!--<f:ajax/>-->
+                                            <!--</h:commandLink>-->
+                                        <!--</li>-->
                                     </ul>
                                 </div>
                             </div>
