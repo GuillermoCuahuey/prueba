@@ -11,29 +11,54 @@
 
 <ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
-        <ul class="uk-subnav nav-sub" uk-margin="">
+        <ul class="uk-subnav nav-sub uk-visible@m" uk-margin="">
             <li class="nav-sub-active"><a href="#">Product License</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
         </ul>
+        <div class="uk-navbar-left uk-hidden@m">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
+        </div>
+        <div id="menu" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar  ">
+
+                <button class="uk-offcanvas-close" type="button" uk-close=""></button>
+
+                <ul class="uk-nav  nav-sub-offcanvas ">
+                    <li class="uk-active nav-sub-active"><a href="#">Active</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                </ul>
+
+            </div>
+        </div>
     </ui:define>
 
     <ui:define name="contenido">
-        <h:outputStylesheet library="css" name="profesor.css"/>
         <!--HEADER-->
 
         <h:outputStylesheet library="css" name="tablas.css"/>
+        <h:outputStylesheet library="css" name="graficas.css"/>
+        <h:outputStylesheet library="css" name="barra-progreso.css"/>
+
+
         <!--CARDS WRAPPER-->
         <section class="uk-section uk-section-default uk-section-default uk-padding-remove-top " data-uk-filter="target: .js-filter">
             <div class="uk-container uk-container-expand">
-                    <ul class="uk-subnav  nav-default-profesor uk-subnav-alumno">
+                    <ul class="uk-subnav  nav-default-profesor2 uk-subnav-alumno2">
                         <li class="uk-active" data-uk-filter-control=".actividad-card"><a href="#">Actividad/Alumno</a></li>
                         <li data-uk-filter-control=".tarea-card"><a href="#">Tareas</a></li>
                         <li data-uk-filter-control=".nivel-card "><a href="#">Asignación de nivel</a></li>
                         <li data-uk-filter-control=".progreso-card"><a href="#">Estadistica</a></li>
                         <li data-uk-filter-control=".reportes-card"><a href="#">Reportes</a></li>
                     </ul>
+
+                <div class="contenedor-imagen-alumnos uk-margin-small-bottom uk-margin-small-top">
+                    <h:graphicImage styleClass="uk-border-circle uk-visible@s" library="img" name="fonfo2.png" height="100" width="100"/>
+                    <h3 class="letra-cards lescuadron">Alumnos</h3>
+                </div>
+
 
                 <!--CARDS WRAPPER-->
                 <div class="js-filter" data-uk-sortable="handle: .drag-icon">
@@ -42,7 +67,7 @@
                         <div class="">
                             <div class="titulo-section padding-0">
                                 <div class="uk-grid uk-margin-small-left">
-                                    <div class="uk-text-bold"><h4 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section ">Alumnos</h4></div>
+                                    <div class="uk-text-bold"><h4 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section ">Alumno: Juan</h4></div>
                                     <div class="uk-width-expand uk-flex uk-flex-right">
                                         <h:form id="formulario-filtro-alumno00">
                                             <ul class="uk-iconnav">
@@ -293,41 +318,25 @@
                     <!-- card -->
 
                     <div class="progreso-card"  data-tags="trends in design world - design">
-                        <div class="uk-card uk-card-small uk-card-default">
+                        <h:panelGroup layout="block" styleClass="uk-grid uk-child-width-1-2@m uk-section uk-section-default uk-padding-remove-top uk-padding-remove-bottom" pt:uk-grid="" >
                             <ui:repeat value="#{dahsboardProfesorControldor.graficaModelos}" var="grafica">
-                                <!-- panel -->
-
-                                    <div class="uk-card uk-card-default uk-card-small uk-card-hover">
-                                        <div class="uk-card-header">
-                                            <h:panelGroup layout="block" styleClass="uk-grid-small uk-flex-middle uk-grid" pt:uk-grid="">
-                                                <div class="uk-width-auto">
-                                                    <h:graphicImage library="img" name="verde.svg" width="50" height="50" styleClass="uk-border-circle" pt:uk-svg=""/>
-                                                </div>
-                                                <div class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">
-                                                    <h4 class="uk-margin-remove-bottom">Mejor alumno de la clase</h4>
-                                                </div>
-                                            </h:panelGroup>
-                                        </div>
-                                        <div class="uk-card-body">
-                                            <div class="chart-container">
-                                                <canvas class="mi-char">
-                                                    <div>#{grafica.grupo}</div>
-                                                    <div>#{grafica.grado}</div>
-                                                    <div>#{grafica.color}</div>
-                                                    <div>#{grafica.dato1}</div>
-                                                    <div>#{grafica.dato2}</div>
-                                                    <div>#{grafica.dato3}</div>
-                                                    <div>#{grafica.dato4}</div>
-                                                    <div>#{grafica.dato5}</div>
-                                                </canvas>
-
-                                            </div>
-
-                                        </div>
+                                <div>
+                                    <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Mejor alumno de la clase</h5>
+                                    <div class="chart-container-min">
+                                        <canvas class="mi-char">
+                                            <div>#{grafica.grupo}</div>
+                                            <div>#{grafica.grado}</div>
+                                            <div>#{grafica.color}</div>
+                                            <div>#{grafica.dato1}</div>
+                                            <div>#{grafica.dato2}</div>
+                                            <div>#{grafica.dato3}</div>
+                                            <div>#{grafica.dato4}</div>
+                                            <div>#{grafica.dato5}</div>
+                                        </canvas>
                                     </div>
-
+                                </div>
                             </ui:repeat>
-                        </div>
+                        </h:panelGroup>
                     </div>
                     <!-- /card -->
                     <!-- card -->
@@ -475,27 +484,104 @@
 
         </section>
 
-        <h:outputScript library="js" name="uikit.js"/>
-        <h:outputScript library="js" name="uikit-icons.js"/>
         <h:outputScript library="js" name="cards.js"/>
+        <h:outputScript library="js" name="Chart.js"/>
         <script type="text/javascript">
-            let carMedias = document.querySelectorAll('.nature-card .uk-card-media');
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://vimeo.com/api/oembed.json', true);
-            carMedias.forEach(function (objeto, index) {
-                let imagen = objeto.querySelector('img');
-                let fuente = imagen.getAttribute('data-src');
-            })
+            var i;
 
-            function imagenVimeo(fuente,imagen) {
-                xhr.send({url:fuente});
+            let grafica = document.querySelectorAll('.mi-char');
+            let grafica2 = document.querySelectorAll('.mi-tabla');
+
+            document.addEventListener("DOMContentLoaded", function (evt) {
+                limpiaSelect("undefined");
+                // modalAgregar = document.querySelector('#modal-contacto');
+
+
+            });
+            document.addEventListener('DOMContentLoaded', function (evt) {
+                limpiaSelect();
+            });
+
+            function limpiaSelect(data) {
+                if (typeof data === 'undefined') {
+                    document.querySelectorAll('.uk-select').forEach(
+                        function (value) { value.removeAttribute('size'); }
+                    )
+                } else {
+                    if (data.status === 'success') {
+                        document.querySelectorAll('.uk-select').forEach(
+                            function (value) { value.removeAttribute('size'); }
+                        )
+                    }
+                }
             }
-            xhr.onload = function () {
-                let  objeto = JSON.parse(xhr.response);
-                console.log(objeto.duration);
 
-            };
 
+
+
+
+            for (i = 0; i &lt; grafica.length; i++) {
+
+                // datos[0].innerHTML
+
+                let datos = grafica[i].querySelectorAll('div');
+
+                new Chart(grafica[i], {
+                    type: 'radar',
+                    data: {
+                        labels: ["Listening","Reading" , "Speaking", "Writing", "Mental Map"],
+                        datasets: [{
+                            label: datos[1].innerHTML+datos[0].innerHTML,
+                            fill: true,
+                            backgroundColor: datos[2].innerHTML,
+                            borderColor: "rgba(51,153,255,0.2)",
+                            pointBorderColor: "#fff",
+                            pointBackgroundColor: "rgba(179,181,198,1)",
+                            data: [parseFloat(datos[3].innerHTML), parseFloat(datos[4].innerHTML), parseFloat(datos[5].innerHTML), parseFloat(datos[6].innerHTML), parseFloat(datos[7].innerHTML)]
+                        }]
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        responsiveAnimationDuration: 500,
+                        animation: {
+                            duration: 2000
+                        },
+                        title: {
+                            display: true,
+                            text: 'Amelia juarez garcia'
+                        }
+                    }
+                });
+            }
+
+
+            // let datos2 = grafica2.querySelectorAll('div');
+            new Chart(grafica2, {
+                type: 'bar',
+                data: {
+                    labels: ["Grupo A", "Grupo B", "Grupo C", "Grupo D", "Grupo E"],
+                    datasets: [{
+                        label: "jookoo",
+                        backgroundColor: ["#7d3c98", "#2471a3", "#2e86c1", "#17a589", "#d68910"],
+                        data: [578, 267, 600, 900, 700]
+                    }]
+                },
+
+                options: {
+                    maintainAspectRatio: false,
+                    responsiveAnimationDuration: 500,
+                    legend: {
+                        display: false
+                    },
+                    animation: {
+                        duration: 2000
+                    },
+                    title: {
+                        display: true,
+                        text: 'Calficacion general del grupo'
+                    }
+                }
+            });
 
 
         </script>

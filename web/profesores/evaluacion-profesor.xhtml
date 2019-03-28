@@ -10,18 +10,39 @@
 
 <ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
-        <ul class="uk-subnav nav-sub" uk-margin="">
+        <ul class="uk-subnav nav-sub uk-visible@m" uk-margin="">
             <li class="nav-sub-active"><a href="#">Product License</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
         </ul>
+        <div class="uk-navbar-left uk-hidden@m">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
+        </div>
+        <div id="menu" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar  ">
+
+                <button class="uk-offcanvas-close" type="button" uk-close=""></button>
+
+                <ul class="uk-nav  nav-sub-offcanvas ">
+                    <li class="uk-active nav-sub-active"><a href="#">Active</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                </ul>
+
+            </div>
+        </div>
     </ui:define>
     <ui:define name="contenido">
         <h:outputStylesheet library="css" name="tablas.css"/>
-        <div class="contenedor-imagen-alumnos uk-margin-small-bottom uk-margin-small-top">
-            <h:graphicImage styleClass="uk-border-circle uk-visible@s" library="img" name="fonfo2.png" height="100" width="100"/>
-            <h3 class="letra-cards lescuadron">Mapa mental evaluacion</h3>
+        <div class="uk-container  uk-flex uk-flex-left uk-margin-small-bottom uk-visible@m" >
+            <div> <h:graphicImage styleClass="uk-border-circle" library="img" name="3ojos.svg" width="70" height="70"/></div>
+            <div class="uk-margin-small-left esquadron-paddin"><h1 class="letra-cards lescuadron ">Student Administration</h1></div>
+        </div>
+
+        <div class="uk-container uk-container-small uk-grid uk-child-width-1-1@s uk-hidden@m" >
+            <div class="contenedor-imagen-alumnos uk-flex uk-flex-center"> <h:graphicImage styleClass="uk-border-circle" library="img" name="3ojos.svg" width="70" height="70"/></div>
+            <div class="uk-text-center"><h1 class="letra-cards lescuadron ">Student Administration</h1></div>
         </div>
        <h:panelGroup layout="block" styleClass="uk-container uk-grid" uk-grid="">
 
@@ -57,9 +78,9 @@
                                         <div class="uk-form-controls">
                                            <div class="uk-form-width-medium">
                                                 <label><input class="uk-radio " type="radio" name="radio1"/>6</label>
-                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio1"/>7</label>
-                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio1"/>8</label>
-                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio1"/>9</label>
+                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio2"/>7</label>
+                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio3"/>8</label>
+                                                <label><input class="uk-radio uk-margin-small-left" type="radio" name="radio4"/>9</label>
                                            </div>
                                         </div>
                                     </h:column>
@@ -88,6 +109,8 @@
                    <!--</h:form>-->
                <!--</div>-->
            <!--</div>-->
+
+           <h:commandButton styleClass="boton-escuadron-base-secundary"><h:graphicImage styleClass="module" library="img" name="/boton/anterior-habilitado.svg" pt:uk-svg="" /></h:commandButton>
 
        </h:panelGroup>
 

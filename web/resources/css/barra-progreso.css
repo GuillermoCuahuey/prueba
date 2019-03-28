@@ -1,0 +1,59 @@
+/* Progress */
+.uk-progress {
+    height: 3px;
+    margin-bottom: 0.5rem;
+    background-color: rgba(0,0,0,0.23);
+
+}
+* + .uk-progress {
+    margin-top: 0.25rem;
+}
+.uk-progress.warning::-webkit-progress-value {
+    background-color: #faa05a;
+}
+.uk-progress.warning::-moz-progress-bar {
+    background-color: #faa05a;
+}
+.uk-progress.warning::-ms-fill {
+    background-color: #faa05a;
+}
+.uk-progress.success::-webkit-progress-value {
+    background-color: #32d296;
+}
+.uk-progress.success::-moz-progress-bar {
+    background-color: #32d296;
+}
+.uk-progress.success::-ms-fill {
+    background-color: #32d296;
+}
+
+
+.uk-progress-full {
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* 3 */
+    display: block;
+    width: 100%;
+    /* 4 */
+    border: 0;
+    /* 5 */
+    background-color: #f8f8f8 !important;
+    /* 6 */
+    margin-bottom: 0px;
+    margin-top: 13px;
+    height: 18px;
+    border-radius: 1000px;
+    overflow: hidden;
+
+}
+
+.uk-progress-full::-webkit-progress-value{
+    background-color: var(--subnav-color);
+}
+
+.uk-progress-full::-moz-progress-bar{
+    background-color: var(--subnav-color);
+}

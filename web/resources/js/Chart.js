@@ -8098,7 +8098,7 @@ defaults._set('global', {
 		mode: 'nearest',
 		position: 'average',
 		intersect: true,
-		backgroundColor: 'rgba(0,0,0,0.8)',
+		backgroundColor: 'rgba(0,164,154,1)',
 		titleFontStyle: 'bold',
 		titleSpacing: 2,
 		titleMarginBottom: 6,
@@ -8119,8 +8119,8 @@ defaults._set('global', {
 		cornerRadius: 6,
 		multiKeyBackground: '#fff',
 		displayColors: true,
-		borderColor: 'rgba(0,0,0,0)',
-		borderWidth: 0,
+		borderColor: 'rgba(0,0,0,1)',
+		borderWidth: 2,
 		callbacks: {
 			// Args are: (tooltipItems, data)
 			beforeTitle: helpers.noop,
@@ -11402,7 +11402,7 @@ defaults._set('global', {
 
 		labels: {
 			boxWidth: 40,
-			padding: 10,
+			padding: 10,	
 			// Generates labels shown in the legend
 			// Valid properties to return:
 			// text : text to display
@@ -11413,7 +11413,7 @@ defaults._set('global', {
 			// lineDash
 			// lineDashOffset :
 			// lineJoin :
-			// lineWidth :
+			//lineWidth : 5,
 			generateLabels: function(chart) {
 				var data = chart.data;
 				return helpers.isArray(data.datasets) ? data.datasets.map(function(dataset, i) {
