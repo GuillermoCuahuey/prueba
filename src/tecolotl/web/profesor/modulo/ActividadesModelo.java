@@ -1,20 +1,19 @@
 package tecolotl.web.profesor.modulo;
 
-import java.sql.Time;
-
 public class ActividadesModelo {
+
     private String tag;
     private String titulo;
     private String descripcion;
     private String tiempo;
-    private String url;
+    private String idVideo;
 
-    public ActividadesModelo(String tag, String titulo, String descripcion, String tiempo, String url) {
+    public ActividadesModelo(String tag, String titulo, String descripcion, String tiempo, String idVideo) {
         this.tag = tag;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.tiempo = tiempo;
-        this.url = url;
+        this.idVideo = idVideo;
     }
 
     public ActividadesModelo(String tag, String titulo, String descripcion, String tiempo) {
@@ -24,12 +23,12 @@ public class ActividadesModelo {
         this.tiempo = tiempo;
     }
 
-    public String getUrl() {
-        return url;
+    public String getIdVideo() {
+        return idVideo;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setIdVideo(String idVideo) {
+        this.idVideo = idVideo;
     }
 
     public String getTag() {

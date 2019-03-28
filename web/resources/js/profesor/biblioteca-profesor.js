@@ -1,0 +1,1 @@
+var llamda = new XMLHttpRequest();
