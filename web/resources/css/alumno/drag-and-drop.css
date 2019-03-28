@@ -1,0 +1,21 @@
+body {
+    background-image: url('#{resource["img/fondobueno.jpg"]}');
+}
+#panel-navegacion {
+    position: fixed;
+    right: 0;
+    top:0;
+    bottom:0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+    width: max-content;
+    z-index:2;
+    transition: height 0.3s ease-out;
+}
+#top-head {
+    z-index: 9;
+    top: 0;
+    left:0;
+    right:0;
+}
