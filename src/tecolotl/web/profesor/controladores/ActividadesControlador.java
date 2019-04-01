@@ -13,6 +13,7 @@ import java.util.List;
 public class ActividadesControlador {
 
     private List<ActividadesModelo> tarea1;
+
     private List<ActividadesModelo> tarea2;
     private List<ActividadesModelo> tarea3;
     private List<ActividadesModelo> tarea4;
