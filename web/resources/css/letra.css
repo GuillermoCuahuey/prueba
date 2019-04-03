@@ -48,3 +48,6 @@ top: 18px;
 .text-color-level6{
     color: #ec2147;
 }
+.vista{
+    display: table;
+}

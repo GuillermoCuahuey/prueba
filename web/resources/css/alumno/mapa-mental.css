@@ -1,0 +1,37 @@
+[class*='centrar-formulario']{
+    position: absolute !important;
+}
+
+.centrar-formulario{
+    top: 50%;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    /* 1 */
+    /*width: -moz-max-content;*/
+    /*width: max-content;*/
+    /*max-width: 100%;*/
+    /*box-sizing: border-box;*/
+}
+
+.contenedor-padding{
+    padding: 30px 0px 30px 0px;
+}
+.contorno{
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--tsecundary-option-one);
+    border-radius: 8px;
+
+}
+.fondo-mapa{
+    /*background-color: rgba(232,231,231,0.3);*/
+    background-color: rgba(51,49,49,0.3);
+}
+
+textarea{
+    border-radius: 20px !important;
+    border-width: 10px !important;
+    padding: 0 20px;
+    border-color: black !important;
+}
