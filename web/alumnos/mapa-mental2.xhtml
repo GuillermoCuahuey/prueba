@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="/template/dashboard-profesor.xhtml">
+    <ui:define name="menu">
+        <ul class="uk-subnav nav-sub uk-visible@m " uk-margin="">
+            <li class="nav-sub-active"><a href="#">Product License</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
+            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
+        </ul>
+        <div class="uk-navbar-left uk-hidden@m">
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
+        </div>
+        <div id="menu" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar  ">
+
+                <button class="uk-offcanvas-close" type="button" uk-close=""></button>
+
+                <ul class="uk-nav  nav-sub-offcanvas ">
+                    <li class="uk-active nav-sub-active"><a href="#">Active</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </ui:define>
+    <ui:define name="contenido">
+        <!--<h:outputStylesheet library="css" name="/alumno/alumno.css"/>-->
+
+        <div class="uk-section uk-light uk-margin-large-top uk-margin-large-bottom uk-padding-small  uk-background-cover" uk-background-cover=" " style="background-image: url('../resources/img/fondobueno.jpg')" >
+            <div class="uk-container">
+                <form class="uk-form-stacked">
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="text1">Text</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="text1" type="text" placeholder="Some text..."/>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="text2">Text</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="text2" type="text" placeholder="Some text..."/>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="text3">Text</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="text3" type="text" placeholder="Some text..."/>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">Text</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text..."/>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </ui:define>
+
+
+</ui:composition>
+</html>
