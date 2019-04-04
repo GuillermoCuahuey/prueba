@@ -8681,12 +8681,13 @@ iframe.uk-cover {
 .uk-position-center {
   top: 50%;
   left: 50%;
+  right: 0;
   transform: translate(-50%, -50%);
   /* 1 */
-  width: -moz-max-content;
-  width: max-content;
-  max-width: 100%;
-  box-sizing: border-box;
+  /*width: -moz-max-content;*/
+  /*width: max-content;*/
+  /*max-width: 100%;*/
+  /*box-sizing: border-box;*/
 }
 /* Vertical */
 [class*='uk-position-center-left'],

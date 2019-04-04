@@ -47,33 +47,6 @@
     border-top-right-radius: 3px;
     background-color:#FFFFFF;
 }
-.uk-subnav-alumno li.uk-active:nth-child(1) a {
-    background-color:var(--turquesa-primary-color);
-    color: white;
-
-}.uk-subnav-alumno li.uk-active:nth-child(2) a {
-     background-color:var(--psecundary-option-one);
-    color: white;
- }.uk-subnav-alumno li.uk-active:nth-child(3) a {
-      background-color:var(--nsecundary-option-two);
-       color: white;
-  }
-.uk-subnav-alumno li.uk-active:nth-child(4) a {
-    background-color:var(--activo-fondo-navbar);
-    color: white;
-}
-.uk-subnav-alumno li.uk-active:nth-child(5) a {
-    background-color:var(--tsecundary-option-one);
-    color: white;
-}
-.uk-subnav-alumno li.uk-active:nth-child(6) a {
-    background-color:var(--asecundary-option-one);
-    color: white;
-}
-.uk-subnav-alumno li.uk-active:nth-child(7) a {
-    background-color:var(--color-nav-primary);
-    color: white;
-}
 
 /*navegacion detalle-alumno*/
 .nav-default-profesor2 {
