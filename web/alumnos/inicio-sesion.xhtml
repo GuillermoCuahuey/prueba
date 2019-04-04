@@ -13,11 +13,11 @@
         <ui:define name="contenido">
             <div class="uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="expand: true">
                 <div class="contenedor">
-                    <div class="nombre-alumno">Jose Luis Morales</div>
+                    <h5 class="nombre-alumno letra-inicio">Jose Luis Morales</h5>
                     <c:forEach begin="1" end="28" var="indice">
                         <h:graphicImage library="img" name="alumno/iconos-login/${indice}.svg" height="40" width="40"/>
                     </c:forEach>
-                    <button class="boton">Aceptar</button>
+                    <button class="boton boton-escuadron-base-secundary">Aceptar</button>
                 </div>
             </div>
             <h:outputScript library="js" name="alumno/inicio-sesion.js"/>

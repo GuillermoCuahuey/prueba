@@ -32,3 +32,9 @@
     grid-area: 1 / 5 / 1 / 8;
     justify-self: end;
 }
+.letra-inicio {
+    font-family: 'Sniglet', "Arial Black";
+    font-size: 45px !important;
+    padding: 7px 10px 7px 10px;
+    color:#000;
+}
