@@ -7,11 +7,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>Escuadron</title>
+    <h:outputStylesheet library="css" name="uikit.css"/>
+    <h:outputStylesheet library="css" name="index.css"/>
 </h:head>
 <h:body>
-    Landing
-    <h:form>
-        <h:link id="index" outcome="administracion/administracion-dashboard" value="Administración"/>
-    </h:form>
+    <div class="">
+        <h:graphicImage library="img" name="fondo/sunset.svg" uk-svg=""/>
+    </div>
+    <h:outputScript library="js" name="uikit.js"/>
 </h:body>
 </html>
