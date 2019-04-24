@@ -9,12 +9,14 @@
       xmlns:pa="http://xmlns.jcp.org/jsf/composite/paginacion"  >
 <ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
-        <ul class="uk-subnav nav-sub uk-visible@m" uk-margin="">
-            <li class="nav-sub-active"><a href="#">Product License</a></li>
-            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
-            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
-            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
-        </ul>
+        <div class="">
+            <ul class="uk-subnav nav-sub uk-visible@m" uk-margin="">
+                <li class="nav-sub-active"><a href="#">Product License</a></li>
+                <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
+                <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
+                <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
+            </ul>
+        </div>
         <div class="uk-navbar-left uk-hidden@m">
             <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
         </div>
@@ -124,7 +126,7 @@
                                             <f:facet name="header"><span class="letra-tabla uk-text-bold">progreso</span></f:facet>
                                             <div>
                                                 <span class="uk-text-small"><small>%60</small></span>
-                                                <progress class="uk-progress" value="60" max="100"></progress>
+                                                <progress class="uk-progress tabla" value="60" max="100"></progress>
                                             </div>
                                         </h:column>
                                         <h:column>
@@ -135,27 +137,27 @@
                                                 <div uk-dropdown="boundary:.tabla-profesor-dropdown; mode: click" id="dropear" >
                                                     <ul class="uk-nav uk-dropdown-nav uk-text-left">
                                                         <li>
-                                                            <h:link    outcome="detalle-alumno" styleClass="uk-text-primary" >
+                                                            <h:link outcome="detalle-alumno">
                                                                 <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
                                                                 <span class="uk-text-middle"><h:outputText value="Detalle"/></span>
                                                             </h:link>
                                                         </li>
                                                         <li>
-                                                            <h:commandLink   pt:uk-toggle="target: #modal-editar-alumno" styleClass="uk-text-primary">
+                                                            <h:commandLink   pt:uk-toggle="target: #modal-editar-alumno">
                                                                 <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
                                                                 <span class="uk-text-middle"><h:outputText value="Editar"/></span>
                                                                 <f:ajax />
                                                             </h:commandLink>
                                                         </li>
                                                         <li>
-                                                            <h:commandLink  pt:uk-toggle="target: #modal-eliminar" styleClass="uk-text-primary" >
+                                                            <h:commandLink  pt:uk-toggle="target: #modal-eliminar">
                                                                 <h:outputText pt:uk-icon="icon: trash" styleClass="uk-margin-small-right uk-icon" />
                                                                 <span class="uk-text-middle"><h:outputText value="Eliminar"/></span>
                                                                 <f:ajax/>
                                                             </h:commandLink>
                                                         </li>
                                                         <li>
-                                                            <h:commandLink  pt:uk-toggle="target: #modal-descarga" styleClass="uk-text-primary" >
+                                                            <h:commandLink  pt:uk-toggle="target: #modal-descarga">
                                                                 <h:outputText pt:uk-icon="icon: ban" styleClass="uk-margin-small-right uk-icon" />
                                                                 <span class="uk-text-middle"><h:outputText value="Reporte"/></span>
                                                                 <f:ajax/>
