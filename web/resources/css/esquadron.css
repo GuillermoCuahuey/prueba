@@ -495,6 +495,8 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 padding-top: 38px;
 }
 
-.padding-logo{
-  padding: 8px 0px;
+
+.img-alumno-dashboard{
+  width: 200px;
+  height: 200px;
 }

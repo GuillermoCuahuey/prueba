@@ -244,35 +244,32 @@ iframe {
     background-color: rgba(255,255,255,0.5);
 }
 .fondo-comic{
-    background-image: url('../img/alumno/lineas-rojas.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url("/resources/img/fonfo1.png");
 
 }
 
 .fondo-comic2{
-    background-image: url('../img/fondoart2.jpg');
+    background-image: url('/resources/img/alumno/fondoart2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 
 }
 .fondo-comic3{
-    background-image: url('../img/fondoart3.jpg');
+    background-image: url('/resources/img/alumno/fondoart3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 
 }
 .fondo-comic4{
-    background-image: url('../img/fondoart4.jpg');
+    background-image: url('/resources/img/alumno/fondoart4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 .fondo-comic5{
-    background-image: url('../img/fondo5.jpg');
+    background-image: url('/resources/img/alumno/fondo5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -359,4 +356,19 @@ iframe {
 
 .barra-padding{
     margin-top: 5px;
+}
+
+.color-nav{
+    /* background-color: #76448A; */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+8,b8bac6+49,dddfe3+93,f5f6f6+100 */
+    background: #f5f6f6; /* Old browsers */
+    background: -moz-linear-gradient(left, #f5f6f6 0%, #dbdce2 8%, #b8bac6 49%, #dddfe3 93%, #f5f6f6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f5f6f6 0%,#dbdce2 8%,#b8bac6 49%,#dddfe3 93%,#f5f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #f5f6f6 0%,#dbdce2 8%,#b8bac6 49%,#dddfe3 93%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); /* IE6-9 */
+    height: 30px;
+}
+.color-card-dashboard-alumno{
+    border-color: #76448A !important;
 }
