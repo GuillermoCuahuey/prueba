@@ -107,6 +107,7 @@
 .letra-color-subnav{
   color: #000 !important;
 }
+
 .nav-sub>li>a:hover{
   color: var(--turquesa-primary-color) !important;
   border: solid;
@@ -114,6 +115,15 @@
   border-radius: 5px;
   border-color: var(--turquesa-primary-color);
 }
+
+.nav-sub>li>a {
+  border: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  border-color: #f4f3ed;
+}
+
+
 .nav-sub-offcanvas>li>a:hover{
     color: var(--turquesa-primary-color) !important;
     border: solid;
@@ -127,9 +137,8 @@
   border: solid;
   border-width: 3px;
   border-radius: 5px;
-  border-color: var(--turquesa-primary-color);}
-
-
+  border-color: var(--turquesa-primary-color) !important;
+}
 
 
 .section-color{
@@ -401,17 +410,33 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 }
 
 .uk-dropdown {
+  font-family: 'Sniglet', "Arial Black";
   border: solid;
   border-width: 3px;
-  border-color: var(--subnav-color);
+  border-color: var(--turquesa-primary-color);
   border-radius: 5%;
+}
 
+.uk-dropdown ul li a{
+  color: var(--turquesa-primary-color);
+}
+
+.uk-dropdown ul li a:hover{
+  color: var(--tsecundary-option-one);
+}
+
+.uk-progress.tabla::-webkit-progress-value {
+  background-color: var(--turquesa-primary-color);
+}
+.uk-progress.tabla::-moz-progress-bar {
+  background-color: var(--turquesa-primary-color);
+}
+.uk-progress.tabla::-ms-fill {
+  background-color: var(--turquesa-primary-color);
 }
 
 .profile-img {
-
     display: block;
-
 }
 
 .uk-tooltip {
@@ -470,6 +495,8 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 padding-top: 38px;
 }
 
-.padding-logo{
-  padding: 8px 0px;
+
+.img-alumno-dashboard{
+  width: 200px;
+  height: 200px;
 }

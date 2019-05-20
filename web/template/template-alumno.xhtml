@@ -6,23 +6,16 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
-<ui:include src="header-profesor.xhtml"/>
-<h:body >
-   <header>
-        <ui:include src="nav1-profesor.xhtml"/>
-   </header>
-    <div class="section-color">
-        <div class="uk-container uk-flex uk-flex-center uk-flex-middle">
-          <ui:insert name="menu"/>
-        </div>
-    </div>
-    <section>
-        <div class="uk-container">
-             <ui:insert name="contenido"/>
+<ui:include src="head-alumno.xhtml"/>
+<h:body>
+    <ui:include src="header-alumno.xhtml"/>
+    <ui:include src="nav-alumnos.xhtml"/>
+    <section id="content" pt:data-uk-height-viewport="expand: true">
+        <div class="padding-contenido-inferior">
+            <ui:insert name="contenido"/>
         </div>
     </section>
-    <ui:include src="footer.xhtml"/>
-</h:body>
+    <ui:include src="footer-alumno.xhtml"/>
 
+</h:body>
 </html>

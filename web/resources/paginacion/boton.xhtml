@@ -9,23 +9,23 @@
         <cc:attribute name="htmlDataTable" required="true" type="javax.faces.component.html.HtmlDataTable"/>
     </cc:interface>
     <cc:implementation>
-        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-primera"
+        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-primera-admin"
                          disabled="#{cc.attrs.htmlDataTable.first eq 0}">
             <f:setPropertyActionListener value="0" target="#{cc.attrs.htmlDataTable.first}"/>
         </h:commandButton>
 
-        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-anterior"
+        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-anterior-admid"
                          disabled="#{cc.attrs.htmlDataTable.first eq 0}">
             <f:setPropertyActionListener value="#{cc.attrs.htmlDataTable.first - cc.attrs.htmlDataTable.rows}"
                                          target="#{cc.attrs.htmlDataTable.first}"/>
         </h:commandButton>
-        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-siguiente"
+        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-siguiente-admin"
                          disabled="#{cc.attrs.htmlDataTable.first + cc.attrs.htmlDataTable.rows ge cc.attrs.htmlDataTable.rowCount}">
             <f:setPropertyActionListener value="#{cc.attrs.htmlDataTable.first + cc.attrs.htmlDataTable.rows}"
                                          target="#{cc.attrs.htmlDataTable.first}"/>
         </h:commandButton>
 
-        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-ultima"
+        <h:commandButton styleClass="uk-button uk-button-secondary uk-margin-small-right boton-paginacion boton-paginacion-ultima-admin"
                          disabled="#{cc.attrs.htmlDataTable.first + cc.attrs.htmlDataTable.rows ge cc.attrs.htmlDataTable.rowCount}">
             <f:setPropertyActionListener value="#{((cc.attrs.htmlDataTable.rowCount div cc.attrs.htmlDataTable.rows) -1) * cc.attrs.htmlDataTable.rows}"
                                          target="#{cc.attrs.htmlDataTable.first}"/>

@@ -1,0 +1,40 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.contenedor img {
+    transition: height 1s, width 1s;
+    cursor: pointer;
+}
+
+.contenedor img:hover {
+    width: 70px;
+    height: 70px;
+}
+
+.seleccionado {
+    width: 70px;
+    height: 70px;
+}
+
+.nombre-alumno {
+    grid-area: 1 / 1 / 1 / 8;
+    justify-self: start;
+}
+
+.boton {
+    grid-area: 1 / 5 / 1 / 8;
+    justify-self: end;
+}
+.letra-inicio {
+    font-family: 'Sniglet', "Arial Black";
+    font-size: 45px !important;
+    padding: 7px 10px 7px 10px;
+    color:#000;
+}

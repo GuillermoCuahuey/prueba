@@ -8,9 +8,10 @@
 }
 
 .letra-logo{
-font-size: 27px;
-position: relative;
-top: 18px;
+    font-size: 27px;
+    position: relative;
+    top: 15px;
+    margin-left: 10px;
 }
 
 .letra-titulo{

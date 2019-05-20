@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+    <ui:composition template="/template/dashboard-profesor.xhtml">
+        <ui:define name="menu"/>
+        <ui:define name="contenido">
+            <div class="uk-flex uk-flex-around">
+                <div class="columna" draggable="true">A</div>
+                <div class="columna" draggable="true">B</div>
+                <div class="columna" draggable="true">C</div>
+            </div>
+            <style type="text/css">
+                .columna{
+                    width: 100px;
+                    height: 100px;
+                    border: #2E0239 solid 5px;
+                    background: #999999 ;
+                }
+            </style>
+            <script type="text/javascript">
+                function handleDragStart(evento) {
+                    evento.target.style.opacity = '0.4';
+                }
+
+                var cols = document.querySelectorAll('#columns .column');
+                cols.forEach(function (col) {
+                    col.addEventListener('dragstart', handleDragStart, false);
+                });
+            </script>
+        </ui:define>
+    </ui:composition>
+
+</html>
