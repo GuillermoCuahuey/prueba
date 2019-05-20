@@ -130,10 +130,10 @@ body{
 
 @media screen and (min-width: 1367px){
     .nave-superior > img{
-       width: 300px;
+       width: 350px;
        height: auto;}
     .nave-inferior > div > img{
-        width: 300px;
+        width: 350px;
         height: auto;
     }
 }
