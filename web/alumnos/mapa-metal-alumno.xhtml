@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="/template/template-alumno.xhtml">
+    <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="/alumno/mapa-mental.css"/>
+        <h:outputStylesheet library="css" name="letra.css"/>
+
+            <div class="padding-superior "    >
+                <div class="uk-light">
+                    <div class="uk-container uk-container-small fondo-mapa contorno">
+                        <h1><span class="lescuadron">Mapa mental</span></h1>
+
+                        <form class="uk-form-stacked">
+
+                            <div class="uk-margin uk-grid" uk-grid="" >
+                                <div class="uk-width-auto" >
+                                    <h:graphicImage library="img" name="monstruo.svg" styleClass="uk-svg" width="70" height="70"/>
+                                </div>
+                                <div class="uk-width-expand  ">
+                                    <label class="uk-form-label uk-text-bold" for="form-stacked-text">Who was involved?</label>
+                                    <div class="uk-form-controls">
+                                        <!--<input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text..."/>-->
+                                        <textarea class="uk-textarea" id="form-stacked-text" rows="3" placeholder="Textarea"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid" uk-grid="">
+                                <div class="uk-width-auto ">
+                                    <h:graphicImage library="img" name="monstruo.svg" styleClass="uk-svg" width="70" height="70"/>
+                                </div>
+                                <div class="uk-width-expand  ">
+                                    <label class="uk-form-label uk-text-bold" for="form-stacked-text2">What happened?</label>
+                                    <div class="uk-form-controls">
+                                        <!--<input class="uk-input" id="form-stacked-text2" type="text" placeholder="Some text..."/>-->
+                                        <textarea class="uk-textarea" id="form-stacked-text2" rows="3" placeholder="Textarea"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid" uk-grid="">
+                                <div class="uk-width-auto ">
+                                    <h:graphicImage library="img" name="monstruo.svg" styleClass="uk-svg" width="70" height="70"/>
+                                </div>
+                                <div class="uk-width-expand  ">
+                                    <label class="uk-form-label uk-text-bold" for="form-stacked-text3">When did it happen?</label>
+                                    <div class="uk-form-controls">
+                                        <!--<input class="uk-input" id="form-stacked-text3" type="text" placeholder="Some text..."/>-->
+                                        <textarea class="uk-textarea" id="form-stacked-text3" rows="3" placeholder="Textarea"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid" uk-grid="">
+                                <div class="uk-width-auto ">
+                                    <h:graphicImage library="img" name="monstruo.svg" styleClass="uk-svg" width="70" height="70"/>
+                                </div>
+                                <div class="uk-width-expand  ">
+                                    <label class="uk-form-label uk-text-bold" for="form-stacked-text4">Where did it happen?</label>
+                                    <div class="uk-form-controls">
+                                        <!--<input class="uk-input" id="form-stacked-text4" type="text" placeholder="Some text..."/>-->
+                                        <textarea class="uk-textarea" id="form-stacked-text4" rows="3" placeholder="Textarea"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid" uk-grid="">
+                                <div class="uk-width-auto ">
+                                    <h:graphicImage library="img" name="monstruo.svg" styleClass="uk-svg" width="70" height="70"/>
+                                </div>
+                                <div class="uk-width-expand  ">
+                                    <label class="uk-form-label uk-text-bold" for="form-stacked-text5">Why did it happen?</label>
+                                    <div class="uk-form-controls">
+                                        <!--<input class="uk-input" id="form-stacked-text5" type="text" placeholder="Some text..."/>-->
+                                        <textarea class="uk-textarea" id="form-stacked-text5" rows="3" placeholder="Textarea"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+    </ui:define>
+</ui:composition>
+</html>

@@ -26,7 +26,8 @@
 }
 .fondo-mapa{
     /*background-color: rgba(232,231,231,0.3);*/
-    background-color: rgba(51,49,49,0.3);
+    /*background-color: rgba(51,49,49,0.3);*/
+    background-color: rgba(233,33,71,0.8);
 }
 
 textarea{
@@ -34,4 +35,6 @@ textarea{
     border-width: 5px !important;
     padding: 0 20px;
     border-color: black !important;
-}
+    background-color: rgba(255,255,255,0.4) !important;
+    color: black !important;
+font-weight: bold !important;}

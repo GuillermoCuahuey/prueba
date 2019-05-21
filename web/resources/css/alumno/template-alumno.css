@@ -1,7 +1,7 @@
 body{
-    background: url("#{resource['img/morado-fondo.jpg']}") !important;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: url("#{resource['img/estrellas-alumno.jpg']}");
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
     background-attachment: fixed;
 
 

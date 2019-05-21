@@ -1,6 +1,4 @@
-body {
-    background-image: url('#{resource["img/fondobueno.jpg"]}');
-}
+
 .tamContenedor{
     position: relative;
     display: flex;
@@ -26,10 +24,11 @@ body {
     margin: 10vh 2vw;
 }
 .centElementos{
+    background-color: rgba(255,255,255,0.8);
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     width: inherit;
     height: inherit;
