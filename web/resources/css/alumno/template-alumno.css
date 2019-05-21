@@ -1,5 +1,8 @@
 body{
-    background: url("#{resource['img/fondo-morado2.jpg']}") !important;
+    background: url("#{resource['img/morado-fondo.jpg']}") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 
 
 }
@@ -24,7 +27,8 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
     /*background-color: #222A30;*/
-    background-color: #76448A;
+    /*background-color: #76448A;*/
+    background-color: rgba(255,255,255,0.3);
     width: 100px;
     z-index:2;
     transition: height 0.3s ease-out;
