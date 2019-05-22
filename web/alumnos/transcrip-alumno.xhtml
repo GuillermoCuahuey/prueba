@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <ui:composition template="/template/template-alumno.xhtml">
     <ui:define name="contenido">
@@ -14,35 +15,35 @@
                     <iframe class="" width="100%" height="100%" src="https://www.youtube.com/embed/JcMtWwiyzpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/JcMtWwiyzpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>-->
                 </div>
-                <div class="tamElemento">
-                    <div class="centElementos uk-overflow-auto ">
+                <div class="tamElemento ">
+                    <div class="centElementos uk-overflow-auto letra-guion padding-guion borde-guion scroll-alumno">
                         <p>
-                            Will Smith: I know you guys have been waiting and here&#39;s the very first trailer for Aladdin. It is the
-                            very first trailer. Don&#39;t get dizzy though; don&#39;t get dizzy before we start to trailer. Don&#39;t get dizzy!</p>
+                           <span class="letra-perdonaje">Will Smith:</span> I know you guys have been waiting and here&#39;s the very first trailer for Aladdin. It is the
+                            very first trailer. Don&#39;t get <h:outputText styleClass="palabra-glosario" value="dizzy" pt:uk-tooltip="title:Adjective: Mareado"/> though; don&#39;t get dizzy before we start to trailer. Don&#39;t get dizzy!</p>
 
-                        <p>Crowd: Stop, thief! Vandal! Street rat! Get him! Stop that boy! Up, there!</p>
-                        <p>Guard: He’s on the roof! Watch out!</p>
-                        <p>Jafar: You stumbled upon an opportunity. I can make you rich… rich enough to impress a
+                        <p><span class="letra-perdonaje">Crowd:</span> Stop, <h:outputText styleClass="palabra-glosario" value="thief!" pt:uk-tooltip="title:Noun: Ladrón"/>  Vandal! Street rat! Get him! Stop that boy! Up, there!</p>
+                        <p><span class="letra-perdonaje">Guard:</span> He’s on the roof! Watch out!</p>
+                        <p><span class="letra-perdonaje">Jafar:</span> You <h:outputText styleClass="palabra-glosario" value="stumbled" pt:uk-tooltip="title:Verb: stumble-Tropezón"/> upon an opportunity. I can make you rich… rich enough to impress a
                             princess</p>
-                        <p>Aladdin: What would I have to do?</p>
-                        <p>Jafar: There&#39;s a Cave of Wonders. Bring me the lamp.</p>
-                            <p>Genie: Oh, great one who summons me. I stand by my oath loyalty two wishes three. I&#39;m kidding
+                        <p><span class="letra-perdonaje">Aladdin:</span> What would I have to do?</p>
+                        <p><span class="letra-perdonaje">Jafar:</span> There&#39;s a Cave of Wonders. Bring me the lamp.</p>
+                        <p><span class="letra-perdonaje">Genie:</span> Oh, great one who <h:outputText styleClass="palabra-glosario" value="summons" pt:uk-tooltip="title:Verb:Summon-Convocar"/> me. I stand by my <h:outputText styleClass="palabra-glosario" value="oath " pt:uk-tooltip="title:Noun:Juramento"/> <h:outputText styleClass="palabra-glosario" value="loyalty" pt:uk-tooltip="title:Noun:Lealtad"/> two wishes three. I&#39;m kidding
                                 Russians.
                             Watch out! You have woken me up! You ain’t never had a friend like me</p>
-                           <p>Aladdin: Hey, can you make me a prince.</p>
-                        <p>Genie: There is a lot of gray area in make me a prince. I could just make you a prince</p>
-                        <p>Aladdin: Oh, no!</p>
-                        <p>Genie: Have you seen my palace?
+                        <p><span class="letra-perdonaje">Aladdin:</span> Hey, can you make me a prince.</p>
+                        <p><span class="letra-perdonaje">Genie:</span> There is a lot of gray area in make me a prince. I could just make you a prince</p>
+                        <p><span class="letra-perdonaje">Aladdin:</span> Oh, no!</p>
+                        <p><span class="letra-perdonaje">Genie:</span> Have you seen my palace?
                             You look like a prince on the outside but I didn&#39;t change anything on the inside. Showtime!</p>
-                        <p>Aladdin: No, I&#39;m in charge. Okay, I say when it&#39;s time…Really?
+                        <p><span class="letra-perdonaje">Aladdin:</span> No, I&#39;m <h:outputText styleClass="palabra-glosario" value="in charge" pt:uk-tooltip="title:Adverb:Encargado"/>. Okay, I say when it&#39;s time…Really?
                             I thought a princess could go anywhere…</p>
-                        <p>Jasmine: Not this princess.</p>
-                        <p>Aladdin: Do you trust me?</p>
-                        <p>Jasmine: A whole new world.</p>
-                        <p>Aladdin: Don’t you dare close your eyes</p>
-                        <p>Jasmine: A hundred thousand things to see</p>
-                        <p>Aladdin: Hold your breath. It gets better.</p>
-                        <p>Jasmine: I’m like a shooting star. I’ve come so far
+                        <p><span class="letra-perdonaje">Jasmine:</span> Not this princess.</p>
+                        <p><span class="letra-perdonaje">Aladdin:</span> Do you trust me?</p>
+                        <p><span class="letra-perdonaje">Jasmine:</span> A whole new world.</p>
+                        <p><span class="letra-perdonaje">Aladdin:</span> Don’t you <h:outputText styleClass="palabra-glosario" value="dare" pt:uk-tooltip="title:Verb: osar/atreverse"/>close your eyes</p>
+                        <p><span class="letra-perdonaje">Jasmine:</span> A hundred thousand things to see</p>
+                        <p><span class="letra-perdonaje">Aladdin:</span> Hold your <h:outputText styleClass="palabra-glosario" value="breath" pt:uk-tooltip="title:Noun:Respiración"/>. It gets better.</p>
+                        <p><span class="letra-perdonaje">Jasmine:</span> I’m like a <h:outputText styleClass="palabra-glosario" value="shooting star" pt:uk-tooltip="title:Noun:Estrella fugaz"/>. I’ve come so far
                             Aladdin and Jasmine: Let me share this whole new world with you.</p>
 
                     </div>
