@@ -9,13 +9,15 @@
 <ui:include src="head-alumno.xhtml"/>
 <h:body  pt:uk-height-viewport="">
     <ui:include src="header-alumno.xhtml"/>
-    <ui:include src="nav-alumnos.xhtml"/>
+    <!--<ui:include src="nav-alumnos.xhtml"/>-->
+    <aside id="left-col" class="uk-light uk-visible@m">
+        <ui:insert name="menu"/>
+    </aside>
     <section id="content" pt:data-uk-height-viewport="expand: true">
         <div class="padding-contenido-inferior">
             <ui:insert name="contenido"/>
         </div>
     </section>
     <ui:include src="footer-alumno.xhtml"/>
-
 </h:body>
 </html>

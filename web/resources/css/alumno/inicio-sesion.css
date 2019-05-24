@@ -33,8 +33,15 @@
     justify-self: end;
 }
 .letra-inicio {
-    font-family: 'Sniglet', "Arial Black";
+    font-family: Sniglet, 'Arial Black';
     font-size: 45px !important;
     padding: 7px 10px 7px 10px;
     color:#000;
+}
+
+.link{
+    color: white;
+}
+.link:hover{
+    text-decoration: none;
 }

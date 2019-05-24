@@ -8,7 +8,50 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 
     <ui:composition template="/template/template-alumno.xhtml">
+        <ui:define name="menu">
+            <div class="left-content-box  content-box-dark">
+                <h:graphicImage library="img" name="astronauta-nino.svg" alt="" class="uk-border-circle profile-img"/>
+                <h6 class="uk-text-center uk-margin-remove-vertical text-light">John Doe</h6>
 
+                <div class="uk-position-relative uk-text-center uk-display-block">
+                    <a href="#" class="uk-text-small uk-text-muted uk-display-block uk-text-center" data-uk-icon="icon: triangle-down; ratio: 0.7">Admin</a>
+                    <!-- user dropdown -->
+                    <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+                        <ul >
+                            <!--<li class="uk-active"><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></a></li>-->
+                            <li><a href="#">Perfil</a></li>
+                            <li><a href="#">Chat</a></li>
+                            <li><a href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+                    <!-- /user dropdown -->
+                </div>
+            </div>
+
+            <div class="left-nav-wrap  uk-visible@xl ">
+                <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-center uk-margin-large-top">
+                    <!--<li class="uk-active"><a href="#"><img src="img/alumno/iconos-login/1.svg" width="80" alt=""></a></li>-->
+                    <li class="uk-active"><a href="#" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></a></li>
+                    <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></h:link></li>
+                    <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="80" alt=""/></a></li>
+                    <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
+                    <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="85" height="" alt=""/></a></li>
+                    <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="80" alt=""/></a></li>
+                </ul>
+
+            </div>
+            <div class="left-nav-wrap uk-position-relative  uk-hidden@xl ">
+                <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-top-center uk-margin-small-top">
+                    <li class="uk-active"><a href="#"><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></a></li>
+                    <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
+                    <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="50" alt=""/></a></li>
+                    <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
+                    <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></a></li>
+                    <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
+                </ul>
+
+            </div>
+        </ui:define>
         <ui:define name="contenido">
             <h:outputStylesheet library="css" name="letra.css"/>
             <div class="uk-container margen-superior  padding-superior padding-inferior uk-border-rounded">
@@ -39,7 +82,7 @@
                                 <div  uk-grid="">
                                     <div class="uk-width-1-1@m"><div class="uk-text-center">A1</div></div>
                                     <div class="uk-width-auto " style="font-weight: bold; color:black;" >0%</div>
-                                    <div class="uk-width-expand uk-padding-remove-left"><progress class="uk-progress barra-padding" value="60" max="100"></progress></div>
+                                    <div class="uk-width-expand uk-padding-remove-left"><progress class="uk-progress barra-padding" value="60" max="100"/></div>
                                     <div class="uk-width-auto uk-padding-remove-left" style="font-weight: bold;color:black;">100%</div>
                                 </div>
                             </div>
@@ -97,7 +140,7 @@
                             <div class="fondo-comic4 " style=";border: 6px solid white; padding: 20px 0;">
                                 <div class="uk-flex uk-flex-center  uk-grid" >
                                     <h:graphicImage styleClass="img-alumno-dashboard " library="img" name="verde.svg" alt="moustrou naranja"  pt:uk-tooltip="title: Mental map; pos: right "/>
-                                    <div class="uk-width-1-1@m paddind-barra"><progress class="uk-progress color5" value="60" max="100"></progress></div>
+                                    <div class="uk-width-1-1@m paddind-barra"><progress class="uk-progress color5" value="60" max="100"/></div>
                                 </div>
                             </div>
                         </div>
