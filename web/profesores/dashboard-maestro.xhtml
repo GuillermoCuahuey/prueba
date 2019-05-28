@@ -12,9 +12,8 @@
     <ui:define name="menu">
         <ul class="uk-subnav nav-sub uk-visible@m " uk-margin="">
             <li class="nav-sub-active"><h:link outcome="dashboard-maestro" value="Home"/></li>
-            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
+            <li class="uk-text-uppercase"><h:link outcome="biblioteca-profesor2" styleClass="letra-color-subnav" value="Library"/> </li>
             <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
-            <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
         </ul>
         <div class="uk-navbar-left uk-hidden@m">
             <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
@@ -25,9 +24,9 @@
                 <button class="uk-offcanvas-close" type="button" uk-close=""/>
 
                 <ul class="uk-nav  nav-sub-offcanvas ">
-                    <li class="uk-active nav-sub-active"><a href="#">Active</a></li>
-                    <li><a href="#" class="letra-color-subnav">Item</a></li>
-                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                    <li class="nav-sub-active"><h:link outcome="dashboard-maestro" value="Home"/></li>
+                    <li class="uk-text-uppercase"><h:link outcome="biblioteca-profesor2" styleClass="letra-color-subnav" value="Library"/> </li>
+                    <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
                 </ul>
 
             </div>

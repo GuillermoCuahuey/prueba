@@ -6,46 +6,66 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<ui:composition template="/template/template-alumno.xhtml">
+    <ui:define name="menu">
+        <div class="left-content-box  content-box-dark">
+            <h:graphicImage library="img" name="astronauta-nino.svg" alt="" class="uk-border-circle profile-img"/>
+            <h6 class="uk-text-center uk-margin-remove-vertical text-light">John Doe</h6>
 
-    <ui:composition template="/template/dashboard-profesor.xhtml">
-        <ui:define name="menu">
-            <ul class="uk-subnav nav-sub uk-visible@m " uk-margin="">
-                <li ><h:link outcome="dashboard-maestro" value="Home" styleClass="letra-color-subnav"/></li>
-                <li class="uk-text-uppercase nav-sub-active"><h:link outcome="biblioteca-profesor2" styleClass="letra-color-subnav" value="Library"/> </li>
-                <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
-            </ul>
-            <div class="uk-navbar-left uk-hidden@m">
-                <a class="uk-navbar-toggle" uk-navbar-toggle-icon="" href="" uk-toggle="target: #menu" type="button"/>
-            </div>
-            <div id="menu" uk-offcanvas="overlay: true">
-                <div class="uk-offcanvas-bar  ">
-
-                    <button class="uk-offcanvas-close" type="button" uk-close=""/>
-
-                    <ul class="uk-nav  nav-sub-offcanvas ">
-                        <li ><h:link outcome="dashboard-maestro" value="Home" styleClass="letra-color-subnav"/></li>
-                        <!--<li class="uk-text-uppercase "><a href="#" class="letra-color-subnav">Group Details</a></li>-->
-                        <!--<li class="uk-text-uppercase "><a href="#" class="letra-color-subnav">Student Details</a></li>-->
-                        <li class="uk-text-uppercase nav-sub-active"><h:link outcome="biblioteca-profesor2" styleClass="letra-color-subnav" value="Library"/> </li>
-                        <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
+            <div class="uk-position-relative uk-text-center uk-display-block">
+                <a href="#" class="uk-text-small uk-text-muted uk-display-block uk-text-center" data-uk-icon="icon: triangle-down; ratio: 0.7">Admin</a>
+                <!-- user dropdown -->
+                <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+                    <ul >
+                        <!--<li class="uk-active"><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></a></li>-->
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Cerrar Sesion</a></li>
                     </ul>
-
                 </div>
+                <!-- /user dropdown -->
             </div>
-        </ui:define>
-        <ui:define name="contenido">
-            <h:outputStylesheet library="css" name="profesor/biblioteca-profesor.css"/>
-            <div class="uk-container">
-                <div class="uk-width-1-1@m uk-margin-medium-top">
-                    <form id="search-form" action="">
-                        <div class="uk-inline uk-width-1-1">
-                            <span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: search"/>
-                            <input class="uk-input uk-width-1-1 search-fld" type="text" placeholder="Type your search" autofocus=""/>
-                            <a href="#" class="search-filter" data-uk-filter-control="[data-tags*='']" hidden="">Search</a>
-                        </div>
-                    </form>
-                </div>
-                <div data-uk-filter="target: .js-filter">
+        </div>
+
+        <div class="left-nav-wrap  uk-visible@xl ">
+            <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-center uk-margin-large-top">
+                <!--<li class="uk-active"><a href="#"><img src="img/alumno/iconos-login/1.svg" width="80" alt=""></a></li>-->
+                <li ><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></h:link></li>
+                <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></h:link></li>
+                <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="80" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="80" height="" alt=""/></h:link></li>
+                <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="80" alt=""/></a></li>
+            </ul>
+
+        </div>
+        <div class="left-nav-wrap uk-position-relative  uk-hidden@xl ">
+            <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-top-center uk-margin-small-top">
+                <li class="uk-active"><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></h:link></li>
+                <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
+            </ul>
+
+        </div>
+
+    </ui:define>
+    <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="profesor/biblioteca-profesor.css"/>
+
+        <div class="uk-container  margen-superior  padding-superior padding-inferior">
+            <div class="uk-width-1-1@m uk-margin-medium-top">
+                <form id="search-form" action="">
+                    <div class="uk-inline uk-width-1-1">
+                        <span class="uk-form-icon uk-form-icon-flip" data-uk-icon="icon: search"/>
+                        <input class="uk-input uk-width-1-1 search-fld" type="text" placeholder="Type your search" autofocus=""/>
+                        <a href="#" class="search-filter" data-uk-filter-control="[data-tags*='']" hidden="">Search</a>
+                    </div>
+                </form>
+            </div>
+            <div data-uk-filter="target: .js-filter">
                 <ul class="uk-subnav nav-default-profesor uk-subnav-alumno uk-margin-medium-top">
                     <li class="uk-active" data-uk-filter-control=""><a href="#">Show All</a></li>
                     <li data-uk-filter-control=".A1" ><a href="#">Level A1</a></li>
@@ -107,9 +127,9 @@
                         </h:panelGroup>
                     </ui:repeat>
                 </h:panelGroup>
-                </div>
             </div>
-            <h:outputScript library="js" name="profesor/biblioteca-profesor.js"/>
-        </ui:define>
-    </ui:composition>
+        </div>
+        <h:outputScript library="js" name="profesor/biblioteca-profesor.js"/>
+    </ui:define>
+</ui:composition>
 </html>

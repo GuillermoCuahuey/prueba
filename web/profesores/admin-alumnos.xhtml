@@ -10,11 +10,11 @@
 <ui:composition template="/template/dashboard-profesor.xhtml">
     <ui:define name="menu">
         <div class="">
-            <ul class="uk-subnav nav-sub uk-visible@m" uk-margin="">
-                <li class="nav-sub-active"><a href="#">Product License</a></li>
-                <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Manage Users</a></li>
+            <ul class="uk-subnav nav-sub uk-visible@m " uk-margin="">
+                <li ><h:link outcome="dashboard-maestro" value="Home" styleClass="letra-color-subnav"/></li>
+                <li class="uk-text-uppercase nav-sub-active"><h:link styleClass="letra-color-subnav" value="Group Details" outcome="admin-alumnos"/></li>
+                <li class="uk-text-uppercase"><h:link outcome="biblioteca-profesor2" styleClass="letra-color-subnav" value="Library"/> </li>
                 <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
-                <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">purchase history</a></li>
             </ul>
         </div>
         <div class="uk-navbar-left uk-hidden@m">
@@ -26,9 +26,10 @@
                 <button class="uk-offcanvas-close" type="button" uk-close=""/>
 
                 <ul class="uk-nav  nav-sub-offcanvas ">
-                    <li class="uk-active nav-sub-active"><a href="#">Active</a></li>
-                    <li><a href="#" class="letra-color-subnav">Item</a></li>
-                    <li><a href="#" class="letra-color-subnav">Item</a></li>
+                    <li ><h:link outcome="dashboard-maestro" value="Home" styleClass="letra-color-subnav"/></li>
+                    <li class="uk-text-uppercase nav-sub-active"><h:link styleClass="letra-color-subnav" value="Group Details" outcome="admin-alumnos"/></li>
+                    <li class="uk-text-uppercase"><h:link outcome="biblioteca-profesor2" styleClass="letra-color-subnav" value="Library"/> </li>
+                    <li class="uk-text-uppercase"><a href="#" class="letra-color-subnav">Edit profile</a></li>
                 </ul>
 
             </div>

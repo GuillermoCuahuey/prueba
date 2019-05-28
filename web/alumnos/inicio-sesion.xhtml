@@ -11,13 +11,21 @@
             <h:outputStylesheet library="css" name="alumno/inicio-sesion.css"/>
         </ui:define>
         <ui:define name="contenido">
-            <div class="uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="expand: true">
-                <div class="contenedor">
-                    <h5 class="nombre-alumno letra-inicio">Jose Luis Morales</h5>
-                    <c:forEach begin="1" end="28" var="indice">
-                        <h:graphicImage library="img" name="alumno/iconos-login/${indice}.svg" height="40" width="40"/>
-                    </c:forEach>
-                    <h:link  outcome="dashboard-alumno" ><button class="boton boton-escuadron-base-secundary">Aceptar</button></h:link>
+            <div class="caja-padre">
+                <div class="caja-hijo">
+
+                        <div class="uk-flex uk-flex-center uk-flex-middle" >
+                            <div class="contenedor">
+                                <h5 class="nombre-alumno letra-inicio uk-margin-small-bottom">Jose Luis Morales</h5>
+                                <c:forEach begin="1" end="28" var="indice">
+                                    <h:graphicImage library="img" name="alumno/iconos-login/${indice}.svg" height="40" width="40"/>
+                                </c:forEach>
+                            </div>
+                        </div>
+                        <div class="uk-container uk-flex uk-flex-center uk-margin-small-top">
+                            <h:link  outcome="dashboard-alumno" ><button class="boton boton-escuadron-base-secundary">Aceptar</button></h:link>
+                        </div>
+
                 </div>
             </div>
             <h:outputScript library="js" name="alumno/inicio-sesion.js"/>

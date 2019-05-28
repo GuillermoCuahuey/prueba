@@ -1,12 +1,13 @@
 .contenedor {
     display: grid;
-    grid-template-columns: 70px 70px 70px 70px 70px 70px 70px;
-    grid-template-rows: 70px 70px 70px 70px;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px 30px;
     justify-items: center;
     align-items: center;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
+
 
 .contenedor img {
     transition: height 1s, width 1s;
@@ -34,8 +35,7 @@
 }
 .letra-inicio {
     font-family: Sniglet, 'Arial Black';
-    font-size: 45px !important;
-    padding: 7px 10px 7px 10px;
+    font-size: 20px !important;
     color:#000;
 }
 
@@ -45,3 +45,33 @@
 .link:hover{
     text-decoration: none;
 }
+
+@media screen and (min-width: 768px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: 70px 70px 70px 70px 70px 70px 70px;
+        grid-template-rows: 70px 70px 70px 70px;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    .letra-inicio{
+        font-size: 45px !important;
+    }
+}
+
+.caja-padre {
+    height: 100%;
+    position: relative;
+
+}
+.caja-hijo{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
