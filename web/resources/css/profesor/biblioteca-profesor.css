@@ -40,7 +40,7 @@
 }
 
 .A1:before {
-    background-color: var(--psecundary-option-three);
+    background-color: var(--psecundary-option-three) !important;
 }
 
 .A2:before {
