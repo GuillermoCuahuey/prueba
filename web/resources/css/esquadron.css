@@ -313,7 +313,7 @@
   color: black;
 }
 
-.boton-escuadron-base-secundary{
+.boton-escuadron-base-secundary{z|
   background-color: var(--tsecundary-option-one);
   padding: 8px 25px;
   color:white;
