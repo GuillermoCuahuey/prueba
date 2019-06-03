@@ -1,0 +1,17 @@
+@media (min-width: 960px) {
+    .uk-form-horizontal .uk-form-label {
+        width: 50px;
+        margin-top: 7px;
+        float: left;
+    }
+}
+    .uk-form-horizontal .uk-form-controls {
+        margin-left: 50px;
+    }
+
+.caja{
+
+    padding: 10px 10px;
+    box-sizing: border-box;
+
+}
