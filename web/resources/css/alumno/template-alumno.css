@@ -1,9 +1,9 @@
 body{
-    background: url("#{resource['img/estrellas-alumno.jpg']}");
+    background-color: black;
+    /*background-image: url("#{resource['img/fondo/espacio-animado.svg']}");*/
     /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    background-size: 5% auto;
     background-attachment: fixed;
-
 }
 
 #top-head {

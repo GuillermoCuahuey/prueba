@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <ui:composition template="/template/template-alumno.xhtml">
     <ui:define name="menu">
@@ -55,11 +56,20 @@
         <h:outputStylesheet library="css" name="/alumno/mapa-cronologico.css"/>
         <h:outputStylesheet library="css" name="letra.css"/>
             <div class="uk-section  margen-superior">
-                <div class="uk-container fondo-mapa-orden contorno">
-                            <form class="uk-form-horizontal uk-margin-small-top" action="">
+                <div class="uk-container fondo-mapa-orden contorno posicion-contenedor">
+
+                    <div class="dialogo">
+                        <h:graphicImage library="img" name="/pop-art/pop-art.svg" style="transform: rotateY(180deg)"/>
+                    </div>
+
+                    <div class="imagen-mapa ">
+                        <h:graphicImage library="img" name="Who.svg" />
+                    </div>
+                            <form class="uk-form-horizontal uk-margin-small-top " action="">
 
                                 <div class="uk-grid uk-margin-remove " uk-grid="">
-                                    <div class="uk-margin mapa-caja margen-caja1 uk-width-1-1@s">
+                                    <div class="margen-mapa"></div>
+                                    <div class="uk-margin mapa-caja margen-caja1 uk-width-1-1@s sobrepuesto">
                                         <label class="uk-form-label" for="uno">Date:</label>
                                         <div class="uk-form-controls">
                                             <input class="uk-input" id="uno" type="text" placeholder="Some text..."/>

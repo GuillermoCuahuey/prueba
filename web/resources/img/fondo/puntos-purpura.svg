@@ -2,7 +2,7 @@
 
 <svg width="1029" height="535" version="1.1" viewBox="0 0 1029 535" xmlns="http://www.w3.org/2000/svg">
 
-  <rect x="0" y="0" width="1029" height="535" fill="#00ff00" stroke="#00ff00"/>
+  <rect x="0" y="0" width="1029" height="535" fill="#31D175" stroke="#31D175"/>
 
   <line stroke-dasharray=".1 37"
         style="stroke-width:13; stroke-linecap: round; stroke:#2e0239;"

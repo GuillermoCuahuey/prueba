@@ -10,8 +10,69 @@
     }
 
 .caja{
-
     padding: 10px 10px;
     box-sizing: border-box;
+}
 
+.margen-mapa{
+    margin-top: 25%;
+}
+
+.imagen-mapa{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    left: 55%;
+    top: 0%;
+    z-index: 2;
+}
+
+.dialogo{
+    width: 350px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sobrepuesto{
+    z-index: 3;
+}
+@media screen and (min-width: 1024px ){
+    .margen-mapa{
+        margin-top: 25%;
+    }
+    .imagen-mapa{
+        width: 250px;
+        height: auto;
+        position: absolute;
+        left: 55%;
+        top: 0%;
+        z-index: 2;
+    }
+}
+@media  screen and (min-width: 768px) {
+    .imagen-mapa{
+        width: 200px;
+        height: auto;
+        position: absolute;
+        left: 55%;
+        top: 0%;
+        z-index: 2;
+    }
+}
+
+@media  screen and (min-width: 1200px) {
+    .imagen-mapa{
+        width: 300px;
+        height: auto;
+        position: absolute;
+        left: 55%;
+        top: 0%;
+        z-index: 2;
+    }
+}
+
+
+
+.posicion-contenedor{
+ position: relative;
 }
