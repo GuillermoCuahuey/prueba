@@ -1,8 +1,8 @@
 body{
     background-color: black;
-    /*background-image: url("#{resource['img/fondo/espacio-animado.svg']}");*/
+    background-image: url("#{resource['img/estrellas-alumno.jpg']}");
     /*background-repeat: no-repeat;*/
-    background-size: 5% auto;
+    background-size: 30% auto;
     background-attachment: fixed;
 }
 
@@ -60,7 +60,7 @@ body{
 #left-col .uk-dropdown.user-drop:after {
     bottom: 100%;
     left: 50%;
-    border: solid transparent;
+    border: solid ;
     content: " ";
     height: 0;
     width: 0;
