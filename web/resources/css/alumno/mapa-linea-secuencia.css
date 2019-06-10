@@ -1,0 +1,19 @@
+.cuadro1{
+
+    height: 300px;
+    background-color: #B31F0C;
+    border: 3px solid black;
+}
+
+.cuadro2{
+    /*width: 100%;*/
+    height: 700px;
+    background-color: #B31F0C;
+    border: 3px solid black;
+}
+.cuadro3{
+    /*width: 100%;*/
+    height: 300px;
+    background-color: #B31F0C;
+    border: 3px solid black;
+}
