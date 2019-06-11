@@ -53,18 +53,45 @@
     <ui:define name="contenido">
         <h:outputStylesheet library="css" name="/alumno/mapa-linea-secuencia.css"/>
         <div class="uk-section">
-            <div class="uk-container ">
-                <div class="uk-child-width-1-2@m" uk-grid="">
-                    <div class="cuadro1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eius fugit hic illo nemo quas voluptate.</p>
+            <div class="uk-container margen-superior">
+                <div class="uk-child-width-1-2@m uk-margin-remove" uk-grid="">
+                    <div class="cuadro-padre1" >
+                        <div class="uk-width-1-1@s cuadro-hijo1">
+                            <div class="img-hijo1">
+                                <h:graphicImage library="img" name="/pop-art/mensaje3.svg" styleClass=""/>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-1@s cuadro-hijo2">
+                            <div class="img-hijo2">
+                                <h:graphicImage library="img" name="/pop-art/mensaje3.svg" styleClass=""/>
+                            </div>
+                            <div class="img-hijo2">
+                                <h:graphicImage library="img" name="/pop-art/mensaje3.svg" styleClass=""/>
+                            </div>
+                            <div class="img-hijo2">
+                                <h:graphicImage library="img" name="/pop-art/mensaje3.svg" styleClass=""/>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="cuadro2">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eius fugit hic illo nemo quas voluptate.</p>
+                    <div class="cuadro-padre2">
+                        <div class="uk-width-1-1@s cuadro-hijo3">
+                            <div class="img-hijo3">
+                                <h:graphicImage library="img" name="/pop-art/pop-art.svg" styleClass=""/>
+                            </div>
+                            <div class="img-who">
+                                <h:graphicImage library="img" name="Who.svg" styleClass=""/>
+                            </div>
+                        </div >
+                        <div class="uk-width-1-1@s cuadro-hijo4 ">
+                            <div class="img-whom">
+                                <h:graphicImage library="img" name="Whom1.svg" styleClass=""/>
+                            </div>
+                        </div>
                     </div>
-                    <div class="cuadro3">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eius fugit hic illo nemo quas voluptate.</p>
-                    </div>
+
                 </div>
+
             </div>
         </div>
 
