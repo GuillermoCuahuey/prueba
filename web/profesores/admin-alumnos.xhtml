@@ -83,7 +83,7 @@
                                 <div class="contenedor-imagen-alumnos uk-flex uk-flex-center"> <h:graphicImage styleClass="uk-border-circle" library="img" name="3ojos.svg" width="70" height="70"/></div>
                                 <div class="uk-text-center"><h1 class="letra-cards lescuadron ">Student Administration</h1></div>
                             </div>
-                            <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Mejor alumno de la clase</h5>
+                            <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Alumnos de la clase</h5>
                             <h:form id="formulario-tabla-alumno">
                                 <div class="uk-overflow-auto">
                                     <h:dataTable id="tabla-alumno"
@@ -145,7 +145,7 @@
                                                         </li>
                                                         <li>
                                                             <h:commandLink   pt:uk-toggle="target: #modal-editar-alumno">
-                                                                <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
+                                                                <h:outputText pt:uk-icon="icon: cog" styleClass="uk-margin-small-right uk-icon" />
                                                                 <span class="uk-text-middle"><h:outputText value="Editar"/></span>
                                                                 <f:ajax />
                                                             </h:commandLink>
@@ -159,7 +159,7 @@
                                                         </li>
                                                         <li>
                                                             <h:commandLink  pt:uk-toggle="target: #modal-descarga">
-                                                                <h:outputText pt:uk-icon="icon: ban" styleClass="uk-margin-small-right uk-icon" />
+                                                                <h:outputText pt:uk-icon="icon: file-text" styleClass="uk-margin-small-right uk-icon" />
                                                                 <span class="uk-text-middle"><h:outputText value="Reporte"/></span>
                                                                 <f:ajax/>
                                                             </h:commandLink>
@@ -196,7 +196,7 @@
         <h:panelGroup layout="block" id="modal-nuevo-alumno" styleClass="uk-modal-container" pt:uk-modal="">
             <div class="uk-modal-dialog uk-margin-auto-vertical">
                 <h:form id="formulario-modal-nuevo-profesor" styleClass="uk-form-stacked">
-                    <button class="uk-modal-close-default" type="button" uk-close=""></button>
+                    <button class="uk-modal-close-default" type="button" uk-close=""/>
                     <div class="uk-modal-header header-color-card">
                         <h2 class="uk-modal-title titulo-modal">Modal Title</h2>
                     </div>

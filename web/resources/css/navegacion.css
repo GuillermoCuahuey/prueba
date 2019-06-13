@@ -27,7 +27,7 @@
 }
 
 .nav-default-profesor>li>a:hover{
-    color: var(--turquesa-primary-color);
+    /*color: var(--turquesa-primary-color);*/
     background-color:var(--inactivo-fondo-navbar);
     color:var(--inactivo-letra-navbar);
 }
@@ -93,6 +93,9 @@
     background-color:var(--activo-fondo-navbar);
 }
 .uk-subnav-alumno2 li.uk-active:nth-child(5) a {
+    background-color:var(--activo-fondo-navbar);
+}
+uk-subnav-alumno2 li.uk-active:nth-child(6) a {
     background-color:var(--activo-fondo-navbar);
 }
 .nav-default-profesor2>li>a{

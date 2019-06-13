@@ -50,6 +50,19 @@
 .A1-A2:before {
     background: linear-gradient(to right, var(--psecundary-option-three), var(--purpura-primary-color));
 }
+.B1:before{
+    background-color:var(--tsecundary-option-one) !important;
+}
+.B2{
+    background-color:var(--asecundary-option-one);
+}
+.C1{
+    background-color:var(--color-nav-primary);
+}
+.C2{
+    background-color:var(--color-peligro);
+}
+
 
 .uk-subnav-alumno li.uk-active:nth-child(1) a {
     background-color:var(--turquesa-primary-color);
@@ -93,13 +106,42 @@
     background-color:var(--tsecundary-option-one);
     color: white;
 }
+.uk-subnav-alumno li:nth-child(5) a:hover {
+    background-color:var(--tsecundary-option-one);
+    opacity: 0.3;
+    color: white;
+}
 
 .uk-subnav-alumno li.uk-active:nth-child(6) a {
     background-color:var(--asecundary-option-one);
+    color: white;
+}
+.uk-subnav-alumno li:nth-child(6) a:hover {
+    background-color:var(--asecundary-option-one);
+    opacity: 0.3;
     color: white;
 }
 
 .uk-subnav-alumno li.uk-active:nth-child(7) a {
     background-color:var(--color-nav-primary);
     color: white;
+}
+.uk-subnav-alumno li:nth-child(7) a:hover {
+    background-color:var(--color-nav-primary);
+    opacity:0.3;
+    color: white;
+}
+.uk-subnav-alumno li.uk-active:nth-child(8) a {
+    background-color:var(--color-peligro);
+    color: white;
+}
+.uk-subnav-alumno li:nth-child(8) a:hover {
+    background-color:var(--color-peligro);
+    opacity: 0.3;
+    color: white;
+}
+#search-form input:focus{
+    background-color:paleturquoise ;
+    color:black;
+    font-weight: bold;
 }

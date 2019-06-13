@@ -48,15 +48,15 @@
                                 <p class="uk-text-meta uk-margin-remove-top uk-text-small"><span>el mau</span></p>
                             </div>
                             <div class="uk-width-1-1@s">
-                                <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top uk-text-small "><span class="uk-text-bold">Email:</span>maugg76@gmail.com</p>
-                                <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top  uk-text-small "><span class="uk-text-bold" >Grade:</span>2</p>
-                                <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top uk-text-small "><span class="uk-text-bold">State:</span>Puebla</p>
+                                <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top uk-text-small uk-margin-small-bottom "><span class="uk-text-bold">Email:</span>maugg76@gmail.com</p>
+                                <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top  uk-text-small uk-margin-small-bottom "><span class="uk-text-bold" >Grade:</span>2</p>
+                                <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top uk-text-small uk-margin-small-bottom"><span class="uk-text-bold">State:</span>Puebla</p>
                                 <p class="uk-text-meta uk-margin-remove-bottom uk-margin-remove-top uk-text-small "><span class="uk-text-bold uk-text-primary">Edit Profile</span></p>
                             </div>
                         </div>
                     </div>
                     <div class="uk-card-body padding-card-body">
-                        <h3 class="uk-text-uppercase uk-text-bold ">question ?</h3>
+                        <h3 class="uk-text-uppercase uk-text-bold ">question?</h3>
                         <p>We've got answers! <span class="uk-text-primary">Contact Us</span></p>
                     </div>
                     <div class="uk-card-footer">
@@ -79,10 +79,10 @@
                                    </div>
                             </div>
                             <div>
-                                <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-cards color-title-card uk-text-center">N° Alumnos</h5>
+                                <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-cards color-title-card uk-text-center">Nro. Alumnos</h5>
                                 <!--<h1 class="color-texto uk-text-center size-one uk-margin-remove-top uk-margin-remove-bottom">180</h1>-->
                                 <div class="uk-flex uk-flex-center">
-                                    <div class="tamaño-imagen"  uk-tooltip="title:150 alumnos; pos: right">
+                                    <div class="tamaño-imagen"  uk-tooltip="title:150 Alumnos; pos: right">
                                         <h:graphicImage styleClass="uk-border-circle imagen-card-section uk-svg " library="img" name="maestra.svg"   pt:uk-svg=""/>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                 <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-cards color-title-card uk-text-center">Horas de Conexión</h5>
                                 <!--<h1 class="color-texto uk-text-center size-one uk-margin-remove-top uk-margin-remove-bottom">30<small class="uk-text-small">HR</small></h1>-->
                                 <div class="uk-flex uk-flex-center">
-                                    <div class="tamaño-imagen"  uk-tooltip="title: 30 HR; pos: right">
+                                    <div class="tamaño-imagen"  uk-tooltip="title: 30 Horas; pos: right">
                                         <h:graphicImage styleClass="uk-border-circle imagen-card-section uk-svg " library="img" name="administrador.svg"   pt:uk-svg=""/>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
         </div>
         <div class="uk-container  uk-flex uk-flex-left uk-margin-small-bottom uk-visible@m" >
             <div> <h:graphicImage styleClass="uk-border-circle" library="img" name="3ojos.svg" width="70" height="70"/></div>
-            <div class="uk-margin-small-left esquadron-paddin"><h3 class="letra-cards lescuadron ">Premia el ezfuerzo de tus alumnos</h3></div>
+            <div class="uk-margin-small-left esquadron-paddin"><h3 class="letra-cards lescuadron ">Premia el esfuerzo de tus alumnos</h3></div>
         </div>
 
         <div class="uk-container uk-container-small uk-grid uk-child-width-1-1@s uk-hidden@m" >
@@ -140,7 +140,7 @@
         <h:panelGroup layout="block" styleClass="uk-grid uk-child-width-1-2@m uk-section uk-section-default uk-padding-remove-top uk-padding-remove-bottom" pt:uk-grid="" >
                 <ui:repeat value="#{dahsboardProfesorControldor.graficaModelos}" var="grafica">
                 <div>
-                    <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Mejor alumno de la clase</h5>
+                    <h5 class="uk-text-capitalize uk-text-bold uk-margin-remove-bottom titulo-section">Rendimiento del Grupo</h5>
                         <div class="chart-container-min color-contenido-grafica">
                             <canvas class="mi-char">
                                 <div>#{grafica.grupo}</div>
@@ -199,13 +199,13 @@
                                         <li>
 
                                             <h:link outcome="biblioteca-profesor2" styleClass="uk-text-primary" >
-                                                <h:outputText pt:uk-icon="icon: file-edit" styleClass="uk-margin-small-right uk-icon" />
+                                                <h:outputText pt:uk-icon="icon: cog" styleClass="uk-margin-small-right uk-icon" />
                                                 <span class="uk-text-middle"><h:outputText value="Asignar Tarea"/></span>
                                             </h:link>
                                         </li>
                                         <li>
                                             <h:commandLink  pt:uk-toggle="target: #modal-reporte" styleClass="uk-text-primary" >
-                                                <h:outputText pt:uk-icon="icon: trash" styleClass="uk-margin-small-right uk-icon" />
+                                                <h:outputText pt:uk-icon="icon: file-text" styleClass="uk-margin-small-right uk-icon" />
                                                 <span class="uk-text-middle"><h:outputText value="Reporte"/></span>
                                                 <f:ajax/>
                                             </h:commandLink>
@@ -342,7 +342,7 @@
                 new Chart(grafica[i], {
                     type: 'horizontalBar',
                     data: {
-                        labels: ["Learning", "Speaking", "Mental Map", "Transcrip", "Quiz"],
+                        labels: ["Learning", "Speaking", "Mental Map", "Transcript", "Quiz"],
                         datasets: [{
                             label: "Population (millions)",
                             backgroundColor: ["#39f", "#895df6", "#3cba9f", "#e8c3b9", "#c45850"],
