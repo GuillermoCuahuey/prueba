@@ -11,23 +11,23 @@
             <h:outputStylesheet library="css" name="alumno/inicio-sesion.css"/>
         </ui:define>
         <ui:define name="contenido">
-            <div class="caja-padre">
-                <div class="caja-hijo">
 
-                        <div class="uk-flex uk-flex-center uk-flex-middle" >
-                            <div class="contenedor">
+
+                        <div class="centrado" >
+                            <div class="contenedor ">
                                 <h5 class="nombre-alumno letra-inicio uk-margin-small-bottom">Jose Luis Morales</h5>
                                 <c:forEach begin="1" end="28" var="indice">
-                                    <h:graphicImage library="img" name="alumno/iconos-login/${indice}.svg" height="40" width="40"/>
+                                    <h:graphicImage library="img" name="alumno/iconos-login/${indice}.svg" />
                                 </c:forEach>
                             </div>
-                        </div>
-                        <div class="uk-container uk-flex uk-flex-center uk-margin-small-top">
-                            <h:link  outcome="dashboard-alumno" ><button class="boton boton-escuadron-base-secundary">Aceptar</button></h:link>
+                            <div class="uk-margin-small-top">
+                                <h:link  outcome="dashboard-alumno" styleClass="uk-flex uk-flex-center"><button class="boton-escuadron-base-secundary">Aceptar</button></h:link>
+                            </div>
                         </div>
 
-                </div>
-            </div>
+
+
+
             <h:outputScript library="js" name="alumno/inicio-sesion.js"/>
         </ui:define>
     </ui:composition>
