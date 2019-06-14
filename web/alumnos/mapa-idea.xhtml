@@ -47,58 +47,42 @@
                 <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></h:link></li>
                 <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
             </ul>
-
         </div>
     </ui:define>
     <ui:define name="contenido">
-        <h:outputStylesheet library="css" name="/alumno/mapa-linea-secuencia.css"/>
-        <div class="uk-section">
-            <div class="uk-container margen-superior">
-                <div class="uk-child-width-1-2@m uk-margin-remove" uk-grid="">
-                    <div class="cuadro-padre1" >
-                        <div class="uk-width-1-1@s cuadro-hijo1">
-
-                            <div class="img-hijo1">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                        </div>
-                        <div class="uk-width-1-1@s cuadro-hijo2">
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-
+        <h:outputStylesheet library="css" name="/alumno/mapa-idea.css"/>
+        <div class="uk-section margen-superior">
+            <div class="uk-container fondo-idea">
+                <form action="" class="uk-form-stacked">
+                <div class="uk-grid uk-child-width-1-4@m" uk-grid="">
+                    <div>
+                        <label class="uk-form-label uk-text-center" for="id1">Text</label>
+                        <div class="uk-form-controls">
+                            <textarea rows="" cols="" id="id1" class="uk-textarea" placeholder="Details:"/>
                         </div>
                     </div>
-                    <div class="cuadro-padre2">
-                        <div class="uk-width-1-1@s cuadro-hijo3">
-                            <div class="img-hijo3">
-                                <h:graphicImage library="img" name="/pop-art/pop-art.svg" styleClass=""/>
-                            </div>
-                            <div class="img-who">
-                                <h:graphicImage library="img" name="Who.svg" styleClass=""/>
-                            </div>
-                        </div >
-                        <div class="uk-width-1-1@s cuadro-hijo4 ">
-                            <div class="img-whom">
-                                <h:graphicImage library="img" name="Whom1.svg" styleClass=""/>
-                            </div>
+                    <div>
+                        <label class="uk-form-label" for="id2">Text</label>
+                        <div class="uk-form-controls">
+                            <textarea rows="" cols="" id="id2" class="uk-textarea" placeholder="Details:"/>
                         </div>
                     </div>
-
+                    <div>
+                        <label class="uk-form-label" for="id3">Text</label>
+                        <div class="uk-form-controls">
+                            <textarea rows="" cols="" id="id3" class="uk-textarea" placeholder="Details:"/>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="uk-form-label" for="id4">Text</label>
+                        <div class="uk-form-controls">
+                            <textarea rows="" cols="" id="id4" class="uk-textarea text-area-idea" placeholder="Details:"/>
+                        </div>
+                    </div>
                 </div>
-
+                </form>
             </div>
         </div>
-
     </ui:define>
 </ui:composition>
 </html>

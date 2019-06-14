@@ -29,10 +29,10 @@
         <div class="left-nav-wrap  uk-visible@xl ">
             <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-center uk-margin-large-top">
                 <!--<li class="uk-active"><a href="#"><img src="img/alumno/iconos-login/1.svg" width="80" alt=""></a></li>-->
-                <li><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></h:link></li>
                 <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></h:link></li>
                 <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="80" alt=""/></h:link></li>
-                <li class="uk-active"><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
                 <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="80" height="" alt=""/></h:link></li>
                 <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="80" alt=""/></a></li>
             </ul>
@@ -40,10 +40,10 @@
         </div>
         <div class="left-nav-wrap uk-position-relative  uk-hidden@xl ">
             <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-top-center uk-margin-small-top">
-                <li ><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></h:link></li>
-                <li ><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
                 <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="50" alt=""/></h:link></li>
-                <li class="uk-active" ><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
                 <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></h:link></li>
                 <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
             </ul>
@@ -51,54 +51,18 @@
         </div>
     </ui:define>
     <ui:define name="contenido">
-        <h:outputStylesheet library="css" name="/alumno/mapa-linea-secuencia.css"/>
-        <div class="uk-section">
-            <div class="uk-container margen-superior">
-                <div class="uk-child-width-1-2@m uk-margin-remove" uk-grid="">
-                    <div class="cuadro-padre1" >
-                        <div class="uk-width-1-1@s cuadro-hijo1">
-
-                            <div class="img-hijo1">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                        </div>
-                        <div class="uk-width-1-1@s cuadro-hijo2">
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-                            <div class="img-hijo2">
-                                <h:graphicImage library="img" name="/pop-art/nube.svg" styleClass=""/>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="cuadro-padre2">
-                        <div class="uk-width-1-1@s cuadro-hijo3">
-                            <div class="img-hijo3">
-                                <h:graphicImage library="img" name="/pop-art/pop-art.svg" styleClass=""/>
-                            </div>
-                            <div class="img-who">
-                                <h:graphicImage library="img" name="Who.svg" styleClass=""/>
-                            </div>
-                        </div >
-                        <div class="uk-width-1-1@s cuadro-hijo4 ">
-                            <div class="img-whom">
-                                <h:graphicImage library="img" name="Whom1.svg" styleClass=""/>
-                            </div>
-                        </div>
-                    </div>
+        <h:outputStylesheet library="css" name="/alumno/mapa-capas.css"/>
+        <div class="uk-section margen-superior">
+            <div class="uk-container fondo-capas posicion-relativa">
+                <div class="imagen-who">
+                    <h:graphicImage library="img" name="Who.svg"/>
+                </div>
+                <div class="caja-capas">
 
                 </div>
 
             </div>
         </div>
-
     </ui:define>
 </ui:composition>
 </html>

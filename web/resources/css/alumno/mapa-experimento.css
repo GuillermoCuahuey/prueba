@@ -3,9 +3,9 @@ body{
 }
 .fondo-mapa3{
     background-image: url("#{resource['img/fondo/fondo-mapa7.svg']}");
-    background-repeat: no-repeat;
+    /*background-repeat: repeat-x;*/
     background-size: cover;
-    /*background-position:  center center;*/
+    /*background-position:5% 5%;*/
 }
 
 

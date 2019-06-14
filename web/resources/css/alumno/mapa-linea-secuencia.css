@@ -11,11 +11,15 @@
 .cuadro-hijo1{
     border: 5px solid black;
     background-image: url("#{resource['img/fondo/puntos-naranjas2.svg']}");
+    background-position: center center;
+    background-size: 150%;
     position: relative;
 }
 .cuadro-hijo2{
     border: 5px solid black;
     background-image: url("#{resource['img/fondo/puntos-naranjas.svg']}");
+    background-position: center center;
+    background-size: 150%;
     position: relative;
 }
 .cuadro-hijo3{
@@ -27,6 +31,8 @@
 .cuadro-hijo4{
     border: 5px solid black;
     background-image: url("#{resource['img/fondo/puntos-amarillos.svg']}");
+    background-position: center center;
+    background-size: 150%;
     position: relative;
     overflow: hidden;
 }

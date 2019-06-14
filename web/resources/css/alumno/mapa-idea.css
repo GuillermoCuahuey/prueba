@@ -1,0 +1,15 @@
+.fondo-idea{
+    background-image: url("#{resource['img/alumno/lineas-amarillas.svg']}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.text-area-idea{
+    min-height: 400px;
+    max-height: 600px;
+    border-width: 22px 12px 22px 12px !important;
+
+    border-color: #32d296 !important;
+    border-radius: 15% !important;;
+}
