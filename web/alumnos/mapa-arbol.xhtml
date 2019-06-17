@@ -48,57 +48,32 @@
                 <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></h:link></li>
                 <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
             </ul>
+
         </div>
     </ui:define>
     <ui:define name="contenido">
-        <h:outputStylesheet library="css" name="/alumno/mapa-idea.css"/>
-        <div class="uk-section margen-superior">
-            <div class="uk-container fondo-idea uk-position-relative ">
-                <p class="uk-position-absolute titulo-mapa-idea">Main idea:</p>
-                <div class="uk-margin-small-top">
-                    <h:graphicImage library="img" name="/pop-art/mensaje11.svg" styleClass="uk-display-block imagen-ard"/>
+        <h:outputStylesheet library="css" name="/alumno/mapa-arbol.css"/>
+        <div class="uk-section">
+            <div class="uk-container fondo-mapa-arbol margen-superior uk-position-relative">
+                <div class="contenedor-arbol uk-margin-large-top">
+                    <div class="imagen-arbol ">
+                        <h:graphicImage library="img" name="/pop-art/tree.svg" pt:uk-svg=""/>
+                    </div>
+                    <form action="" class="uk-form-stacked">
+                        <div class="uk-form-controls uk-position-absolute posicion-text-area1">
+                            <textarea rows="" cols="" class="uk-textarea text-area-arbol"/>
+                        </div>
+                        <div class="uk-form-controls uk-position-absolute ">
+                            <textarea rows="" cols="" class="uk-textarea text-area-arbol"/>
+                        </div>
+                        <div class="uk-form-controls uk-position-absolute">
+                            <textarea rows="" cols="" class="uk-textarea text-area-arbol"/>
+                        </div>
+
+                    </form>
                 </div>
 
-                <form action="" class="uk-form-stacked">
 
-                <div class="uk-grid uk-child-width-1-4@m uk-position-relative uk-margin-large-top" uk-grid="">
-                    <div class="uk-position-relative tam-contenido-mapa">
-                        <div class="tam-gancho color-gancho1 posicion-gancho1">
-                            <h:graphicImage library="img" name="/pop-art/gancho.svg" styleClass="uk-svg" pt:uk-svg="" />
-                        </div>
-                        <div class="uk-form-controls">
-                            <textarea rows="" cols=""  class="uk-textarea text-area-idea text-area-color1" placeholder="Details:"/>
-                        </div>
-                    </div>
-                    <div class="uk-position-relative tam-contenido-mapa">
-                        <div class="tam-gancho color-gancho2 posicion-gancho1">
-                            <h:graphicImage library="img" name="/pop-art/gancho.svg" styleClass="uk-svg" pt:uk-svg="" />
-                        </div>
-                        <div class="uk-form-controls">
-                            <textarea rows="" cols="" class="uk-textarea text-area-idea text-area-color2" placeholder="Details:"/>
-                        </div>
-                    </div>
-                    <div class="uk-position-relative tam-contenido-mapa">
-                        <div class="tam-gancho color-gancho3  posicion-gancho1">
-                            <h:graphicImage library="img" name="/pop-art/gancho.svg" styleClass="uk-svg" pt:uk-svg="" />
-                        </div>
-                        <div class="uk-form-controls">
-                            <textarea rows="" cols=""  class="uk-textarea text-area-idea text-area-color3" placeholder="Details:"/>
-                        </div>
-                    </div>
-                    <div class="uk-position-relative tam-contenido-mapa">
-                        <div class="tam-gancho color-gancho4 posicion-gancho1">
-                            <h:graphicImage library="img" name="/pop-art/gancho.svg" styleClass="uk-svg" pt:uk-svg="" />
-                        </div>
-                        <div class="uk-form-controls">
-                            <textarea rows="" cols=""  class="uk-textarea text-area-idea text-area-color4" placeholder="Details:"/>
-                        </div>
-                    </div>
-                </div>
-                </form>
-                <div class="imagen-centrada">
-                    <h:graphicImage library="img" name="Whom1.svg" />
-                </div>
             </div>
         </div>
     </ui:define>
