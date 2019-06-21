@@ -29,10 +29,10 @@
         <div class="left-nav-wrap  uk-visible@xl ">
             <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-center uk-margin-large-top">
                 <!--<li class="uk-active"><a href="#"><img src="img/alumno/iconos-login/1.svg" width="80" alt=""></a></li>-->
-                <li><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></h:link></li>
                 <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></h:link></li>
                 <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="80" alt=""/></h:link></li>
-                <li class="uk-active"><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
                 <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="80" height="" alt=""/></h:link></li>
                 <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="80" alt=""/></a></li>
             </ul>
@@ -40,10 +40,10 @@
         </div>
         <div class="left-nav-wrap uk-position-relative  uk-hidden@xl ">
             <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-top-center uk-margin-small-top">
-                <li ><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></h:link></li>
-                <li ><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
                 <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="50" alt=""/></h:link></li>
-                <li class="uk-active" ><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
                 <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></h:link></li>
                 <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
             </ul>
@@ -51,52 +51,22 @@
         </div>
     </ui:define>
     <ui:define name="contenido">
-        <h:outputStylesheet library="css" name="/alumno/mapa-secuencia.css"/>
-        <div class="uk-section">
-            <div class="uk-container  margen-superior color-fondo contenedor-padre margen-secuencia ">
-<!--                <div class="">-->
-                    <div class="imagen-secuencia">
-                        <h:graphicImage library="img" name="Whose.svg"/>
-                    </div>
-                    <div class="imagen-globo">
-                        <h:graphicImage library="img" name="/pop-art/mensaje9.svg"/>
-                    </div>
-                    <div class="caja1 posicion1 uk-padding-small uk-margin-small-bottom">
-                        <form action="">
-                            <div class="uk-child-width-1-3@m " uk-grid="">
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                                <div class="area-texto">
-                                    <textarea rows="" cols=""/>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-<!--                </div>-->
+        <h:outputStylesheet library="css" name="/alumno/mapa-efecto.css"/>
+        <div class="uk-section margen-superior">
+            <div class="uk-container fondo-mapa-efecto margen-mapa-efecto contenedor-efecto ">
+                <div class="imagen-pez uk-margin-auto">
+                    <h:graphicImage library="img" name="/alumno/pescado.svg"/>
+                </div>
+                <form action="" class="uk-form-stacked">
+                    <textarea rows="" cols="" class="caja1" />
+                    <textarea rows="" cols="" class="caja2"/>
+                    <textarea rows="" cols="" class="caja3"/>
+                    <textarea rows="" cols="" class="caja4"/>
+                    <textarea rows="" cols="" class="caja5"/>
+                </form>
             </div>
         </div>
+
     </ui:define>
 </ui:composition>
 </html>

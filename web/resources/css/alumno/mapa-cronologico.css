@@ -76,3 +76,7 @@
 .posicion-contenedor{
  position: relative;
 }
+.margen-cronologico{
+    margin-left: 20px;
+    margin-right: 20px;
+}
