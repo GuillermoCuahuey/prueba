@@ -1,0 +1,15 @@
+.fondo-comparar{
+     background-color: #81b442;
+
+
+}
+.nube-superior>img{
+    display: block;
+    width: 100%;
+    top: 0;
+}
+.nube-inferior>img{
+    display: block;
+    width: 100%;
+    bottom: 0;
+}
