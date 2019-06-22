@@ -11,11 +11,12 @@
     margin: 50px auto !important;
 }
 .margen-mapa-efecto{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .contenedor-efecto{
     position: relative;
+
 }
 form textarea{
     display: inline-block;
@@ -31,18 +32,18 @@ form textarea{
 
 .caja1{
     position: absolute;
-    top: 0;
+    top: 1%;
     left: 25%;
 }
 .caja2{
     position: absolute;
-    top: 0;
+    top: 1%;
     left: 43%;
 }
 
 .caja3{
     position: absolute;
-    top: 0;
+    top: 1%;
     left: 63%;
 }
 .caja4{
@@ -54,4 +55,37 @@ form textarea{
     position: absolute;
     bottom: 8%;
     right: 23%;
+}
+@media  screen and (max-width: 1499px){
+    .margen-mapa-efecto{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 639px){
+    .imagen-pez{
+        display: none;
+    }
+}
+
+.caja-pez{
+    width: 60%;
+    margin: auto;
+}
+
+.caja-pez textarea{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom:5px;
+}
+
+@media screen and  (max-width: 769px) {
+    textarea {
+         width: 10% !important;
+     }
+    .caja-pez textarea{
+        width: 100% !important;
+
+    }
 }

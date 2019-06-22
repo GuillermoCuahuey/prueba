@@ -29,7 +29,7 @@
 }
 
 .imagen-secuencia{
-    width: 600px;
+    width: 45%;
     height: auto;
     position: absolute;
     top:0;
@@ -37,7 +37,7 @@
     z-index: 2;
 }
 .imagen-globo>img{
-   width: 500px;
+   width: 38%;
     height: auto;
     position: absolute;
     top:0;
@@ -56,6 +56,24 @@
 }
 
 .margen-secuencia{
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media  screen and (max-width: 1499px){
+    .margen-secuencia{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+.imagen-secuencia-small{
+    width: 55%;
+    position: absolute;
+    top:6%;
+    left: 25%;
+    z-index: 2;
+}
+.imagen-globo-small{
+    width: 80%;
+    margin: auto;
+
 }

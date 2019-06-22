@@ -17,11 +17,29 @@
     position: relative;
 }
 
-
 .imagen-who{
     width: 22%;
     height: auto;
     position: absolute;
     top:5%;
     right: 8%;
+}
+.imagen-hamburguesa>img{
+    width: 50%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+
+}
+.texto-posicion{
+    width: 40%;
+    background-color: #81b442;
+    top: 23%;
+    left: 6%;
+}
+.texto-posicion textarea{
+    display: block;
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
 }
