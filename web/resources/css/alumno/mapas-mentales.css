@@ -1,3 +1,37 @@
-.padding-contenedor{
+.margen-superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.contenedor1{
     background: #00a49d;
+}
+
+.contenedor2{
+    background: orangered;
+}
+
+.contenedor3{
+    background: yellowgreen;
+}
+
+.contenedor4{
+    background: rebeccapurple;
+}
+
+.contenedor5 {
+    background: #F4D03F;
+}
+
+.contenedor6 {
+    background: blue;
+}
+
+.contenedor7 {
+    background: red;
+}
+
+.contenedor8 {
+    background: brown;
 }
