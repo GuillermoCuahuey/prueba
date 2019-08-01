@@ -1,11 +1,15 @@
 .margen-superior{
+    margin: 50px 300px 50px 300px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    height: 250px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .contenedor1{
-    background: #00a49d;
+    background: rosybrown;
 }
 
 .contenedor2{
