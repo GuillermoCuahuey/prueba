@@ -53,50 +53,58 @@
         </div>
     </ui:define>
     <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="/alumno/variables-alumno.css"/>
+        <h:outputStylesheet library="css" name="/alumno/transcript-drag.css"/>
        <div class="uk-section margen-superior">
            <div class="uk-container padding-contenedor">
-                    <div class="uk-child-width-1-3@s" uk-grid="">
-                        <div>
-                            <h4 class="uk-text-primary">Group 1</h4>
-                            <div uk-sortable="group: sortable-group1">
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
-                                </div>
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 2</div>
-                                </div>
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
-                                </div>
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 4</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h4>Group 2</h4>
-                            <div uk-sortable="group: sortable-group">
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
-                                </div>
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 2</div>
-                                </div>
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
-                                </div>
-                                <div class="uk-margin">
-                                    <div class="uk-card uk-card-default uk-card-body uk-card-small">Item 4</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h4>Empty Group</h4>
-                            <div uk-sortable="group: sortable-group">
-                            </div>
-                        </div>
-                     </div>
+               <h:panelGroup layout="block" styleClass="uk-child-width-1-2@m uk-grid" pt:uk-grid="">
+                   <h:panelGroup layout="block" >
+                       <h:panelGroup layout="block" styleClass="uk-sortable contenedor-respuesta" pt:uk-sortable="group: respuesta">
+                           <div class="respuesta">uno</div>
+                           <div class="respuesta">dos</div>
+                           <div class="respuesta">tres</div>
+                           <div class="respuesta">cuatro</div>
+                           <div class="respuesta">cinco</div>
+                           <div class="respuesta">seis</div>
+                           <div class="respuesta">siete</div>
+                           <div class="respuesta">ocho</div>
+                           <div class="respuesta">nueve</div>
+                       </h:panelGroup>
+                   </h:panelGroup>
+                   <div class="trancript-contenedor scroll-drag">
+                       <p>
+                           <span class="personaje">Will Smith:</span> I know you guys have been waiting and here&#39;s the very first trailer for Aladdin. It is the
+                           very first trailer. Don&#39;t get <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/> though; don&#39;t get dizzy before we start to trailer. Don&#39;t get dizzy!</p>
+
+                       <p><span class="personaje">Crowd:</span> Stop,<h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/>  Vandal! Street rat! Get him! Stop that boy! Up, there!</p>
+                       <p><span class="personaje">Guard:</span> He’s on the roof! Watch out!</p>
+                       <p><span class="personaje">Jafar:</span> You <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/> upon an opportunity. I can make you rich… rich enough to impress a
+                           princess</p>
+                       <p><span class="personaje">Aladdin:</span> What would I have to do?</p>
+                       <p><span class="personaje">Jafar:</span> There&#39;s a Cave of Wonders. Bring me the lamp.</p>
+                       <p><span class="personaje">Genie:</span> Oh, great one who <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/> me. I stand by my <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/> two wishes three. I&#39;m kidding
+                           Russians.
+                           Watch out! You have woken me up! You ain’t never had a friend like me</p>
+                       <p><span class="personaje">Aladdin:</span> Hey, can you make me a prince.</p>
+                       <p><span class="personaje">Genie:</span> There is a lot of gray area in make me a prince. I could just make you a prince</p>
+                       <p><span class="personaje">Aladdin:</span> Oh, no!</p>
+                       <p><span class="personaje">Genie:</span> Have you seen my palace?
+                           You look like a prince on the outside but I didn&#39;t change anything on the inside. Showtime!</p>
+                       <p><span class="personaje">Aladdin:</span> No, I&#39;m <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/>. Okay, I say when it&#39;s time…Really?
+                           I thought a princess could go anywhere…</p>
+                       <p><span class="personaje">Jasmine:</span> Not this princess.</p>
+                       <p><span class="personaje">Aladdin:</span> Do you trust me?</p>
+                       <p><span class="personaje">Jasmine:</span> A whole new world.</p>
+                       <p><span class="personaje">Aladdin:</span> Don’t you <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/>close your eyes</p>
+                       <p><span class="personaje">Jasmine:</span> A hundred thousand things to see</p>
+                       <p><span class="personaje">Aladdin:</span> Hold your <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/>. It gets better.</p>
+                       <p><span class="personaje">Jasmine:</span> I’m like a <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/>. I’ve come so far
+                           Aladdin and Jasmine: Let me share this whole new world with you.</p>
+                   </div>
+               </h:panelGroup>
+
            </div>
+
        </div>
 
     </ui:define>
