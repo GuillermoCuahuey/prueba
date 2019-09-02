@@ -50,7 +50,7 @@
 }
 .trancript-contenedor{
     min-height: 400px;
-    max-height: 600px;
+    max-height: 52vh;
     background-color: white;
     overflow: auto;
     font-family: 'Sniglet', "Arial Black";
