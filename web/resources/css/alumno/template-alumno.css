@@ -1,8 +1,7 @@
 body{
-    background-color: black;
-    background-image: url("#{resource['img/estrellas-alumno.jpg']}");
-    /*background-repeat: no-repeat;*/
-    background-size: 30% auto;
+    background-image: url("#{resource['img/alumno/fondo-general.svg']}");
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -104,11 +103,6 @@ body{
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 30px 0 0 0;
-    /* background-color: #f7f7f7; */
-    /*background-image: url('../img/space2.jpg');*/
-    /*background-size: 100% 100%;*/
-    /*background-repeat: no-repeat;*/
-    /*background-attachment: fixed;*/
     margin-left: 0;
     transition: margin 0.2s cubic-bezier(.4,0,.2,1);
 }

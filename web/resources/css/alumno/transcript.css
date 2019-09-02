@@ -31,14 +31,37 @@
 .uk-tooltip {
     /* 1 */
     max-width: 300px;
-    padding: 4px 7px;
+    padding: 7px 5px;
     /* 4 */
     background: var(--naranja-primary-color) !important;
+
     border:solid 1px;
     border-color: black;
     border-radius: 3px;
     color: #fff !important;
     font-size: 14px;
+    font-weight: normal;
+    font-family: 'Sniglet', "Arial Black";
+}
+
+.uk-tooltip.aliens{
+    /* 1 */
+    width: auto;
+    height: auto;
+
+    padding: 15px 3px;
+    /* 4 */
+    /*background: var(--naranja-primary-color) !important;*/
+    background-color: transparent!important;
+    background-image: url("#{resource['img/pop-art/mensaje1.svg']}") !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    /*background-position: top left;*/
+    border:none!important;
+    /*border-color: black;*/
+    /*border-radius: 3px;*/
+    color: black !important;
+    font-size: 13px;
     font-weight: normal;
     font-family: 'Sniglet', "Arial Black";
 }
@@ -50,13 +73,14 @@
 
 /* Track */
 .scroll-alumno::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 8px black;
+    box-shadow: inset 0 0 8px #5F8DD3;
+    /*background: rgb(95,141,211);*/
     border-radius: 10px;
 }
 
 /* Handle */
 .scroll-alumno::-webkit-scrollbar-thumb {
-    background: rgb(64,5,73);
+    background: rgb(22,22,80);
     border-radius: 10px;
 }
 
