@@ -1,5 +1,6 @@
 <svg width="200" height="200" viewBox="0 0 53 53" xmlns="http://www.w3.org/2000/svg">
 
+ <rect width="53" height="53" fill="white"/>
  <g transform="translate(0 -244.08)">
   <g stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
    <path d="m11.234 278.7a7.0176 7.0176 0 0 1-6.0774-3.5088 7.0176 7.0176 0 0 1 0-7.0176 7.0176 7.0176 0 0 1 6.0774-3.5088v7.0176z"

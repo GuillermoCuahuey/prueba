@@ -44,11 +44,10 @@
     font-family: 'Sniglet', "Arial Black";
 }
 
-.uk-tooltip.aliens{
+.aliens .uk-tooltip{
     /* 1 */
     width: auto;
     height: auto;
-
     padding: 15px 3px;
     /* 4 */
     /*background: var(--naranja-primary-color) !important;*/
@@ -86,7 +85,7 @@
 
 /* Handle on hover */
 .scroll-alumno::-webkit-scrollbar-thumb:hover {
-    background: rgb(129,9,147);
+    background: rgb(0,163,106);
 }
 .tam-contenido{
     max-height:52vh;
