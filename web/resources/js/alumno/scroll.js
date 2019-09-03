@@ -1,14 +1,16 @@
 var time;
 
 document.addEventListener("DOMContentLoaded",function (evt) {
-    pageScroll();
+    // pageScroll();
     // activasion();
     var mouse = document.getElementById('scroll');
+    document.getElementById('activar').onclick = function (){pageScroll()};
     mouse.addEventListener("click",function (evt) {
         clearTimeout(time);
     }).mouseout(function() {
         pageScroll();
     });
+
 });
 
 function pageScroll() {
