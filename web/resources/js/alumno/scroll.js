@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",function (evt) {
     // pageScroll();
     // activasion();
     var mouse = document.getElementById('scroll');
-    document.getElementById('activar').onclick = function (){pageScroll()};
+    document.getElementById('activar2').onclick = function (){pageScroll()};
     mouse.addEventListener("click",function (evt) {
         clearTimeout(time);
     }).mouseout(function() {

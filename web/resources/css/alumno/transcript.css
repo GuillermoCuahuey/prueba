@@ -11,8 +11,6 @@
 .letra-guion{
     color: black;
 
-    font-weight: bold;
-
 }
 .letra-perdonaje{
     color: #5F8DD3;
@@ -95,4 +93,6 @@
     overflow: auto;
 }
 
-
+.remover{
+    color:red;
+}

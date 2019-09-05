@@ -72,7 +72,7 @@
                         <li class="transcrip">
                            <h:panelGroup styleClass="uk-grid" pt:uk-grid="">
                                <div class="uk-width-1-2@m tam-contenido uk-padding-remove-left "  >
-                                   <iframe class="" width="100%" height="100%" src="https://www.youtube.com/embed/JcMtWwiyzpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" ></iframe>
+                                   <iframe class="" width="100%" height="100%" src="https://www.youtube.com/embed/JcMtWwiyzpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="" ></iframe>
                                </div>
                                <div class="uk-width-1-2@m uk-text-justify transcrip-contenedor tam-contenido scroll-alumno letra-guion borde-guion" id="scroll" >
                                    <p>
@@ -104,7 +104,7 @@
                                        Aladdin and Jasmine: Let me share this whole new world with you.</p>
                                </div>
                            </h:panelGroup>
-                            <button id="activar">aceptar</button>
+                            <button class="activar" id="activar">aceptar</button>
                         </li>
                         <li class="listening  uk-margin-small-top ">
                             <h1 class="uk-text-center lescuadron" style="color: white">Coloca la respuesta correcta</h1>
@@ -208,7 +208,7 @@
                                         <div class="respuesta">nueve</div>
                                     </h:panelGroup>
                                 </h:panelGroup>
-                                <div class="trancript-contenedor scroll-drag">
+                                <div class="trancript-contenedor scroll-drag actividad-drag">
                                     <p>
                                         <span class="personaje">Will Smith:</span> I know you guys have been waiting and here&#39;s the very first trailer for Aladdin. It is the
                                         very first trailer. Don&#39;t get <h:outputText styleClass="uk-sortable respuesta-transcript" pt:uk-sortable="group: respuesta"/> though; don&#39;t get dizzy before we start to trailer. Don&#39;t get dizzy!</p>
@@ -246,6 +246,9 @@
             </div>
         </div>
       <h:outputScript library="js" name="alumno/scroll.js"/>
+       <script type="application/javascript">
+
+       </script>
     </ui:define>
 </ui:composition>
 </html>

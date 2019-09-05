@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<ui:composition template="/template/template-alumno.xhtml">
+    <ui:define name="menu">
+        <div class="left-content-box  content-box-dark">
+            <h:graphicImage library="img" name="astronauta-nino.svg" alt="" class="uk-border-circle profile-img"/>
+            <h6 class="uk-text-center uk-margin-remove-vertical text-light">John Doe</h6>
+
+            <div class="uk-position-relative uk-text-center uk-display-block">
+                <a href="#" class="uk-text-small uk-text-muted uk-display-block uk-text-center" data-uk-icon="icon: triangle-down; ratio: 0.7">Admin</a>
+                <!-- user dropdown -->
+                <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+                    <ul >
+                        <!--<li class="uk-active"><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></a></li>-->
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Cerrar Sesion</a></li>
+                    </ul>
+                </div>
+                <!-- /user dropdown -->
+            </div>
+        </div>
+
+        <div class="left-nav-wrap  uk-visible@xl ">
+            <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-center uk-margin-large-top">
+                <!--<li class="uk-active"><a href="#"><img src="img/alumno/iconos-login/1.svg" width="80" alt=""></a></li>-->
+                <li><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg" width="80" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg" width="80" alt=""/></h:link></li>
+                <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="80" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="80" alt=""/></h:link></li>
+                <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="80" height="" alt=""/></h:link></li>
+                <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="80" alt=""/></a></li>
+            </ul>
+        </div>
+        <div class="left-nav-wrap uk-position-relative  uk-hidden@xl ">
+            <ul class="uk-thumbnav uk-thumbnav-vertical uk-position-top-center uk-margin-small-top">
+                <li ><h:link outcome="dashboard-alumno" ><h:graphicImage library="img" name="alumno/planetas/tierra.svg"  width="50" alt=""/></h:link></li>
+                <li class="uk-active"><h:link outcome="transcrip-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta1.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="glosario-alumno" ><h:graphicImage library="img" name="alumno/planetas/planeta2.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="mapa-metal-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta3.svg"  width="50" alt=""/></h:link></li>
+                <li><h:link outcome="biblioteca-alumno"><h:graphicImage library="img" name="alumno/planetas/planeta4.svg"  width="50" alt=""/></h:link></li>
+                <li><a href="#"><h:graphicImage library="img" name="alumno/planetas/planeta5.svg"  width="50" alt=""/></a></li>
+            </ul>
+        </div>
+
+    </ui:define>
+    <ui:define name="contenido">
+        <h:outputStylesheet library="css" name="alumno/transcript.css"/>
+        <h:outputStylesheet library="css" name="alumno/variables-alumno.css"/>
+        <h:outputStylesheet library="css" name="/alumno/transcript-drag.css"/>
+        <div class="uk-section margen-superior">
+            <div class="uk-container padding-contenedor">
+                <h:panelGroup styleClass="uk-grid" pt:uk-grid="">
+                    <div class="uk-width-1-2@m tam-contenido uk-padding-remove-left "  >
+                        <iframe class="" width="100%" height="100%" src="https://www.youtube.com/embed/JcMtWwiyzpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="" ></iframe>
+                    </div>
+                    <div class="uk-width-1-2@m uk-text-justify transcrip-contenedor tam-contenido scroll-alumno letra-guion borde-guion" id="scroll" >
+                        <p><span class="personaje">Lupe:</span> Don't just think of it as a <span class="remover">fight</span>. Think of it like a dance.</p>
+                        <p><span class="personaje">Klaus:</span> A bull dancing? Is <strong>this</strong> some kind of hilarious joke designed to make me laugh?</p>
+                        <p><span class="personaje">Greta:</span> You see, horses, we have the beautifulest legs for the dancing.</p>
+                        <p><span class="personaje">Hans:</span> Bulls have short, <span class="remover">stubby</span> legs.</p>
+                        <p><span class="personaje">Klaus:</span> Yeah. Look at me. Moo, moo, moo.</p>
+                        <p><span class="personaje">Lupe:</span> Go eat a schnitzel, you pasty-faced glue stick!</p>
+                        <p><span class="personaje">Ferdinand:</span> It's okay, Lupe, they're right. I mean, how could a big, clumsy bull ever do something like <strong>this</strong>?</p>
+                        <p><span class="personaje">Lupe:</span> Whoo! Check out my boy cuttin' a rug.</p>
+                        <p><span class="personaje">1,2,4:</span> Yeah! <strong>That</strong> was good.</p>
+                        <p><span class="personaje">Greta:</span> You call that dancing? Ha! Nein! <strong>This</strong> is dancing.</p>
+                        <p><span class="personaje">Angus:</span> Three against one is hardly fair. Lupe, get my <span class="remover">pipes</span>! Well, put <strong>that</strong> in your kilts and smoke it!</p>
+                        <p><span class="personaje">Greta:</span> Don't celebrate yet, you rump roast! Try <strong>this</strong>!</p>
+                        <p><span class="personaje">Bones:</span> Ooh, I hate <strong>those</strong> horses!</p>
+                        <p><span class="personaje">1:</span> It's show time.</p>
+                        <p><span class="personaje">Bones:</span> I'm going in!</p>
+                        <p><span class="personaje">4:</span> Hey,</p>
+                        <p><span class="personaje">Greta:</span> watch where</p>
+                        <p><span class="personaje">Klaus:</span> you're stepping,</p>
+                        <p><span class="personaje">Hans:</span> dummkopf.</p>
+                        <p><span class="personaje">Klaus:</span> Who are you calling dummkopf?</p>
+                        <p><span class="personaje">Greta:</span> You have four left <span class="remover">hooves</span>.</p>
+                        <p><span class="personaje">Hans:</span> Watch me</p>
+                        <p><span class="personaje">1,2,4:</span> Yeah!</p>
+                        <p><span class="personaje">Klaus:</span> I've fallen and I can't giddyup.</p>
+                    </div>
+                </h:panelGroup>
+            </div>
+        </div>
+        <h:outputScript library="js" name="/alumno/remplazo.js"/>
+    </ui:define>
+</ui:composition>
+</html>
