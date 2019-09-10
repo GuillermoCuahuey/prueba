@@ -1,8 +1,17 @@
 body{
     background-image: url("#{resource['img/alumno/fondo-general.svg']}");
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+@media screen and (max-width: 768px ){
+    body{
+        background-image: url("#{resource['img/alumno/fondobueno.jpg']}");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
 
 #top-head {
