@@ -112,8 +112,8 @@
 }
 
 input[type=text],input[type=email],input[type=password],select,textarea{
-    border-radius: 0px !important;
-    background-color: rgba(231,76,60,.5);
+    border-radius: 8px !important;
+    background-color: transparent;
     border-width: 2px !important;
     padding: 0 20px;
     border-color: var(--form-focul) !important;
@@ -123,6 +123,13 @@ input[type=text],input[type=email],input[type=password],select,textarea{
 input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select:focus,textarea:focus{
     border-color: var(--turquesa-primary-color) !important;
     border-width: 3px!important;
+}
+
+form label{
+    color: black !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white;
 }
 
 .posicion-planeta{
@@ -139,6 +146,11 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 }
 
 @media screen and (max-width: 500px ){
+
+    .parrafo-mapa-15{
+        font-size: 30px;
+
+    }
 
   .orientacion{
     position: relative;

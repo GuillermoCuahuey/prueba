@@ -53,7 +53,7 @@
     </ui:define>
     <ui:define name="contenido">
         <h:outputStylesheet library="css" name="/alumno/mapa-15.css"/>
-        <div class="uk-section margen-superior">
+        <div class="uk-section margen-superior uk-margin-small-left uk-margin-small-right">
             <div class="uk-container picture margen-picture">
 
                 <div class="">
@@ -62,66 +62,68 @@
                           <p class="parrafo-mapa-15">Definition: <br/>Sentence: <br/>Part of Speech:</p>
                         </div>
                     </div>
-                    <div class="parrafo-mapa-15 uk-position-relative subtitulo-15 caja-2">
-                        <span class="uk-position-absolute subtitulo-15 uk-display-inline-block">
-                            Picture:
-                        </span>
-                    </div>
-                    <div class="parrafo-mapa-15 uk-position-absolute caja-4">
-                        <span class="subtitulo-15 uk-display-inline-block">
-                            Vocabulary
-                        </span>
-                    </div>
-                    <div class="parrafo-mapa-15 uk-position-absolute caja-5">
-                        <span class="subtitulo-15 uk-display-inline-block">
-                            Study
-                        </span>
+                    <div class="parrafo-mapa-15 uk-position-relative subtitulo-15 caja-2 uk-visible@m">
+                            <span class="uk-position-absolute subtitulo-15 uk-display-inline-block">
+                                Picture:
+                            </span>
+                        </div>
+                        <div class="parrafo-mapa-15 uk-position-absolute caja-4 uk-visible@m">
+                            <span class="subtitulo-15 uk-display-inline-block">
+                                Vocabulary
+                            </span>
+                        </div>
+                        <div class="parrafo-mapa-15 uk-position-absolute caja-5 uk-visible@m">
+                            <span class="subtitulo-15 uk-display-inline-block">
+                                Study
+                            </span>
                     </div>
 
+                    <h3 class="parrafo-mapa-15 uk-hidden@m uk-text-center">Vocabulary Study</h3>
 
                         <div class="uk-position-relative caja-3">
-                            <div class="planet-1 orientacion  letras ">
-                                <form class="uk-form-stacked posicion-planeta">
+                            <form action="" class="uk-form-stacked">
+                            <div class="planet-1 orientacion letras ">
+                                <div class="uk-form-stacked posicion-planeta">
                                     <label class="uk-form-label" for="form-stacked-text">Suffix:</label>
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                             <div class="planet-2 orientacion letras">
-                                <form class="uk-form-stacked posicion-planeta">
-                                    <label class="uk-form-label" for="form-stacked-text">Prefix:</label>
+                                <div class="uk-form-stacked posicion-planeta">
+                                    <label class="uk-form-label " for="form-stacked-text">Prefix:</label>
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                             <div class="planet-3 orientacion letras">
-                                <form class="uk-form-stacked posicion-planeta">
+                                <div class="uk-form-stacked posicion-planeta">
                                     <label class="uk-form-label" for="form-stacked-text">Root:</label>
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                             <div class="planet-4 orientacion letras">
-                                <form class="uk-form-stacked posicion-planeta">
+                                <div class="uk-form-stacked posicion-planeta">
                                     <label class="uk-form-label" for="form-stacked-text">Context:</label>
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                             <div class="planet-5 orientacion letras">
-                                <form class="uk-form-stacked posicion-planeta">
+                                <div class="uk-form-stacked posicion-planeta">
                                     <label class="uk-form-label" for="form-stacked-text">New Word:</label>
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                             <div class="planet-6 orientacion letras">
-                                <form class="uk-form-stacked posicion-planeta">
+                                <div class=" posicion-planeta">
                                     <label class="uk-form-label" for="form-stacked-text">Synonyms:</label>
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
@@ -130,11 +132,10 @@
                                     <div class="uk-form-controls">
                                         <input class="uk-input" id="form-stacked-text" type="text"/>
                                     </div>
-                                </form>
+                                </div>
                             </div>
+                            </form>
                         </div>
-
-
                 </div>
             </div>
         </div>
