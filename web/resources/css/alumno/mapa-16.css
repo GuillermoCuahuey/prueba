@@ -1,0 +1,78 @@
+.picture1{
+    background-image: url("#{resource['img/alumno/fondo-16.svg']}");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 1200px;
+    background-color: white;
+}
+
+.titulo-16{
+    background-color: green;
+    /*display: inline-block;*/
+    margin: 50px;
+}
+
+
+.titulo1{
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+}
+
+.contenedor1{
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
+
+.contenedor2{
+    position: absolute;
+    top: 42%;
+    right: 63%;
+}
+
+.contenedor3{
+    position: absolute;
+    top: 63%;
+    right: 39%;
+}
+
+.contenedor4{
+    position: absolute;
+    top: 70%;
+    right: 17%;
+}
+
+.contenedor5{
+    position: absolute;
+    top: 50%;
+    right: 60%;
+}
+
+.whom1{
+    transform: translate(300,40);
+}
+
+input[type=text],input[type=email],input[type=password],select,textarea{
+    border-radius: 8px !important;
+    background-color: transparent;
+    border-width: 2px !important;
+    padding: 0 20px;
+    width: 200px;
+    border-color: var(--form-focul) !important;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select:focus,textarea:focus{
+    border-color: var(--turquesa-primary-color) !important;
+    border-width: 3px!important;
+}
+
+form label{
+    color: black !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white;
+}
