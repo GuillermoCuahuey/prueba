@@ -21,8 +21,8 @@
 }
 
 .caja-3{
-    width: 80%;
-    height: 650px;
+    width: 100%;
+    height: auto;
 }
 
 .caja-4{
@@ -69,7 +69,7 @@
     width: 170px;
     height: 170px;
     left: 25%;
-    top: 10%;
+    top: 0;
 }
 
 .planet-3{
@@ -77,7 +77,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     left: 55%;
-    top: 25%;
+    top: 0;
 }
 
 .planet-4{
@@ -87,7 +87,7 @@
     width: 160px;
     height: 160px;
     left: 37%;
-    top: 33%;
+    top: 0;
 }
 
 
@@ -98,7 +98,7 @@
     width: 170px;
     height: 170px;
     left: 25%;
-    top: 53%;
+    top: 0;
 }
 
 .planet-6{
@@ -108,7 +108,7 @@
     width: 180px;
     height: 180px;
     left: 43%;
-    top: 70%;
+    top: 0;
 }
 
 input[type=text],input[type=email],input[type=password],select,textarea{
@@ -132,4 +132,44 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
     align-items: center;
     flex-direction: column;
     height: 100%;
+}
+
+.orientacion{
+    position: relative;
+}
+
+@media screen and (max-width: 500px ){
+
+  .orientacion{
+    position: relative;
+  }
+
+    .caja-3{
+        width: 100%;
+        height: auto;
+    }
+
+    .planet-1{
+        top: 0;
+    }
+
+    .planet-2{
+        top: 0;
+    }
+
+    .planet-3{
+        top: 0;
+    }
+
+    .planet-4{
+        top: 0;
+    }
+
+    .planet-5{
+        top: 0;
+    }
+
+    .planet-6{
+        top: 0;
+    }
 }

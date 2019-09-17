@@ -25,21 +25,21 @@
         }
 
         @media screen and (max-width: 500px){
-            .tierra{
-            transform: scale(0.2) translate(1250px,350px);
-            }
-            .nave{
-            transform: scale(0.3) translate(300px,270px) rotate(90deg);
-            }
+        .tierra{
+        transform: scale(0.2) translate(1250px,350px);
+        }
+        .nave{
+        transform: scale(0.3) translate(300px,270px) rotate(90deg);
+        }
         }
 
         @media screen and (max-width: 330px){
-            .tierra{
-            transform: scale(0.2) translate(1250px,370px);
-            }
-            .nave{
-            transform: scale(0.3) translate(300px,290px) rotate(90deg);
-            }
+        .tierra{
+        transform: scale(0.2) translate(1250px,370px);
+        }
+        .nave{
+        transform: scale(0.3) translate(300px,290px) rotate(90deg);
+        }
         }
     </style>
 

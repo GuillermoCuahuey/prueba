@@ -1,17 +1,9 @@
 body{
     background-image: url("#{resource['img/alumno/fondo-general.svg']}");
-    background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
-}
 
-@media screen and (max-width: 768px ){
-    body{
-        background-image: url("#{resource['img/alumno/fondo-gral-movil.svg']}");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
 }
 
 @media screen and (max-width: 1030px ){
@@ -22,6 +14,16 @@ body{
         background-attachment: fixed;
     }
 }
+
+@media screen and (max-width: 768px){
+    body{
+        background-image: url("#{resource['img/alumno/fondo-gral-movil.svg']}");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
 
 #top-head {
     z-index: 9;

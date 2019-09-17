@@ -1,4 +1,4 @@
-<svg version="1.1" viewBox="0 0 1024 1366" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewBox="0 0 320 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 
     <style media="screen">
         body{
@@ -18,29 +18,14 @@
         opacity:.3;
         }
         .nave{
-        transform: scale(0.3) translate(300px,450px) rotate(90deg);
+        transform: scale(0.3) translate(330px,180px) rotate(90deg);
         }
         .tierra{
-        transform: scale(0.2) translate(1250px,600px);
+        transform: scale(0.15) translate(1650px,300px);
         }
 
-        @media screen and (max-width: 500px){
-        .tierra{
-        transform: scale(0.2) translate(1250px,350px);
-        }
-            .nave{
-            transform: scale(0.3) translate(300px,270px) rotate(90deg);
-            }
-        }
 
-        @media screen and (max-width: 330px){
-        .tierra{
-        transform: scale(0.2) translate(1250px,370px);
-        }
-        .nave{
-        transform: scale(0.3) translate(300px,290px) rotate(90deg);
-        }
-        }
+
     </style>
 
     <defs>
@@ -49,7 +34,7 @@
             <stop offset="100%" style="stop-color:rgb(0,0,51); stop-opacity:1"/>
         </linearGradient>
     </defs>
-    <rect class="principal" width="360" height="640" fill="url(#grad1)"/>
+    <rect class="principal" width="320" height="480" fill="url(#grad1)"/>
 
     <g class="nave">
         <defs>
