@@ -20,6 +20,23 @@
     z-index: 2;
 }
 
+.caja-1{
+    height: 400px;
+}
+
+.caja-2{
+    height: 400px;
+}
+
+.caja-3{
+    height: 400px;
+}
+
+[class^="caja"]{
+    margin-top: 0;
+    position: relative;
+}
+
 .contenedor1{
     position: absolute;
     width: 250px;
@@ -41,54 +58,54 @@
 
 .contenedor4{
     position: absolute;
-    top: 70%;
-    right: 17%;
+    top: 35%;
+    right: 5%;
 }
 
 .contenedor5{
     position: absolute;
-    top: 73%;
-    right: 65%;
+    top: 30%;
+    right: 78%;
 }
 
 .contenedor6{
     position: absolute;
-    top: 80%;
-    right: 17%;
+    top: 55%;
+    right: 5%;
 }
 
 .contenedor7{
     position: absolute;
-    top: 90%;
-    right: 17%;
+    top: 80%;
+    right: 5%;
 }
 
 .contenedor8{
     position: absolute;
     width: 150px;
-    top: 111%;
-    right: 51%;
+    top: 11%;
+    right: 57%;
 }
 
 .contenedor9{
     position: absolute;
     width: 105px;
-    top: 112%;
+    top: 13%;
     right: 40%;
 }
 
 .contenedor10{
     position: absolute;
     width: 105px;
-    top: 112%;
-    right: 29%;
+    top: 13%;
+    right: 25%;
 }
 
 .contenedor11{
     position: absolute;
     width: 105px;
-    top: 112%;
-    right: 18%;
+    top: 13%;
+    right: 9%;
 }
 
 .whom1{
@@ -125,6 +142,12 @@ form label{
     font-size: 16px;
     font-weight: bold;
     /*text-shadow: 1px 1px 0 white, -1px -1px 0 white;*/
+}
+
+.formulario16{
+ width: 100%;
+ height: 100%;
+    background-color: rgba(255, 35, 89, 0.5);
 }
 
 .negrita{
