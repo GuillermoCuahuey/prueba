@@ -8,11 +8,10 @@
 }
 
 .titulo-16{
-    background-color: green;
-    /*display: inline-block;*/
+    position: absolute;
+    right: 25%;
     margin: 50px;
 }
-
 
 .titulo1{
     font-weight: bold;
@@ -23,20 +22,21 @@
 
 .contenedor1{
     position: absolute;
+    width: 250px;
     top: 30%;
-    right: 25%;
+    right: 22%;
 }
 
 .contenedor2{
     position: absolute;
     top: 42%;
-    right: 63%;
+    right: 66%;
 }
 
 .contenedor3{
     position: absolute;
     top: 63%;
-    right: 39%;
+    right: 41%;
 }
 
 .contenedor4{
@@ -47,12 +47,54 @@
 
 .contenedor5{
     position: absolute;
-    top: 50%;
-    right: 60%;
+    top: 73%;
+    right: 65%;
+}
+
+.contenedor6{
+    position: absolute;
+    top: 80%;
+    right: 17%;
+}
+
+.contenedor7{
+    position: absolute;
+    top: 90%;
+    right: 17%;
+}
+
+.contenedor8{
+    position: absolute;
+    width: 150px;
+    top: 111%;
+    right: 51%;
+}
+
+.contenedor9{
+    position: absolute;
+    width: 105px;
+    top: 112%;
+    right: 40%;
+}
+
+.contenedor10{
+    position: absolute;
+    width: 105px;
+    top: 112%;
+    right: 29%;
+}
+
+.contenedor11{
+    position: absolute;
+    width: 105px;
+    top: 112%;
+    right: 18%;
 }
 
 .whom1{
-    transform: translate(300,40);
+    position: absolute;
+    top: 76%;
+    right: 48%;
 }
 
 input[type=text],input[type=email],input[type=password],select,textarea{
@@ -60,9 +102,17 @@ input[type=text],input[type=email],input[type=password],select,textarea{
     background-color: transparent;
     border-width: 2px !important;
     padding: 0 20px;
-    width: 200px;
+    width: 140px;
     border-color: var(--form-focul) !important;
     box-sizing: border-box;
+}
+
+textarea{
+    background-color: transparent !important;
+}
+
+textarea:focus{
+    background-color: white !important;
 }
 
 input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select:focus,textarea:focus{
@@ -71,8 +121,12 @@ input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select
 }
 
 form label{
-    color: black !important;
+    color: white !important;
     font-size: 16px;
     font-weight: bold;
-    text-shadow: 1px 1px 0 white, -1px -1px 0 white;
+    /*text-shadow: 1px 1px 0 white, -1px -1px 0 white;*/
+}
+
+.negrita{
+    color: black !important;
 }
