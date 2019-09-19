@@ -154,7 +154,19 @@ form label{
     color: black !important;
 }
 
-@media screen and(max-width: 500px ){
+@media screen and (max-width: 700px) {
 
+    .picture1{
+        background-color: yellow;
+    }
 
 }
+
+@media screen and (max-width: 500px) {
+
+    .picture1{
+        background-color: green;
+    }
+
+}
+
