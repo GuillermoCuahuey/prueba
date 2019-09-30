@@ -36,6 +36,7 @@
     box-sizing: border-box;
     text-align: center;
     z-index: 2;
+    margin-top: 0;
 
 }
 .contenedor-respuesta > .respuesta{

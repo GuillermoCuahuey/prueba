@@ -1,10 +1,9 @@
 var time;
 
 document.addEventListener("DOMContentLoaded",function (evt) {
-    // pageScroll();
-    // activasion();
+
     var mouse = document.getElementById('scroll');
-    document.getElementById('activar2').onclick = function (){pageScroll()};
+    pageScroll();
     mouse.addEventListener("click",function (evt) {
         clearTimeout(time);
     }).mouseout(function() {
@@ -16,8 +15,6 @@ document.addEventListener("DOMContentLoaded",function (evt) {
 function pageScroll() {
     var objDiv = document.getElementById("scroll");
     objDiv.scrollTop = objDiv.scrollTop + 1;
-    // if (objDiv.scrollTop == (objDiv.scrollHeight - 625)) {
-    //     objDiv.scrollTop = 0;
-    // }
+
     time = setTimeout('pageScroll()', 100);
 }
