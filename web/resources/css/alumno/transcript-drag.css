@@ -42,6 +42,7 @@
 .contenedor-respuesta > .respuesta{
     margin-top: 10px;
     box-shadow: 1.5px 1.5px 8px white;
+    display: block;
 }
 
 .respuesta-transcript{
@@ -56,6 +57,8 @@
 }
 .respuesta-transcript .respuesta{
     color: #D35400;
+    display: inline-block;
+    width: 100%;
 }
 .trancript-contenedor{
     min-height: 400px;
