@@ -22,12 +22,13 @@
     appearance: none;
     height: 13px;
     background: rgb(238,2,2);
-    background: linear-gradient(90deg, rgba(238,2,2,1) 1%, rgba(227,231,76,0.8715861344537815) 51%, rgba(228,255,0,1) 80%, rgba(0,255,38,1) 100%);
+    background: linear-gradient(90deg, rgba(238,2,2,1) 1%, rgba(227,231,76,0.8715861344537815) 38%, rgba(228,255,0,1) 76%, rgba(0,255,38,1) 100%);
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
     margin-top: 20px;
+    border-radius: 8px;
 }
 .rango:hover{
     opacity: 1;
@@ -58,48 +59,60 @@
     margin-bottom: 5px;
 }
 
-.bmap1{
+.mapa-mental > div > div + div > p{
+    color: red;
+}
+.mapa-mental textarea{
+    height: 90px;
+}
+
+.mapa-mental form  > .comentario textarea{
+    height: 75%;
+    box-sizing: border-box;
+}
+
+.bmap-1{
     background: url("#{resource['img/preview/1.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap2{
+.bmap-2{
     background: url("#{resource['img/preview/2.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap3{
+.bmap-3{
     background: url("#{resource['img/preview/3.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap4{
+.bmap-4{
     background: url("#{resource['img/preview/4.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap5{
+.bmap-5{
     background: url("#{resource['img/preview/5.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap6{
+.bmap-6{
     background: url("#{resource['img/preview/6.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap7{
+.bmap-7{
     background: url("#{resource['img/preview/7.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap8{
+.bmap-8{
     background: url("#{resource['img/preview/8.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap9{
+.bmap-9{
     background: url("#{resource['img/preview/9.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap10{
+.bmap-10{
     background: url("#{resource['img/preview/10.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap11{
+.bmap-11{
     background: url("#{resource['img/preview/11.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap12{
+.bmap-12{
     background: url("#{resource['img/preview/12.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap13{
+.bmap-13{
     background: url("#{resource['img/preview/13.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap14{
+.bmap-14{
     background: url("#{resource['img/preview/14.jpg']}") no-repeat center center/100% 100%;
 }
-.bmap15{
+.bmap-15{
     background: url("#{resource['img/preview/15.jpg']}") no-repeat center center/100% 100%;
 }
